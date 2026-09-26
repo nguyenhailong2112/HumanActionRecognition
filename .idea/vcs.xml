@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/01_IMPACT/code/IMPACT" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/02_IndustReal/code/IndustReal" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/03_Assembly101/code/assembly101-action-recognition" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/03_Assembly101/code/assembly101-annotations" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/03_Assembly101/code/assembly101-mistake-detection" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/03_Assembly101/code/assembly101-temporal-action-segmentation" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/05_HA4M/HA4Mfeatures" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/05_HA4M/ha4m" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/05_HA4M/multiple-azure-kinect-gui" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/06_MS-TCN/code/MS-TCN2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/06_MS-TCN/code/ms-tcn" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/07_ASFormer/code/ASFormer" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/08_ActionFormer/code/ActionFormer_fork" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/08_ActionFormer/code/actionformer_release" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/09_IKEA ASM/code/IKEA_ASM_Dataset" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/09_IKEA ASM/code/IKEA_ASM_Dataset_sparse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/10_HoloAssist/code/holoassist-release" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/11_EPIC-KITCHENS/code/C1-Action-Recognition-TSN-TRN-TSM" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/11_EPIC-KITCHENS/code/C2-Action-Detection" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/11_EPIC-KITCHENS/code/epic-kitchens-100-annotations" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/12_COIN/code/annotation-tool" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/12_COIN/code/annotations" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/12_COIN/code/baselines/R-C3D" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/12_COIN/code/baselines/action-detection-ssn" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/12_COIN/code/official-code" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/13_CrossTask/code/CrossTask" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/14_FineGym/code/FineGym" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ResearchDocuments/16_FIELDS/code/FIELDS-public" vcs="Git" />
+  </component>
+</project>

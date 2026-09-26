@@ -1,0 +1,231 @@
+{
+  "dataset": "IMPACT v1.1",
+  "annotation_archive": "C:\\Users\\longn\\PyCharmMiscProject\\HumanActionRecognition\\data\\raw\\impact\\v1.1\\annotations\\IMPACT-v1.1-annotations.zip",
+  "annotation_view": "front",
+  "procedure": "Disassembly_A",
+  "official_split": {
+    "split_id": 2,
+    "procedure": "Disassembly_A",
+    "view": "front",
+    "video_ids": {
+      "train": [
+        "LE06AS03_Disassembly_A_002_front",
+        "LE06AS03_Disassembly_A_003_front",
+        "LE06AS03_Disassembly_A_004_front",
+        "TO08CO25_Disassembly_A_002_front",
+        "TO08CO25_Disassembly_A_003_front",
+        "TO08CO25_Disassembly_A_004_front",
+        "KE03ER16_Disassembly_A_001_front",
+        "KE03ER16_Disassembly_A_002_front",
+        "KE03ER16_Disassembly_A_003_front",
+        "KE03ER16_Disassembly_A_004_front",
+        "ER10WE06_Disassembly_A_001_front",
+        "ER10WE06_Disassembly_A_002_front",
+        "ER07AD15_Disassembly_A_001_front",
+        "ER07AD15_Disassembly_A_002_front",
+        "ER07AD15_Disassembly_A_003_front",
+        "ER07AD15_Disassembly_A_004_front",
+        "LE07UF17_Disassembly_A_001_front",
+        "LE07UF17_Disassembly_A_002_front",
+        "LE07UF17_Disassembly_A_003_front",
+        "LE07UF17_Disassembly_A_004_front",
+        "KI03AR28_Disassembly_A_001_front",
+        "KI03AR28_Disassembly_A_002_front",
+        "KI03AR28_Disassembly_A_003_front",
+        "KI03AR28_Disassembly_A_004_front",
+        "KJ03JM25_Disassembly_A_003_front",
+        "KJ03JM25_Disassembly_A_004_front",
+        "NA07GE21_Disassembly_A_001_front",
+        "NA07GE21_Disassembly_A_002_front",
+        "NA07GE21_Disassembly_A_004_front",
+        "AL07EJ17_Disassembly_A_001_front",
+        "AL07EJ17_Disassembly_A_002_front",
+        "AL07EJ17_Disassembly_A_003_front",
+        "AL07EJ17_Disassembly_A_004_front",
+        "MA07LF04_Disassembly_A_003_front",
+        "MA07LF04_Disassembly_A_004_front",
+        "KI05KO01_Disassembly_A_001_front",
+        "KI05KO01_Disassembly_A_002_front",
+        "KI05KO01_Disassembly_A_003_front",
+        "KI05KO01_Disassembly_A_004_front"
+      ],
+      "val": [
+        "LE06AS03_Disassembly_A_001_front",
+        "MA07LF04_Disassembly_A_001_front",
+        "ER10WE06_Disassembly_A_003_front",
+        "NA07GE21_Disassembly_A_003_front",
+        "ER10WE06_Disassembly_A_004_front"
+      ],
+      "test": [
+        "SS07EL13_Disassembly_A_001_front",
+        "SS07EL13_Disassembly_A_002_front",
+        "SS07EL13_Disassembly_A_003_front",
+        "SS07EL13_Disassembly_A_004_front"
+      ]
+    },
+    "counts": {
+      "train": 39,
+      "val": 5,
+      "test": 4
+    },
+    "worker_counts": {
+      "train": 12,
+      "val": 4,
+      "test": 1
+    },
+    "worker_ids": {
+      "train": [
+        "AL07EJ17",
+        "ER07AD15",
+        "ER10WE06",
+        "KE03ER16",
+        "KI03AR28",
+        "KI05KO01",
+        "KJ03JM25",
+        "LE06AS03",
+        "LE07UF17",
+        "MA07LF04",
+        "NA07GE21",
+        "TO08CO25"
+      ],
+      "val": [
+        "ER10WE06",
+        "LE06AS03",
+        "MA07LF04",
+        "NA07GE21"
+      ],
+      "test": [
+        "SS07EL13"
+      ]
+    },
+    "execution_overlap": {
+      "train_val": [],
+      "train_test": [],
+      "val_test": []
+    },
+    "worker_overlap": {
+      "train_val": [
+        "ER10WE06",
+        "LE06AS03",
+        "MA07LF04",
+        "NA07GE21"
+      ],
+      "train_test": [],
+      "val_test": []
+    },
+    "cross_worker_test": true
+  },
+  "front_view_annotation_files": 112,
+  "annotation_qa": {
+    "PASS": 112
+  },
+  "disposition": {
+    "KEEP": 48,
+    "EXCLUDE": 64
+  },
+  "local_video_status": {
+    "AVAILABLE": 3,
+    "MISSING_LOCAL_VIDEO": 109
+  },
+  "selected_action_label_frames": {
+    "NULL": 38873,
+    "START_ANGLE_GRINDER_ASSEMBLY": 3617,
+    "UNSCREW_ANTI_VIBRATION_HANDLE": 9247,
+    "STORE_ANTI_VIBRATION_HANDLE": 2378,
+    "REMOVE_LOCKING_LEVER_ASSEMBLY": 26239,
+    "STORE_LOCKING_LEVER_ASSEMBLY": 7158,
+    "EXTRACT_BEARING_PLATE_ASSEMBLY": 63677,
+    "STORE_BEARING_PLATE_ASSEMBLY": 6524,
+    "DETACH_ADAPTER_PLATE": 61763,
+    "REMOVE_ROTOR_ASSEMBLY": 63350,
+    "STORE_ROTOR_ASSEMBLY": 5142,
+    "STORE_GEARBOX_HOUSING": 1967,
+    "STORE_ADAPTER_PLATE": 8252,
+    "STORE_TOOL": 3927,
+    "INSTALL_ROTOR_ASSEMBLY": 84,
+    "RETRIEVE_LOCKING_LEVER_ASSEMBLY": 115,
+    "RETRIEVE_BEARING_PLATE_ASSEMBLY": 31,
+    "ATTACH_ADAPTER_PLATE": 744
+  },
+  "all_front_action_label_frames": {
+    "NULL": 122422,
+    "START_ANGLE_GRINDER_ASSEMBLY": 4399,
+    "UNSCREW_ANTI_VIBRATION_HANDLE": 11084,
+    "STORE_ANTI_VIBRATION_HANDLE": 2864,
+    "REMOVE_LOCKING_LEVER_ASSEMBLY": 30305,
+    "STORE_LOCKING_LEVER_ASSEMBLY": 7158,
+    "EXTRACT_BEARING_PLATE_ASSEMBLY": 92290,
+    "STORE_BEARING_PLATE_ASSEMBLY": 8008,
+    "DETACH_ADAPTER_PLATE": 77010,
+    "REMOVE_ROTOR_ASSEMBLY": 75224,
+    "STORE_ROTOR_ASSEMBLY": 6033,
+    "STORE_GEARBOX_HOUSING": 2852,
+    "STORE_ADAPTER_PLATE": 9319,
+    "STORE_TOOL": 9531,
+    "RETRIEVE_GEARBOX_HOUSING": 2980,
+    "RETRIEVE_ROTOR_ASSEMBLY": 7750,
+    "INSTALL_ROTOR_ASSEMBLY": 98244,
+    "ATTACH_ADAPTER_PLATE": 89594,
+    "RETRIEVE_ADAPTER_PLATE": 12730,
+    "RETRIEVE_ANTI_VIBRATION_HANDLE": 2503,
+    "RETRIEVE_BEARING_PLATE_ASSEMBLY": 8068,
+    "INSERT_BEARING_PLATE_ASSEMBLY": 98695,
+    "RETRIEVE_LOCKING_LEVER_ASSEMBLY": 8819,
+    "INSTALL_LOCKING_LEVER_ASSEMBLY": 51245,
+    "SCREW_ON_ANTI_VIBRATION_HANDLE": 15573,
+    "FINISH_ANGLE_GRINDER_ASSEMBLY": 3292
+  },
+  "ppr_annotation_qa": {
+    "PASS_train_L": 39,
+    "PASS_train_R": 39,
+    "PASS_val_L": 5,
+    "PASS_val_R": 5,
+    "PASS_test_L": 4,
+    "PASS_test_R": 4
+  },
+  "ppr_state_frame_counts_by_split_and_hand": {
+    "train": {
+      "L": {
+        "NORMAL": 209556,
+        "RECOVERY": 1519,
+        "ANOMALY": 16572
+      },
+      "R": {
+        "NORMAL": 202201,
+        "ANOMALY": 23608,
+        "RECOVERY": 1838
+      }
+    },
+    "val": {
+      "L": {
+        "NORMAL": 45085,
+        "ANOMALY": 10551,
+        "RECOVERY": 1527
+      },
+      "R": {
+        "NORMAL": 38734,
+        "ANOMALY": 17563,
+        "RECOVERY": 866
+      }
+    },
+    "test": {
+      "L": {
+        "NORMAL": 17604,
+        "ANOMALY": 674
+      },
+      "R": {
+        "NORMAL": 14207,
+        "ANOMALY": 4071
+      }
+    }
+  },
+  "ppr_evaluation_boundary": "PPR ground truth is present per hand (NORMAL/ANOMALY/RECOVERY), but no CP01.1 model predicts that target and it is not equivalent to action-workflow violation labels. Workflow anomaly metrics remain NOT EVALUATED.",
+  "gt_timeline_svgs": [
+    "C:\\Users\\longn\\PyCharmMiscProject\\HumanActionRecognition\\results\\cp01_1\\ground_truth\\ER10WE06_Disassembly_A_003_front.svg",
+    "C:\\Users\\longn\\PyCharmMiscProject\\HumanActionRecognition\\results\\cp01_1\\ground_truth\\SS07EL13_Disassembly_A_001_front.svg",
+    "C:\\Users\\longn\\PyCharmMiscProject\\HumanActionRecognition\\results\\cp01_1\\ground_truth\\SS07EL13_Disassembly_A_002_front.svg",
+    "C:\\Users\\longn\\PyCharmMiscProject\\HumanActionRecognition\\results\\cp01_1\\ground_truth\\SS07EL13_Disassembly_A_003_front.svg",
+    "C:\\Users\\longn\\PyCharmMiscProject\\HumanActionRecognition\\results\\cp01_1\\ground_truth\\SS07EL13_Disassembly_A_004_front.svg"
+  ],
+  "process_owner_review_required": "Action ordering/optional/rework semantics and duration tolerances are not inferred from observed TAS-S sequences; see HUMAN_HANDOFF.md."
+}

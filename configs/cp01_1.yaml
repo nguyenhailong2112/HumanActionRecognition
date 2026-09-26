@@ -1,0 +1,90 @@
+experiment_id: EXP-CP01.1
+seed: 17
+
+dataset:
+  source: impact_official_release
+  name: IMPACT
+  version: v1.1
+  annotation_archive: data/raw/impact/v1.1/annotations/IMPACT-v1.1-annotations.zip
+  feature_archive: data/raw/impact/v1.1/features/IMPACT-v1.1-features-I3D.zip
+  # Fallbacks: full official extraction and bundled quick-start sample.
+  feature_roots:
+    - data/processed/impact/v1.1/IMPACT-v1.1/features
+    - data/processed/impact/v1.1/IMPACT-v1.1/sample/features
+  feature_name: I3D
+  feature_dimension: 1024
+  # Released I3D is frame aligned at the source video rate (30 FPS).
+  sample_fps: 5.0
+  view: front
+  video_root: data/processed/impact/v1.1/IMPACT-v1.1/sample/videos
+  official_split:
+    name: IMPACT TAS-S S2 (cross-subject)
+    split_dir: ResearchDocuments/01_IMPACT/code/IMPACT/dataset/TAS/splits_TAS-S
+    split_id: 2
+    procedure: Disassembly_A
+    view: front
+    require_cross_worker_test: true
+
+actions:
+  background: "NULL"
+  # Procedure-scoped official TAS-S labels observed in all 48 Disassembly A
+  # front-view annotations, normalized to uppercase. Preserve component steps.
+  class_order:
+    - "NULL"
+    - START_ANGLE_GRINDER_ASSEMBLY
+    - UNSCREW_ANTI_VIBRATION_HANDLE
+    - STORE_ANTI_VIBRATION_HANDLE
+    - REMOVE_LOCKING_LEVER_ASSEMBLY
+    - STORE_LOCKING_LEVER_ASSEMBLY
+    - EXTRACT_BEARING_PLATE_ASSEMBLY
+    - STORE_BEARING_PLATE_ASSEMBLY
+    - DETACH_ADAPTER_PLATE
+    - REMOVE_ROTOR_ASSEMBLY
+    - STORE_ROTOR_ASSEMBLY
+    - STORE_GEARBOX_HOUSING
+    - STORE_ADAPTER_PLATE
+    - INSTALL_ROTOR_ASSEMBLY
+    - ATTACH_ADAPTER_PLATE
+    - RETRIEVE_BEARING_PLATE_ASSEMBLY
+    - RETRIEVE_LOCKING_LEVER_ASSEMBLY
+    - STORE_TOOL
+
+features:
+  image_size: 8
+  difference_size: 8
+  normalize: true
+
+temporal:
+  smoothing_window: 5
+  min_segment_seconds: 0.4
+
+model:
+  input_dim: 1024
+  hidden_dim: 32
+  layers: 5
+  stages: 3
+  dropout: 0.2
+  epochs: 12
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  batch_windows: 1
+  seed: 17
+  checkpoint: models/cp01_1_mstcn.pt
+  baseline_checkpoint: models/cp01_1_framewise.pt
+
+workflow:
+  id: angle_grinder_disassembly_A
+  version: awaiting-process-owner-confirmation
+  enabled: false
+  status: HUMAN_REVIEW_REQUIRED
+  handoff: HUMAN_HANDOFF.md
+
+evidence:
+  output_dir: results/cp01_1
+  context_seconds: 2.0
+  save_clip: true
+  clip_fps: 10
+
+runtime:
+  device: cpu
+  log_level: INFO

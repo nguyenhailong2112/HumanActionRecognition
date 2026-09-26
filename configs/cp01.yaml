@@ -1,0 +1,108 @@
+experiment_id: EXP-CP01
+seed: 17
+
+dataset:
+  name: IMPACT
+  version: v1.1
+  root: data/processed/impact/v1.1/IMPACT-v1.1/sample
+  view: front
+  sample_fps: 5.0
+  cache_dir: data/processed/features/cp01
+  # Pilot split uses three complete quick-start trials. It is for pipeline validation,
+  # not a statistically reliable benchmark. Trial IDs remain disjoint.
+  splits:
+    train:
+      - AL07EJ17_Disassembly_A_001_front
+    val:
+      - AL07EJ17_Reassembly_A_002_front
+    test:
+      - ER07AD15_Disassembly_A_001_front
+  source_annotation_dir: ResearchDocuments/01_IMPACT/code/IMPACT/dataset/TAS/groundTruth_TAS-S
+  source_mapping: ResearchDocuments/01_IMPACT/code/IMPACT/dataset/TAS/mapping_TAS-S.txt
+  annotation_mapping: annotations/TAS-S/mapping_TAS-S.txt
+  annotation_dir: annotations/TAS-S/groundTruth_TAS-S
+
+actions:
+  background: "NULL"
+  # 7 action classes selected from IMPACT TAS-S; the mapping preserves coarse
+  # operation semantics while using the official step-level temporal labels.
+  source_to_action:
+    START_ANGLE_GRINDER_ASSEMBLY: START
+    UNSCREW_ANTI_VIBRATION_HANDLE: REMOVE
+    REMOVE_LOCKING_LEVER_ASSEMBLY: REMOVE
+    EXTRACT_BEARING_PLATE_ASSEMBLY: REMOVE
+    DETACH_ADAPTER_PLATE: REMOVE
+    REMOVE_ROTOR_ASSEMBLY: REMOVE
+    STORE_ANTI_VIBRATION_HANDLE: STORE
+    STORE_LOCKING_LEVER_ASSEMBLY: STORE
+    STORE_BEARING_PLATE_ASSEMBLY: STORE
+    STORE_ROTOR_ASSEMBLY: STORE
+    STORE_GEARBOX_HOUSING: STORE
+    STORE_ADAPTER_PLATE: STORE
+    STORE_TOOL: STORE
+    RETRIEVE_GEARBOX_HOUSING: RETRIEVE
+    RETRIEVE_ROTOR_ASSEMBLY: RETRIEVE
+    RETRIEVE_ADAPTER_PLATE: RETRIEVE
+    RETRIEVE_ANTI_VIBRATION_HANDLE: RETRIEVE
+    RETRIEVE_BEARING_PLATE_ASSEMBLY: RETRIEVE
+    RETRIEVE_LOCKING_LEVER_ASSEMBLY: RETRIEVE
+    INSTALL_ROTOR_ASSEMBLY: INSTALL
+    INSERT_BEARING_PLATE_ASSEMBLY: INSTALL
+    INSTALL_LOCKING_LEVER_ASSEMBLY: INSTALL
+    SCREW_ON_ANTI_VIBRATION_HANDLE: INSTALL
+    ATTACH_ADAPTER_PLATE: ATTACH
+    FINISH_ANGLE_GRINDER_ASSEMBLY: FINISH
+  class_order: ["NULL", START, REMOVE, STORE, RETRIEVE, INSTALL, ATTACH, FINISH]
+
+features:
+  image_size: 8
+  difference_size: 8
+  normalize: true
+
+temporal:
+  smoothing_window: 5
+  min_segment_seconds: 0.4
+
+model:
+  input_dim: 283
+  hidden_dim: 32
+  layers: 5
+  stages: 3
+  dropout: 0.2
+  epochs: 12
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  batch_windows: 1
+  seed: 17
+  checkpoint: models/cp01_mstcn.pt
+  baseline_checkpoint: models/cp01_framewise.pt
+
+workflow:
+  id: angle_grinder_A
+  version: cp01-v1
+  worker_id: W1
+  # Variants are deliberately limited to the two procedure modes present in
+  # the quick-start sample. Use the same source label mapping as the model.
+  duration_limits_seconds:
+    START: {min: 0.5, max: 60.0}
+    REMOVE: {min: 0.4, max: 90.0}
+    STORE: {min: 0.4, max: 45.0}
+    RETRIEVE: {min: 0.4, max: 45.0}
+    INSTALL: {min: 0.4, max: 90.0}
+    ATTACH: {min: 0.4, max: 60.0}
+    FINISH: {min: 0.5, max: 60.0}
+  valid_paths:
+    - id: disassembly_A
+      steps: [START, REMOVE, STORE, REMOVE, STORE, REMOVE, STORE, REMOVE, STORE, FINISH]
+    - id: reassembly_A
+      steps: [START, RETRIEVE, INSTALL, ATTACH, RETRIEVE, INSTALL, RETRIEVE, INSTALL, FINISH]
+
+evidence:
+  output_dir: results/cp01
+  context_seconds: 2.0
+  save_clip: true
+  clip_fps: 10
+
+runtime:
+  device: cpu
+  log_level: INFO
