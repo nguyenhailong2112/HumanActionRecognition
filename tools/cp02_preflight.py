@@ -17,6 +17,7 @@ from human_action.impact_release import (  # noqa: E402
     annotation_member,
     audit_release_annotation,
     feature_member,
+    parse_tas_s_annotation,
     validate_official_split_integrity,
 )
 
@@ -25,6 +26,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Audit CP02 IMPACT annotation, split, feature, and local video readiness.")
     parser.add_argument("--config", default="configs/cp01_1.yaml")
     parser.add_argument("--output", default="experiments/CP02/data_readiness.json")
+    parser.add_argument("--skip-video-audit", action="store_true", help="Skip full local video decoding; feature/annotation readiness is unchanged.")
     args = parser.parse_args()
     config_path = (PROJECT_ROOT / args.config).resolve()
     config = yaml.safe_load(config_path.read_text(encoding="utf-8"))
@@ -35,8 +37,12 @@ def main() -> None:
         split_dir, int(protocol["split_id"]), protocol["procedure"], protocol["view"],
         bool(protocol.get("require_cross_worker_test", False)),
     )
-    annotation_path = PROJECT_ROOT / dataset["annotation_archive"]
-    feature_path = PROJECT_ROOT / dataset["feature_archive"]
+    annotation_value = dataset.get("annotation_archive")
+    annotation_path = PROJECT_ROOT / annotation_value if annotation_value else None
+    annotation_root_value = dataset.get("annotation_root")
+    annotation_root = PROJECT_ROOT / annotation_root_value if annotation_root_value else None
+    feature_value = dataset.get("feature_archive")
+    feature_path = PROJECT_ROOT / feature_value if feature_value else None
     feature_roots = [PROJECT_ROOT / value for value in dataset.get("feature_roots", [])]
     video_roots = [PROJECT_ROOT / value for value in dataset.get("video_roots", [])]
     if dataset.get("video_root"):
@@ -48,25 +54,35 @@ def main() -> None:
         "procedure": protocol["procedure"],
         "view": protocol["view"],
         "split": split_report,
-        "annotation_archive": str(annotation_path),
-        "feature_archive": {"path": str(feature_path), "present": feature_path.is_file()},
+        "annotation_archive": str(annotation_path) if annotation_path else None,
+        "annotation_root": str(annotation_root) if annotation_root else None,
+        "feature_archive": {"path": str(feature_path) if feature_path else None, "present": bool(feature_path and feature_path.is_file())},
         "annotation_qa": {"checked": 0, "passed": 0, "failed": [], "metadata": {}},
-        "feature_qa": {"expected": 0, "present": 0, "passed": 0, "missing": [], "invalid": []},
+        "feature_qa": {"expected": 0, "present": 0, "passed": 0, "missing": [], "invalid": [], "metadata": {}},
         "video_qa": {"expected": 0, "present": 0, "metadata": [], "missing": []},
     }
     ids = [video_id for values in split_report["video_ids"].values() for video_id in values]
     annotation_metadata = {}
     report["annotation_qa"]["checked"] = len(ids)
     try:
-        with ZipFile(annotation_path) as annotation_zip:
-            for video_id in ids:
-                try:
+        annotation_zip = ZipFile(annotation_path) if annotation_path and annotation_path.is_file() else None
+        for video_id in ids:
+            try:
+                if annotation_zip:
                     annotation_metadata[video_id] = audit_release_annotation(annotation_zip, video_id, protocol["view"], class_order)
-                    report["annotation_qa"]["metadata"][video_id] = annotation_metadata[video_id]
-                    report["annotation_qa"]["passed"] += 1
-                except Exception as exc:
-                    report["annotation_qa"]["failed"].append({"video_id": video_id, "error": str(exc)})
-            feature_zip = ZipFile(feature_path) if feature_path.is_file() else None
+                elif annotation_root:
+                    path = annotation_root / "TAS-S" / protocol["view"] / f"{video_id}.json"
+                    labels, metadata = parse_tas_s_annotation(path.read_bytes(), video_id, class_order)
+                    metadata["label_frame_counts"] = {class_order[index]: int(count) for index, count in enumerate(np.bincount(labels, minlength=len(class_order))) if count}
+                    annotation_metadata[video_id] = metadata
+                else:
+                    raise FileNotFoundError("Configure annotation_archive or annotation_root")
+                report["annotation_qa"]["metadata"][video_id] = annotation_metadata[video_id]
+                report["annotation_qa"]["passed"] += 1
+            except Exception as exc:
+                report["annotation_qa"]["failed"].append({"video_id": video_id, "error": str(exc)})
+        if annotation_zip:
+            feature_zip = ZipFile(feature_path) if feature_path and feature_path.is_file() else None
             feature_members = set(feature_zip.namelist()) if feature_zip is not None else set()
             try:
                 for video_id in ids:
@@ -92,27 +108,74 @@ def main() -> None:
                         report["feature_qa"]["invalid"].append({"video_id": video_id, "error": str(exc)})
                         continue
                     report["feature_qa"]["present"] += 1
-                    annotation = annotation_zip.read(annotation_member(video_id, protocol["view"]))
+                    if annotation_zip:
+                        annotation = annotation_zip.read(annotation_member(video_id, protocol["view"]))
+                    else:
+                        annotation = (annotation_root / "TAS-S" / protocol["view"] / f"{video_id}.json").read_bytes()
                     metadata = json.loads(annotation)["meta_data"]
                     shape_ok = features.shape == (int(metadata["num_frames"]), int(dataset["feature_dimension"]))
                     finite_ok = bool(np.isfinite(features).all())
-                    if shape_ok and finite_ok:
+                    dtype_ok = features.dtype == np.float32
+                    report["feature_qa"]["metadata"][video_id] = {
+                        "path": str(feature_file) if feature_file else member,
+                        "video_id": video_id,
+                        "split": next(name for name, values in split_report["video_ids"].items() if video_id in values),
+                        "shape": list(features.shape),
+                        "dtype": str(features.dtype),
+                        "expected_shape": [int(metadata["num_frames"]), int(dataset["feature_dimension"])],
+                    }
+                    if shape_ok and finite_ok and dtype_ok:
                         report["feature_qa"]["passed"] += 1
                     else:
                         report["feature_qa"]["invalid"].append({
                             "video_id": video_id, "shape": list(features.shape),
                             "expected": [int(metadata["num_frames"]), int(dataset["feature_dimension"])],
-                            "finite": finite_ok,
+                            "dtype": str(features.dtype), "expected_dtype": "float32", "finite": finite_ok,
                         })
                 if feature_zip is not None:
                     feature_zip.close()
             finally:
                 if feature_zip is not None and feature_zip.fp is not None:
                     feature_zip.close()
+        else:
+            for video_id in ids:
+                report["feature_qa"]["expected"] += 1
+                feature_file = next((root / dataset.get("feature_name", "I3D") / f"{video_id}.npy" for root in feature_roots if (root / dataset.get("feature_name", "I3D") / f"{video_id}.npy").is_file()), None)
+                if feature_file is None:
+                    report["feature_qa"]["missing"].append(video_id)
+                    continue
+                try:
+                    features = np.load(feature_file, allow_pickle=False, mmap_mode="r")
+                    report["feature_qa"]["present"] += 1
+                    metadata = annotation_metadata[video_id]
+                    shape_ok = features.shape == (int(metadata["frame_count"]), int(dataset["feature_dimension"]))
+                    finite_ok = all(
+                        bool(np.isfinite(features[start:start + 256]).all())
+                        for start in range(0, features.shape[0], 256)
+                    )
+                    dtype_ok = features.dtype == np.float32
+                    report["feature_qa"]["metadata"][video_id] = {
+                        "path": str(feature_file),
+                        "video_id": video_id,
+                        "split": next(name for name, values in split_report["video_ids"].items() if video_id in values),
+                        "shape": list(features.shape),
+                        "dtype": str(features.dtype),
+                        "expected_shape": [int(metadata["frame_count"]), int(dataset["feature_dimension"])],
+                    }
+                    if shape_ok and finite_ok and dtype_ok:
+                        report["feature_qa"]["passed"] += 1
+                    else:
+                        report["feature_qa"]["invalid"].append({"video_id": video_id, "shape": list(features.shape), "expected": [int(metadata["frame_count"]), int(dataset["feature_dimension"])], "dtype": str(features.dtype), "expected_dtype": "float32", "finite": finite_ok})
+                except Exception as exc:
+                    report["feature_qa"]["invalid"].append({"video_id": video_id, "error": str(exc)})
+        if annotation_zip:
+            annotation_zip.close()
     except Exception as exc:
         report["annotation_qa"]["failed"].append({"archive_error": str(exc)})
 
     try:
+        if args.skip_video_audit:
+            raise ImportError("video audit skipped by request")
         import cv2
         for video_id in ids:
             report["video_qa"]["expected"] += 1
@@ -161,7 +224,7 @@ def main() -> None:
         "split": "PASS",
         "annotations": "PASS" if report["annotation_qa"]["passed"] == len(ids) else "FAIL",
         "features": "PASS" if report["feature_qa"]["passed"] == len(ids) else "INCOMPLETE",
-        "videos": "PASS" if report["video_qa"]["present"] == len(ids) else "INCOMPLETE",
+        "videos": "SKIPPED" if args.skip_video_audit else ("PASS" if report["video_qa"]["present"] == len(ids) else "INCOMPLETE"),
     }
     output = PROJECT_ROOT / args.output
     output.parent.mkdir(parents=True, exist_ok=True)

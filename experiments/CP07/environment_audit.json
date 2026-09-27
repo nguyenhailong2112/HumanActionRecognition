@@ -1,0 +1,21 @@
+{
+  "verified_at": "2026-09-27",
+  "machine_role": "primary implementation PC",
+  "os": "Windows 11 (10.0.26200)",
+  "python": "3.12.14",
+  "numpy": "2.5.3",
+  "opencv": "4.14.0",
+  "pyyaml": "6.0.3",
+  "pytorch": "2.14.0+cu132",
+  "pytorch_cuda_build": "13.2",
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce RTX 5060 Ti",
+  "gpu_memory_mib_reported_by_torch": 16311,
+  "driver_reported_by_nvidia_smi": "596.21",
+  "torchvision": null,
+  "notes": [
+    "Environment values were queried from .venv-cp05 and nvidia-smi during CP07 system audit.",
+    "requirements.txt uses broad version ranges; this snapshot is not a dependency lockfile.",
+    "CPU utilization, peak GPU memory during baseline training, and streaming throughput are not recorded here."
+  ]
+}

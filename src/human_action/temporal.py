@@ -91,8 +91,9 @@ def decode_segments(labels: np.ndarray, probabilities: np.ndarray, class_order: 
     return segments
 
 
-def to_action_events(segments: list[ActionSegment], worker_id: str, video_id: str, background: str = "NULL") -> list[ActionEvent]:
+def to_action_events(segments: list[ActionSegment], worker_id: str, video_id: str, background: str = "NULL", view: str = "") -> list[ActionEvent]:
     return [
-        ActionEvent(worker_id, s.action, s.start_time, s.end_time, s.duration, s.confidence, video_id, s.start_frame, s.end_frame)
+        ActionEvent(worker_id, s.action, s.start_time, s.end_time, s.duration, s.confidence, video_id, s.start_frame, s.end_frame,
+                    view=view, event_id=f"{video_id}:{s.start_frame}-{s.end_frame}:{s.action}")
         for s in segments if s.action != background
     ]

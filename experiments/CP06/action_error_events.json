@@ -1,0 +1,3259 @@
+{
+  "scope": "held-out test; raw frame predictions against TAS-S labels",
+  "errors": [
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00583",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 116.5999984741211,
+      "time_end_seconds": 133.0,
+      "gt_action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.9459129503692489,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 83
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00671",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 134.1999969482422,
+      "time_end_seconds": 149.0,
+      "gt_action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.9327222176392873,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 75
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00012",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 2.4000000953674316,
+      "time_end_seconds": 13.600000381469727,
+      "gt_action": "NULL",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.8134708608451643,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 57
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00279",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 55.79999923706055,
+      "time_end_seconds": 66.4000015258789,
+      "gt_action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.9264498054981232,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 54
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00156",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 31.200000762939453,
+      "time_end_seconds": 40.20000076293945,
+      "gt_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "predicted_action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion"
+      ],
+      "mean_predicted_class_probability": 0.7674829162981199,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 46
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00074",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 14.800000190734863,
+      "time_end_seconds": 23.200000762939453,
+      "gt_action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.87766040757645,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 43
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00757",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 151.39999389648438,
+      "time_end_seconds": 159.60000610351562,
+      "gt_action": "NULL",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.9636008512406122,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 42
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00363",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 72.5999984741211,
+      "time_end_seconds": 80.4000015258789,
+      "gt_action": "REMOVE_ROTOR_ASSEMBLY",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.7033867448568344,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 40
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00333",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 66.5999984741211,
+      "time_end_seconds": 73.0,
+      "gt_action": "NULL",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.8438942730426788,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 33
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00394",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 78.80000305175781,
+      "time_end_seconds": 83.80000305175781,
+      "gt_action": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.5971872577300439,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 26
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00300",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 60.0,
+      "time_end_seconds": 64.80000305175781,
+      "gt_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.866336487531662,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 25
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00996",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 199.1999969482422,
+      "time_end_seconds": 203.60000610351562,
+      "gt_action": "REMOVE_ROTOR_ASSEMBLY",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.7752660020537998,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 23
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00266",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 53.20000076293945,
+      "time_end_seconds": 57.599998474121094,
+      "gt_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "predicted_action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion"
+      ],
+      "mean_predicted_class_probability": 0.5402260966922926,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 23
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00975",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 195.0,
+      "time_end_seconds": 199.0,
+      "gt_action": "NULL",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.8702532762572879,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 21
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e01031",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 206.1999969482422,
+      "time_end_seconds": 210.0,
+      "gt_action": "NULL",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.6844561502337456,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 20
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00050",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 10.0,
+      "time_end_seconds": 13.800000190734863,
+      "gt_action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.5019689083099366,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 20
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00940",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 188.0,
+      "time_end_seconds": 191.8000030517578,
+      "gt_action": "REMOVE_ROTOR_ASSEMBLY",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.4198962926864624,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 20
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00851",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 170.1999969482422,
+      "time_end_seconds": 173.8000030517578,
+      "gt_action": "NULL",
+      "predicted_action": "REMOVE_ROTOR_ASSEMBLY",
+      "error_category": "NULL/background leakage",
+      "diagnostic_tags": [
+        "NULL/background leakage"
+      ],
+      "mean_predicted_class_probability": 0.5133234199724699,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 19
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00170",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 34.0,
+      "time_end_seconds": 37.400001525878906,
+      "gt_action": "NULL",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.8389723433388604,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 18
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00823",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 164.60000610351562,
+      "time_end_seconds": 168.0,
+      "gt_action": "NULL",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.6391014953454336,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 18
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00090",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 18.0,
+      "time_end_seconds": 21.399999618530273,
+      "gt_action": "NULL",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.45320775939358604,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 18
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00633",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 126.5999984741211,
+      "time_end_seconds": 129.8000030517578,
+      "gt_action": "NULL",
+      "predicted_action": "STORE_ROTOR_ASSEMBLY",
+      "error_category": "NULL/background leakage",
+      "diagnostic_tags": [
+        "NULL/background leakage"
+      ],
+      "mean_predicted_class_probability": 0.382145552074208,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 17
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00114",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 22.799999237060547,
+      "time_end_seconds": 25.799999237060547,
+      "gt_action": "UNSCREW_ANTI_VIBRATION_HANDLE",
+      "predicted_action": "NULL",
+      "error_category": "rare-class failure",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.3861049860715866,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 16
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00120",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 24.0,
+      "time_end_seconds": 26.799999237060547,
+      "gt_action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.836139194170634,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 15
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00960",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 192.0,
+      "time_end_seconds": 194.8000030517578,
+      "gt_action": "REMOVE_ROTOR_ASSEMBLY",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.6450194915135702,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 15
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e01087",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 217.39999389648438,
+      "time_end_seconds": 220.1999969482422,
+      "gt_action": "NULL",
+      "predicted_action": "REMOVE_ROTOR_ASSEMBLY",
+      "error_category": "NULL/background leakage",
+      "diagnostic_tags": [
+        "NULL/background leakage"
+      ],
+      "mean_predicted_class_probability": 0.5459401845932007,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 15
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00420",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 84.0,
+      "time_end_seconds": 86.80000305175781,
+      "gt_action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.5222572684288025,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 15
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00141",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 28.200000762939453,
+      "time_end_seconds": 30.799999237060547,
+      "gt_action": "STORE_ANTI_VIBRATION_HANDLE",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.4875648979629789,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 14
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00660",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 132.0,
+      "time_end_seconds": 134.60000610351562,
+      "gt_action": "STORE_TOOL",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.4283581737961088,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 14
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00580",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 116.0,
+      "time_end_seconds": 118.4000015258789,
+      "gt_action": "DETACH_ADAPTER_PLATE",
+      "predicted_action": "REMOVE_ROTOR_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.755091694685129,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 13
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00535",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 107.0,
+      "time_end_seconds": 109.4000015258789,
+      "gt_action": "NULL",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.6866394212612739,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 13
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00012",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 2.4000000953674316,
+      "time_end_seconds": 4.599999904632568,
+      "gt_action": "UNSCREW_ANTI_VIBRATION_HANDLE",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.5167968521515528,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 12
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e01069",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 213.8000030517578,
+      "time_end_seconds": 215.8000030517578,
+      "gt_action": "STORE_ADAPTER_PLATE",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.39704784750938416,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 11
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00799",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 159.8000030517578,
+      "time_end_seconds": 161.60000610351562,
+      "gt_action": "STORE_ADAPTER_PLATE",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.8381114780902863,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 10
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00565",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 113.0,
+      "time_end_seconds": 114.80000305175781,
+      "gt_action": "REMOVE_ROTOR_ASSEMBLY",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.4127741605043411,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 10
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e01106",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 221.1999969482422,
+      "time_end_seconds": 223.0,
+      "gt_action": "NULL",
+      "predicted_action": "STORE_ROTOR_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.41201740205287934,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 10
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00000",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 0.0,
+      "time_end_seconds": 1.7999999523162842,
+      "gt_action": "START_ANGLE_GRINDER_ASSEMBLY",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.3502050846815109,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 10
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00289",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 57.79999923706055,
+      "time_end_seconds": 59.599998474121094,
+      "gt_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "predicted_action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion"
+      ],
+      "mean_predicted_class_probability": 0.2780643656849861,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 10
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00748",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 149.60000610351562,
+      "time_end_seconds": 151.1999969482422,
+      "gt_action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.9384513099988302,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 9
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00008",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 1.600000023841858,
+      "time_end_seconds": 3.200000047683716,
+      "gt_action": "UNSCREW_ANTI_VIBRATION_HANDLE",
+      "predicted_action": "START_ANGLE_GRINDER_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.7222514450550079,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 9
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00574",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 114.80000305175781,
+      "time_end_seconds": 116.4000015258789,
+      "gt_action": "NULL",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.5600079331133101,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 9
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00560",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 112.0,
+      "time_end_seconds": 113.5999984741211,
+      "gt_action": "STORE_ADAPTER_PLATE",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.48922375175688004,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 9
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00366",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 73.19999694824219,
+      "time_end_seconds": 74.80000305175781,
+      "gt_action": "NULL",
+      "predicted_action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "error_category": "NULL/background leakage",
+      "diagnostic_tags": [
+        "NULL/background leakage"
+      ],
+      "mean_predicted_class_probability": 0.4544167419274648,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 9
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e01051",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 210.1999969482422,
+      "time_end_seconds": 211.8000030517578,
+      "gt_action": "NULL",
+      "predicted_action": "STORE_ADAPTER_PLATE",
+      "error_category": "NULL/background leakage",
+      "diagnostic_tags": [
+        "NULL/background leakage"
+      ],
+      "mean_predicted_class_probability": 0.4490170412593418,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 9
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00928",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 185.60000610351562,
+      "time_end_seconds": 187.1999969482422,
+      "gt_action": "STORE_ROTOR_ASSEMBLY",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.4056289825174544,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 9
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00842",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 168.39999389648438,
+      "time_end_seconds": 170.0,
+      "gt_action": "NULL",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "NULL/background leakage",
+      "diagnostic_tags": [
+        "NULL/background leakage"
+      ],
+      "mean_predicted_class_probability": 0.32744878861639237,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 9
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00032",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 6.400000095367432,
+      "time_end_seconds": 7.800000190734863,
+      "gt_action": "STORE_ANTI_VIBRATION_HANDLE",
+      "predicted_action": "UNSCREW_ANTI_VIBRATION_HANDLE",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.8491219207644463,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 8
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00476",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 95.19999694824219,
+      "time_end_seconds": 96.5999984741211,
+      "gt_action": "STORE_ADAPTER_PLATE",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.7500380799174309,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 8
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00121",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 24.200000762939453,
+      "time_end_seconds": 25.600000381469727,
+      "gt_action": "NULL",
+      "predicted_action": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.4897792488336563,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 8
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00581",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 116.19999694824219,
+      "time_end_seconds": 117.5999984741211,
+      "gt_action": "REMOVE_ROTOR_ASSEMBLY",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.4778226651251316,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 8
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e01019",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 203.8000030517578,
+      "time_end_seconds": 205.1999969482422,
+      "gt_action": "REMOVE_ROTOR_ASSEMBLY",
+      "predicted_action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.4381334148347378,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 8
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00464",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 92.80000305175781,
+      "time_end_seconds": 94.19999694824219,
+      "gt_action": "STORE_ADAPTER_PLATE",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.37114347517490387,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 8
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00139",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 27.799999237060547,
+      "time_end_seconds": 29.200000762939453,
+      "gt_action": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "predicted_action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.34090420603752136,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 8
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00041",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 8.199999809265137,
+      "time_end_seconds": 9.399999618530273,
+      "gt_action": "NULL",
+      "predicted_action": "STORE_ANTI_VIBRATION_HANDLE",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.6414498516491481,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 7
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00157",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 31.399999618530273,
+      "time_end_seconds": 32.599998474121094,
+      "gt_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "predicted_action": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.5754701708044324,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 7
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00272",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 54.400001525878906,
+      "time_end_seconds": 55.599998474121094,
+      "gt_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "predicted_action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.5683518350124359,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 7
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00340",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 68.0,
+      "time_end_seconds": 69.19999694824219,
+      "gt_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.5244707465171814,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 7
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00409",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 81.80000305175781,
+      "time_end_seconds": 83.0,
+      "gt_action": "DETACH_ADAPTER_PLATE",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.4877737888268062,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 7
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00435",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 87.0,
+      "time_end_seconds": 88.19999694824219,
+      "gt_action": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.4815069351877485,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 7
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00565",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 113.0,
+      "time_end_seconds": 114.19999694824219,
+      "gt_action": "STORE_ADAPTER_PLATE",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.42970725893974304,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 7
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00644",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 128.8000030517578,
+      "time_end_seconds": 130.0,
+      "gt_action": "NULL",
+      "predicted_action": "STORE_ROTOR_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.3852145033223288,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 7
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00156",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 31.200000762939453,
+      "time_end_seconds": 32.400001525878906,
+      "gt_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "predicted_action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.3529870467526572,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 7
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00472",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 94.4000015258789,
+      "time_end_seconds": 95.5999984741211,
+      "gt_action": "STORE_ADAPTER_PLATE",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.3307615986892155,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 7
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00537",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 107.4000015258789,
+      "time_end_seconds": 108.4000015258789,
+      "gt_action": "STORE_ADAPTER_PLATE",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.9207082589467367,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 6
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00603",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 120.5999984741211,
+      "time_end_seconds": 121.5999984741211,
+      "gt_action": "STORE_ROTOR_ASSEMBLY",
+      "predicted_action": "REMOVE_ROTOR_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.8920343716939291,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 6
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00447",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 89.4000015258789,
+      "time_end_seconds": 90.4000015258789,
+      "gt_action": "NULL",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.6113279908895493,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 6
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00554",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 110.80000305175781,
+      "time_end_seconds": 111.80000305175781,
+      "gt_action": "NULL",
+      "predicted_action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.45788933833440143,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 6
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00108",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 21.600000381469727,
+      "time_end_seconds": 22.600000381469727,
+      "gt_action": "UNSCREW_ANTI_VIBRATION_HANDLE",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.43965909878412884,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 6
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00554",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 110.80000305175781,
+      "time_end_seconds": 111.80000305175781,
+      "gt_action": "DETACH_ADAPTER_PLATE",
+      "predicted_action": "STORE_ADAPTER_PLATE",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.4077623685201009,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 6
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00043",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 8.600000381469727,
+      "time_end_seconds": 9.600000381469727,
+      "gt_action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.40389000872770947,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 6
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00913",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 182.60000610351562,
+      "time_end_seconds": 183.60000610351562,
+      "gt_action": "REMOVE_ROTOR_ASSEMBLY",
+      "predicted_action": "STORE_ROTOR_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.3957013338804245,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 6
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00558",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 111.5999984741211,
+      "time_end_seconds": 112.5999984741211,
+      "gt_action": "REMOVE_ROTOR_ASSEMBLY",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.3941667427619298,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 6
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00579",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 115.80000305175781,
+      "time_end_seconds": 116.80000305175781,
+      "gt_action": "STORE_GEARBOX_HOUSING",
+      "predicted_action": "STORE_ROTOR_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.36873070895671844,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 6
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00069",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 13.800000190734863,
+      "time_end_seconds": 14.800000190734863,
+      "gt_action": "NULL",
+      "predicted_action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "error_category": "NULL/background leakage",
+      "diagnostic_tags": [
+        "NULL/background leakage"
+      ],
+      "mean_predicted_class_probability": 0.32910562058289844,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 6
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e01120",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 224.0,
+      "time_end_seconds": 225.0,
+      "gt_action": "STORE_TOOL",
+      "predicted_action": "NULL",
+      "error_category": "rare-class failure",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.3064831693967183,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 6
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00026",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 5.199999809265137,
+      "time_end_seconds": 6.0,
+      "gt_action": "STORE_ANTI_VIBRATION_HANDLE",
+      "predicted_action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.8894002437591553,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 5
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00325",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 65.0,
+      "time_end_seconds": 65.80000305175781,
+      "gt_action": "NULL",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.845527446269989,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 5
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00351",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 70.19999694824219,
+      "time_end_seconds": 71.0,
+      "gt_action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.5894346594810486,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 5
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00415",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 83.0,
+      "time_end_seconds": 83.80000305175781,
+      "gt_action": "DETACH_ADAPTER_PLATE",
+      "predicted_action": "REMOVE_ROTOR_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.5882412314414978,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 5
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00029",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 5.800000190734863,
+      "time_end_seconds": 6.599999904632568,
+      "gt_action": "STORE_ANTI_VIBRATION_HANDLE",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.5022157609462738,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 5
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00117",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 23.399999618530273,
+      "time_end_seconds": 24.200000762939453,
+      "gt_action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "predicted_action": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.47427794337272644,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 5
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00666",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 133.1999969482422,
+      "time_end_seconds": 134.0,
+      "gt_action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "predicted_action": "STORE_ADAPTER_PLATE",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion"
+      ],
+      "mean_predicted_class_probability": 0.4313763439655304,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 5
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00332",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 66.4000015258789,
+      "time_end_seconds": 67.19999694824219,
+      "gt_action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "predicted_action": "STORE_ADAPTER_PLATE",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.4135658621788025,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 5
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00000",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 0.0,
+      "time_end_seconds": 0.800000011920929,
+      "gt_action": "NULL",
+      "predicted_action": "START_ANGLE_GRINDER_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.41155574917793275,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 5
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00411",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 82.19999694824219,
+      "time_end_seconds": 82.80000305175781,
+      "gt_action": "NULL",
+      "predicted_action": "REMOVE_ROTOR_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.8135206401348114,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 4
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00625",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 125.0,
+      "time_end_seconds": 125.5999984741211,
+      "gt_action": "STORE_ROTOR_ASSEMBLY",
+      "predicted_action": "REMOVE_ROTOR_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.6977089941501617,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 4
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00593",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 118.5999984741211,
+      "time_end_seconds": 119.19999694824219,
+      "gt_action": "STORE_ADAPTER_PLATE",
+      "predicted_action": "REMOVE_ROTOR_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.608150914311409,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 4
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00020",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 4.0,
+      "time_end_seconds": 4.599999904632568,
+      "gt_action": "UNSCREW_ANTI_VIBRATION_HANDLE",
+      "predicted_action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.5137035995721817,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 4
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00484",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 96.80000305175781,
+      "time_end_seconds": 97.4000015258789,
+      "gt_action": "DETACH_ADAPTER_PLATE",
+      "predicted_action": "STORE_ADAPTER_PLATE",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.47082386165857315,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 4
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00629",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 125.80000305175781,
+      "time_end_seconds": 126.4000015258789,
+      "gt_action": "NULL",
+      "predicted_action": "REMOVE_ROTOR_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.4537060335278511,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 4
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00134",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 26.799999237060547,
+      "time_end_seconds": 27.399999618530273,
+      "gt_action": "UNSCREW_ANTI_VIBRATION_HANDLE",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.44832225143909454,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 4
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00340",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 68.0,
+      "time_end_seconds": 68.5999984741211,
+      "gt_action": "NULL",
+      "predicted_action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.42651762068271637,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 4
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00135",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 27.0,
+      "time_end_seconds": 27.600000381469727,
+      "gt_action": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.42544396966695786,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 4
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00606",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 121.19999694824219,
+      "time_end_seconds": 121.80000305175781,
+      "gt_action": "NULL",
+      "predicted_action": "REMOVE_ROTOR_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.4232417047023773,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 4
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00130",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 26.0,
+      "time_end_seconds": 26.600000381469727,
+      "gt_action": "UNSCREW_ANTI_VIBRATION_HANDLE",
+      "predicted_action": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.40560872107744217,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 4
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00164",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 32.79999923706055,
+      "time_end_seconds": 33.400001525878906,
+      "gt_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "predicted_action": "NULL",
+      "error_category": "NULL/background leakage",
+      "diagnostic_tags": [
+        "NULL/background leakage"
+      ],
+      "mean_predicted_class_probability": 0.3921336755156517,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 4
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00008",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 1.600000023841858,
+      "time_end_seconds": 2.200000047683716,
+      "gt_action": "START_ANGLE_GRINDER_ASSEMBLY",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.38478296250104904,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 4
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e01116",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 223.1999969482422,
+      "time_end_seconds": 223.8000030517578,
+      "gt_action": "STORE_TOOL",
+      "predicted_action": "STORE_ROTOR_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.3597033843398094,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 4
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00919",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 183.8000030517578,
+      "time_end_seconds": 184.39999389648438,
+      "gt_action": "NULL",
+      "predicted_action": "STORE_ROTOR_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.3592417612671852,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 4
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e01027",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 205.39999389648438,
+      "time_end_seconds": 206.0,
+      "gt_action": "STORE_ROTOR_ASSEMBLY",
+      "predicted_action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.3506544530391693,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 4
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00585",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 117.0,
+      "time_end_seconds": 117.5999984741211,
+      "gt_action": "STORE_TOOL",
+      "predicted_action": "STORE_ROTOR_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.31619591265916824,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 4
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00075",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 15.0,
+      "time_end_seconds": 15.600000381469727,
+      "gt_action": "NULL",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "NULL/background leakage",
+      "diagnostic_tags": [
+        "NULL/background leakage"
+      ],
+      "mean_predicted_class_probability": 0.29260196536779404,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 4
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00573",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 114.5999984741211,
+      "time_end_seconds": 115.19999694824219,
+      "gt_action": "STORE_ADAPTER_PLATE",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.28664491325616837,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 4
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00523",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 104.5999984741211,
+      "time_end_seconds": 105.0,
+      "gt_action": "NULL",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.9826793074607849,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00455",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 91.0,
+      "time_end_seconds": 91.4000015258789,
+      "gt_action": "NULL",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.9752159118652344,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00029",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 5.800000190734863,
+      "time_end_seconds": 6.199999809265137,
+      "gt_action": "NULL",
+      "predicted_action": "UNSCREW_ANTI_VIBRATION_HANDLE",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.967008093992869,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00440",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 88.0,
+      "time_end_seconds": 88.4000015258789,
+      "gt_action": "NULL",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.9596260984738668,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00282",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 56.400001525878906,
+      "time_end_seconds": 56.79999923706055,
+      "gt_action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.9411073724428812,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00117",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 23.399999618530273,
+      "time_end_seconds": 23.799999237060547,
+      "gt_action": "NULL",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.9324294130007426,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00031",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 6.199999809265137,
+      "time_end_seconds": 6.599999904632568,
+      "gt_action": "NULL",
+      "predicted_action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.9300364851951599,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00372",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 74.4000015258789,
+      "time_end_seconds": 74.80000305175781,
+      "gt_action": "NULL",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.920873204867045,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00319",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 63.79999923706055,
+      "time_end_seconds": 64.19999694824219,
+      "gt_action": "NULL",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.8956513206164042,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00263",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 52.599998474121094,
+      "time_end_seconds": 53.0,
+      "gt_action": "NULL",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.8767917354901632,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00098",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 19.600000381469727,
+      "time_end_seconds": 20.0,
+      "gt_action": "NULL",
+      "predicted_action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.8456184267997742,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00054",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 10.800000190734863,
+      "time_end_seconds": 11.199999809265137,
+      "gt_action": "NULL",
+      "predicted_action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.6015405058860779,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00282",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 56.400001525878906,
+      "time_end_seconds": 56.79999923706055,
+      "gt_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "predicted_action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.5713121096293131,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00349",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 69.80000305175781,
+      "time_end_seconds": 70.19999694824219,
+      "gt_action": "NULL",
+      "predicted_action": "REMOVE_ROTOR_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.47519229849179584,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00492",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 98.4000015258789,
+      "time_end_seconds": 98.80000305175781,
+      "gt_action": "NULL",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.47184014320373535,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00549",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 109.80000305175781,
+      "time_end_seconds": 110.19999694824219,
+      "gt_action": "STORE_ADAPTER_PLATE",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.46383633216222125,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00113",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 22.600000381469727,
+      "time_end_seconds": 23.0,
+      "gt_action": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "predicted_action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.45736928780873615,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00337",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 67.4000015258789,
+      "time_end_seconds": 67.80000305175781,
+      "gt_action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.4527342617511749,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00523",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 104.5999984741211,
+      "time_end_seconds": 105.0,
+      "gt_action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.4019072353839874,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00636",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 127.19999694824219,
+      "time_end_seconds": 127.5999984741211,
+      "gt_action": "NULL",
+      "predicted_action": "STORE_ROTOR_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.3959983189900716,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00049",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 9.800000190734863,
+      "time_end_seconds": 10.199999809265137,
+      "gt_action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.37070365746816,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00292",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 58.400001525878906,
+      "time_end_seconds": 58.79999923706055,
+      "gt_action": "NULL",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.36789002021153766,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00548",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 109.5999984741211,
+      "time_end_seconds": 110.0,
+      "gt_action": "NULL",
+      "predicted_action": "STORE_ROTOR_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.3571710189183553,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00039",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 7.800000190734863,
+      "time_end_seconds": 8.199999809265137,
+      "gt_action": "NULL",
+      "predicted_action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.3533065418402354,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00486",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 97.19999694824219,
+      "time_end_seconds": 97.5999984741211,
+      "gt_action": "NULL",
+      "predicted_action": "REMOVE_ROTOR_ASSEMBLY",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.35065444310506183,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00461",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 92.19999694824219,
+      "time_end_seconds": 92.5999984741211,
+      "gt_action": "STORE_ADAPTER_PLATE",
+      "predicted_action": "NULL",
+      "error_category": "boundary error",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.34164708852767944,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 3
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00492",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 98.4000015258789,
+      "time_end_seconds": 98.5999984741211,
+      "gt_action": "NULL",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "short-action failure",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "short-action failure",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.9839836061000824,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 2
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00535",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 107.0,
+      "time_end_seconds": 107.19999694824219,
+      "gt_action": "NULL",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "short-action failure",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "short-action failure",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.9725590944290161,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 2
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00098",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 19.600000381469727,
+      "time_end_seconds": 19.799999237060547,
+      "gt_action": "NULL",
+      "predicted_action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "error_category": "short-action failure",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "short-action failure",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.8768921494483948,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 2
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00746",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 149.1999969482422,
+      "time_end_seconds": 149.39999389648438,
+      "gt_action": "NULL",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "short-action failure",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "short-action failure",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.8586201071739197,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 2
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00024",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 4.800000190734863,
+      "time_end_seconds": 5.0,
+      "gt_action": "NULL",
+      "predicted_action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "error_category": "short-action failure",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "short-action failure",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.7992758750915527,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 2
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00634",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 126.80000305175781,
+      "time_end_seconds": 127.0,
+      "gt_action": "NULL",
+      "predicted_action": "REMOVE_ROTOR_ASSEMBLY",
+      "error_category": "short-action failure",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "short-action failure",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.5678743720054626,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 2
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00330",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 66.0,
+      "time_end_seconds": 66.19999694824219,
+      "gt_action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "short-action failure",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.5324605852365494,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 2
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00330",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 66.0,
+      "time_end_seconds": 66.19999694824219,
+      "gt_action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "short-action failure",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.4995987117290497,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 2
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00459",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 91.80000305175781,
+      "time_end_seconds": 92.0,
+      "gt_action": "NULL",
+      "predicted_action": "STORE_ADAPTER_PLATE",
+      "error_category": "short-action failure",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "short-action failure",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.4036167114973068,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 2
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00548",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 109.5999984741211,
+      "time_end_seconds": 109.80000305175781,
+      "gt_action": "NULL",
+      "predicted_action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "error_category": "short-action failure",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "short-action failure",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.38790063560009,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 2
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00821",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 164.1999969482422,
+      "time_end_seconds": 164.39999389648438,
+      "gt_action": "STORE_ADAPTER_PLATE",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "short-action failure",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.3745098114013672,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 2
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00010",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 2.0,
+      "time_end_seconds": 2.200000047683716,
+      "gt_action": "START_ANGLE_GRINDER_ASSEMBLY",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "short-action failure",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.35737237334251404,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 2
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00556",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 111.19999694824219,
+      "time_end_seconds": 111.4000015258789,
+      "gt_action": "STORE_ROTOR_ASSEMBLY",
+      "predicted_action": "NULL",
+      "error_category": "short-action failure",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "short-action failure",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.3403201103210449,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 2
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00877",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 175.39999389648438,
+      "time_end_seconds": 175.60000610351562,
+      "gt_action": "REMOVE_ROTOR_ASSEMBLY",
+      "predicted_action": "NULL",
+      "error_category": "short-action failure",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "short-action failure",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.3379126787185669,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 2
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00589",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 117.80000305175781,
+      "time_end_seconds": 118.0,
+      "gt_action": "STORE_TOOL",
+      "predicted_action": "NULL",
+      "error_category": "short-action failure",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "short-action failure",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.2853689193725586,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 2
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00553",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 110.5999984741211,
+      "time_end_seconds": 110.5999984741211,
+      "gt_action": "STORE_ADAPTER_PLATE",
+      "predicted_action": "DETACH_ADAPTER_PLATE",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "short-action failure",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.5530614852905273,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 1
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00048",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 9.600000381469727,
+      "time_end_seconds": 9.600000381469727,
+      "gt_action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "predicted_action": "STORE_ANTI_VIBRATION_HANDLE",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "short-action failure",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.4010479748249054,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 1
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00579",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 115.80000305175781,
+      "time_end_seconds": 115.80000305175781,
+      "gt_action": "NULL",
+      "predicted_action": "REMOVE_ROTOR_ASSEMBLY",
+      "error_category": "short-action failure",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "short-action failure",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.36187222599983215,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 1
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00155",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 31.0,
+      "time_end_seconds": 31.0,
+      "gt_action": "STORE_ANTI_VIBRATION_HANDLE",
+      "predicted_action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "short-action failure",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.3497318625450134,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 1
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00132",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 26.399999618530273,
+      "time_end_seconds": 26.399999618530273,
+      "gt_action": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "short-action failure",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.31214645504951477,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 1
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00131",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 26.200000762939453,
+      "time_end_seconds": 26.200000762939453,
+      "gt_action": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "short-action failure",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.30980396270751953,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 1
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00491",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 98.19999694824219,
+      "time_end_seconds": 98.19999694824219,
+      "gt_action": "NULL",
+      "predicted_action": "STORE_ADAPTER_PLATE",
+      "error_category": "short-action failure",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "short-action failure",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.3095604479312897,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 1
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00820",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 164.0,
+      "time_end_seconds": 164.0,
+      "gt_action": "STORE_ADAPTER_PLATE",
+      "predicted_action": "NULL",
+      "error_category": "short-action failure",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "short-action failure",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.29891204833984375,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 1
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_001_front-e00841",
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "time_start_seconds": 168.1999969482422,
+      "time_end_seconds": 168.1999969482422,
+      "gt_action": "NULL",
+      "predicted_action": "STORE_ADAPTER_PLATE",
+      "error_category": "short-action failure",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "short-action failure"
+      ],
+      "mean_predicted_class_probability": 0.2856588065624237,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 1
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00130",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 26.0,
+      "time_end_seconds": 26.0,
+      "gt_action": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "predicted_action": "NULL",
+      "error_category": "short-action failure",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "short-action failure",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.2854291796684265,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 1
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_004_front-e00009",
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "time_start_seconds": 1.7999999523162842,
+      "time_end_seconds": 1.7999999523162842,
+      "gt_action": "UNSCREW_ANTI_VIBRATION_HANDLE",
+      "predicted_action": "START_ANGLE_GRINDER_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "short-action failure",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.2849039137363434,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 1
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00604",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 120.80000305175781,
+      "time_end_seconds": 120.80000305175781,
+      "gt_action": "REMOVE_ROTOR_ASSEMBLY",
+      "predicted_action": "STORE_ROTOR_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "short-action failure",
+        "boundary error",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.2830923795700073,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 1
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00605",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 121.0,
+      "time_end_seconds": 121.0,
+      "gt_action": "NULL",
+      "predicted_action": "STORE_ROTOR_ASSEMBLY",
+      "error_category": "short-action failure",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "short-action failure",
+        "boundary error"
+      ],
+      "mean_predicted_class_probability": 0.27931830286979675,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 1
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_003_front-e00572",
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "time_start_seconds": 114.4000015258789,
+      "time_end_seconds": 114.4000015258789,
+      "gt_action": "STORE_ADAPTER_PLATE",
+      "predicted_action": "REMOVE_ROTOR_ASSEMBLY",
+      "error_category": "class confusion",
+      "diagnostic_tags": [
+        "class confusion",
+        "short-action failure",
+        "rare-class failure"
+      ],
+      "mean_predicted_class_probability": 0.2779059112071991,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 1
+    },
+    {
+      "error_id": "SS07EL13_Disassembly_A_002_front-e00299",
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "time_start_seconds": 59.79999923706055,
+      "time_end_seconds": 59.79999923706055,
+      "gt_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "predicted_action": "NULL",
+      "error_category": "short-action failure",
+      "diagnostic_tags": [
+        "NULL/background leakage",
+        "short-action failure"
+      ],
+      "mean_predicted_class_probability": 0.20879749953746796,
+      "likely_visual_reason": "UNKNOWN \u2014 requires linked video review; not inferred from model output",
+      "bottleneck_attribution": "UNDETERMINED pending video/annotation review",
+      "human_review_status": "HUMAN_REVIEW_REQUIRED",
+      "frame_count": 1
+    }
+  ],
+  "diagnostic_tag_counts": {
+    "class confusion": 63,
+    "boundary error": 135,
+    "NULL/background leakage": 96,
+    "rare-class failure": 71,
+    "short-action failure": 30
+  },
+  "top_confusions_by_frames": [
+    {
+      "gt": "NULL",
+      "predicted": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "mismatched_frames": 179
+    },
+    {
+      "gt": "STORE_BEARING_PLATE_ASSEMBLY",
+      "predicted": "DETACH_ADAPTER_PLATE",
+      "mismatched_frames": 169
+    },
+    {
+      "gt": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "predicted": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "mismatched_frames": 138
+    },
+    {
+      "gt": "NULL",
+      "predicted": "DETACH_ADAPTER_PLATE",
+      "mismatched_frames": 127
+    },
+    {
+      "gt": "REMOVE_ROTOR_ASSEMBLY",
+      "predicted": "NULL",
+      "mismatched_frames": 86
+    },
+    {
+      "gt": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "predicted": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "mismatched_frames": 76
+    },
+    {
+      "gt": "NULL",
+      "predicted": "REMOVE_ROTOR_ASSEMBLY",
+      "mismatched_frames": 55
+    },
+    {
+      "gt": "STORE_ADAPTER_PLATE",
+      "predicted": "DETACH_ADAPTER_PLATE",
+      "mismatched_frames": 45
+    },
+    {
+      "gt": "NULL",
+      "predicted": "STORE_ROTOR_ASSEMBLY",
+      "mismatched_frames": 45
+    },
+    {
+      "gt": "REMOVE_ROTOR_ASSEMBLY",
+      "predicted": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "mismatched_frames": 38
+    },
+    {
+      "gt": "STORE_ADAPTER_PLATE",
+      "predicted": "NULL",
+      "mismatched_frames": 35
+    },
+    {
+      "gt": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "predicted": "NULL",
+      "mismatched_frames": 34
+    },
+    {
+      "gt": "UNSCREW_ANTI_VIBRATION_HANDLE",
+      "predicted": "NULL",
+      "mismatched_frames": 32
+    },
+    {
+      "gt": "NULL",
+      "predicted": "STORE_BEARING_PLATE_ASSEMBLY",
+      "mismatched_frames": 27
+    },
+    {
+      "gt": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "predicted": "DETACH_ADAPTER_PLATE",
+      "mismatched_frames": 25
+    },
+    {
+      "gt": "STORE_TOOL",
+      "predicted": "NULL",
+      "mismatched_frames": 22
+    },
+    {
+      "gt": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "predicted": "STORE_BEARING_PLATE_ASSEMBLY",
+      "mismatched_frames": 20
+    },
+    {
+      "gt": "STORE_ANTI_VIBRATION_HANDLE",
+      "predicted": "NULL",
+      "mismatched_frames": 19
+    },
+    {
+      "gt": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "predicted": "NULL",
+      "mismatched_frames": 18
+    },
+    {
+      "gt": "DETACH_ADAPTER_PLATE",
+      "predicted": "REMOVE_ROTOR_ASSEMBLY",
+      "mismatched_frames": 18
+    },
+    {
+      "gt": "NULL",
+      "predicted": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "mismatched_frames": 16
+    },
+    {
+      "gt": "START_ANGLE_GRINDER_ASSEMBLY",
+      "predicted": "NULL",
+      "mismatched_frames": 14
+    },
+    {
+      "gt": "NULL",
+      "predicted": "STORE_ADAPTER_PLATE",
+      "mismatched_frames": 13
+    },
+    {
+      "gt": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "predicted": "NULL",
+      "mismatched_frames": 12
+    },
+    {
+      "gt": "STORE_ROTOR_ASSEMBLY",
+      "predicted": "NULL",
+      "mismatched_frames": 11
+    },
+    {
+      "gt": "STORE_BEARING_PLATE_ASSEMBLY",
+      "predicted": "STORE_ADAPTER_PLATE",
+      "mismatched_frames": 10
+    },
+    {
+      "gt": "UNSCREW_ANTI_VIBRATION_HANDLE",
+      "predicted": "START_ANGLE_GRINDER_ASSEMBLY",
+      "mismatched_frames": 10
+    },
+    {
+      "gt": "DETACH_ADAPTER_PLATE",
+      "predicted": "STORE_ADAPTER_PLATE",
+      "mismatched_frames": 10
+    },
+    {
+      "gt": "STORE_ROTOR_ASSEMBLY",
+      "predicted": "REMOVE_ROTOR_ASSEMBLY",
+      "mismatched_frames": 10
+    },
+    {
+      "gt": "STORE_BEARING_PLATE_ASSEMBLY",
+      "predicted": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "mismatched_frames": 8
+    },
+    {
+      "gt": "REMOVE_ROTOR_ASSEMBLY",
+      "predicted": "STORE_BEARING_PLATE_ASSEMBLY",
+      "mismatched_frames": 8
+    },
+    {
+      "gt": "STORE_TOOL",
+      "predicted": "STORE_ROTOR_ASSEMBLY",
+      "mismatched_frames": 8
+    },
+    {
+      "gt": "STORE_ANTI_VIBRATION_HANDLE",
+      "predicted": "UNSCREW_ANTI_VIBRATION_HANDLE",
+      "mismatched_frames": 8
+    },
+    {
+      "gt": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "predicted": "STORE_BEARING_PLATE_ASSEMBLY",
+      "mismatched_frames": 8
+    },
+    {
+      "gt": "STORE_BEARING_PLATE_ASSEMBLY",
+      "predicted": "NULL",
+      "mismatched_frames": 8
+    },
+    {
+      "gt": "NULL",
+      "predicted": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "mismatched_frames": 8
+    },
+    {
+      "gt": "REMOVE_ROTOR_ASSEMBLY",
+      "predicted": "STORE_ROTOR_ASSEMBLY",
+      "mismatched_frames": 7
+    },
+    {
+      "gt": "NULL",
+      "predicted": "STORE_ANTI_VIBRATION_HANDLE",
+      "mismatched_frames": 7
+    },
+    {
+      "gt": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "predicted": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "mismatched_frames": 7
+    },
+    {
+      "gt": "DETACH_ADAPTER_PLATE",
+      "predicted": "NULL",
+      "mismatched_frames": 7
+    },
+    {
+      "gt": "UNSCREW_ANTI_VIBRATION_HANDLE",
+      "predicted": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "mismatched_frames": 6
+    },
+    {
+      "gt": "STORE_ANTI_VIBRATION_HANDLE",
+      "predicted": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "mismatched_frames": 6
+    },
+    {
+      "gt": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "predicted": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "mismatched_frames": 6
+    },
+    {
+      "gt": "STORE_GEARBOX_HOUSING",
+      "predicted": "STORE_ROTOR_ASSEMBLY",
+      "mismatched_frames": 6
+    },
+    {
+      "gt": "NULL",
+      "predicted": "START_ANGLE_GRINDER_ASSEMBLY",
+      "mismatched_frames": 5
+    },
+    {
+      "gt": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "predicted": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "mismatched_frames": 5
+    },
+    {
+      "gt": "STORE_ADAPTER_PLATE",
+      "predicted": "REMOVE_ROTOR_ASSEMBLY",
+      "mismatched_frames": 5
+    },
+    {
+      "gt": "UNSCREW_ANTI_VIBRATION_HANDLE",
+      "predicted": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "mismatched_frames": 4
+    },
+    {
+      "gt": "STORE_ROTOR_ASSEMBLY",
+      "predicted": "STORE_BEARING_PLATE_ASSEMBLY",
+      "mismatched_frames": 4
+    },
+    {
+      "gt": "UNSCREW_ANTI_VIBRATION_HANDLE",
+      "predicted": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "mismatched_frames": 4
+    },
+    {
+      "gt": "NULL",
+      "predicted": "UNSCREW_ANTI_VIBRATION_HANDLE",
+      "mismatched_frames": 3
+    },
+    {
+      "gt": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "predicted": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "mismatched_frames": 3
+    },
+    {
+      "gt": "START_ANGLE_GRINDER_ASSEMBLY",
+      "predicted": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "mismatched_frames": 2
+    },
+    {
+      "gt": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "predicted": "STORE_ANTI_VIBRATION_HANDLE",
+      "mismatched_frames": 1
+    }
+  ],
+  "execution_diagnostics": [
+    {
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "ground_truth_action_segments": 23,
+      "predicted_action_segments": 28,
+      "segment_count_pattern": "over-segmentation",
+      "model_only_issue_reason": "UNDETERMINED"
+    },
+    {
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "ground_truth_action_segments": 28,
+      "predicted_action_segments": 18,
+      "segment_count_pattern": "under-segmentation",
+      "model_only_issue_reason": "UNDETERMINED"
+    },
+    {
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "ground_truth_action_segments": 23,
+      "predicted_action_segments": 18,
+      "segment_count_pattern": "under-segmentation",
+      "model_only_issue_reason": "UNDETERMINED"
+    },
+    {
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "ground_truth_action_segments": 23,
+      "predicted_action_segments": 15,
+      "segment_count_pattern": "under-segmentation",
+      "model_only_issue_reason": "UNDETERMINED"
+    }
+  ],
+  "temporal_postprocessing_comparison": {
+    "raw_correct_decoded_wrong_frames": 3,
+    "raw_wrong_decoded_correct_frames": 2,
+    "evaluation": "post-decoding comparison against TAS-S labels; descriptive diagnosis only"
+  },
+  "visual_ambiguity_and_insufficient_observation": "HUMAN_REVIEW_REQUIRED; not inferable from model outputs"
+}

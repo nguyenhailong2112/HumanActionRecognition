@@ -54,6 +54,8 @@ def action_metrics(gt: np.ndarray, pred: np.ndarray, class_order: list[str], bac
     gt, pred = gt[:length], pred[:length]
     if not length:
         raise ValueError("Cannot evaluate an empty sequence")
+    confusion = np.zeros((len(class_order), len(class_order)), dtype=np.int64)
+    np.add.at(confusion, (gt, pred), 1)
     report = {}
     f1s = []
     for class_id, name in enumerate(class_order):
@@ -85,6 +87,10 @@ def action_metrics(gt: np.ndarray, pred: np.ndarray, class_order: list[str], bac
         "normalized_edit_score": edit,
         "segmental": segmental,
         "per_class": report,
+        "confusion_matrix": {
+            "labels": list(class_order),
+            "rows_true_columns_predicted": confusion.tolist(),
+        },
         "gt_action_segments": len([s for s in gt_segments if s[0] != background_id]),
         "pred_action_segments": len([s for s in pred_segments if s[0] != background_id]),
         "frames_evaluated": int(length),

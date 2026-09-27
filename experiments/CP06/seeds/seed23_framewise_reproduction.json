@@ -1,0 +1,76 @@
+{
+  "seed": 23,
+  "run_config_snapshot": "experiments/CP06/seeds/seed23_run_config_as_executed.yaml",
+  "trained_from_config": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\configs\\cp06_seed23.yaml",
+  "artifact_paths": {
+    "checkpoint": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\models\\cp06_framewise_seed23_best.pt",
+    "final_checkpoint": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\models\\cp06_framewise_seed23_final.pt"
+  },
+  "best_epoch": 10,
+  "best_validation_loss": 1.6621944427490234,
+  "train_seconds": 8.61438080004882,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 2.570529106335762,
+      "val_loss": 2.773798131942749
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.8039814570011237,
+      "val_loss": 2.130169486999512
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.550783702960381,
+      "val_loss": 2.023422861099243
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.4079980880786211,
+      "val_loss": 1.9414184093475342
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.305492598276872,
+      "val_loss": 1.8084355354309083
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.2255655786929986,
+      "val_loss": 1.8063039302825927
+    },
+    {
+      "epoch": 7,
+      "train_loss": 1.1560894709367018,
+      "val_loss": 1.7723570108413695
+    },
+    {
+      "epoch": 8,
+      "train_loss": 1.1001183543449793,
+      "val_loss": 1.6778838634490967
+    },
+    {
+      "epoch": 9,
+      "train_loss": 1.0527509848276775,
+      "val_loss": 1.6928539991378784
+    },
+    {
+      "epoch": 10,
+      "train_loss": 1.0155333341696324,
+      "val_loss": 1.6621944427490234
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.9806985748119843,
+      "val_loss": 1.7052984237670898
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.9508531720210345,
+      "val_loss": 1.7061641931533813
+    }
+  ],
+  "checkpoint_sha256": "cb4a382cd92e772c57d8cb517def92752a68d5461cf475eba88e6d633c85a6d9",
+  "final_checkpoint_sha256": "8636832956ab96c63f15be8dea0505612a84d640c4c608c1a0e52480667b7ff3"
+}

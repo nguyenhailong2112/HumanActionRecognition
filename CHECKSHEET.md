@@ -4,6 +4,8 @@
 
 ### Coding / Research Implementation / Validation / Prototype
 
+> **Current-status rule (2026-09-27):** Sections 1–38 are preserved checkpoint-time snapshots and may contain superseded acquisition/hardware states or earlier “SOP” wording. Use the latest dated checkpoint section, currently CP07, plus `ROADMAP.md`, `README.md`, and the current CP07 handoffs for present status. The current artifact is a **Research Workflow Specification / Benchmark Procedure Interpretation**, not an official factory SOP.
+
 ---
 
 # 0. CÁCH SỬ DỤNG CHECKSHEET
@@ -1955,3 +1957,71 @@ The research-immersion scope above describes the completed preparation phase. Im
 
 
 
+
+# 37. IMPLEMENTATION PHASE — CP05
+
+**Checkpoint:** EXP-CP05 — validated IMPACT front-view action baseline and procedure grounding  
+**Status:** PARTIAL (historical CP05 status) — both action baselines trained/evaluated; workflow semantics were human-dependent. The ZIP was absent at CP05 time but verified in CP06.  
+**Last updated:** 2026-09-27
+
+| Work item | Status | Evidence / result |
+|---|---|---|
+| Context recovery | PASS | `experiments/CP05/CP05_context_recovery.md`; read repository direction, prior checkpoints, source/config/tools/models/tests and actual nested research corpus paths. |
+| Dataset inventory | PASS with provenance caveat | `experiments/CP05/CP05_dataset_audit.md`; extracted annotations, 560 I3D arrays, 112 front + 112 top videos, depth, eye tracking and sample inventoried. Raw dataset remains external. |
+| Archive integrity at CP05 | NOT VERIFIED THEN; RESOLVED IN CP06 | ZIP absent during CP05. CP06 later verified SHA-256 against release manifest and official ZIP structure/CRC; see `experiments/CP06/CP06_context_and_audit.md`. |
+| S2 data readiness | PASS | `experiments/CP05_data_readiness.json`: 48/48 annotations, 48/48 finite frame-aligned 1024-D features, 48/48 front videos fully decoded; video metadata/frame counts align exactly with annotations. |
+| Frozen protocol | PASS (research subset) | IMPACT v1.1 TAS-S S2 split2, Disassembly_A/front, 39/5/4, execution-disjoint, held-out worker SS07EL13. Not an official leaderboard reproduction. |
+| Environment | PASS | Python 3.12.14; PyTorch 2.14.0+cu132; CUDA 13.2; RTX 5060 Ti / 16 GiB; driver 596.21; OpenCV 4.14.0. Rebuilt `.venv-cp05`; inherited `.venv` fails to launch. |
+| FramewiseBaseline | PASS | 12 epochs; best epoch 11; validation CE 1.60675; 22.68 s; best/final checkpoints saved. |
+| Our MS-TCN | PASS | 12 epochs; best epoch 11; validation CE 1.27032; 31.49 s; best/final checkpoints saved. |
+| Test action metrics | PASS | Mean over 4 held-out videos: Framewise accuracy .445 / macro-F1 .319 / Edit 11.70 / F1@10 .149 / @25 .094 / @50 .032. MS-TCN: .569 / .390 / 50.39 / .445 / .445 / .207. Per-class and confusion outputs saved. |
+| Timelines and evidence | PASS for action path | GT, Framewise and MS-TCN timelines saved. 69 actual non-background MS-TCN test events linked to timestamp/frame/snapshot/clip; event-to-frame timing and files verified. Workflow decision is NOT EVALUATED. |
+| Workflow integration | HUMAN REVIEW REQUIRED | No reliable TAS-S process interpretation. Official PSR graph is mined from data and uses component-state nodes; it is not mapped onto action labels. Workflow remains disabled. Handoff: `HUMAN_HANDOFF_CP05.md`. |
+| Process anomaly metrics | NOT EVALUATED | No held-out ground truth matching workflow violations; PPR is not substituted. |
+| Runtime | PARTIAL | Offline precomputed-feature model inference on CUDA recorded. Does not include video decode/feature extraction or streaming. CPU utilization and peak memory not measured. |
+| Existing tests | PASS | `python -m unittest discover -s tests -v`: 24 passed. |
+
+## CP05 acceptance summary
+
+Action data, training/validation/test evaluation, per-class and temporal error analysis, timelines, actual action-event evidence, and offline runtime were available at CP05. CP05 remains **PARTIAL historically** because workflow policy/integration required human input. The ZIP limitation was resolved in CP06; CP07 documents current workflow and system status. CP05 action results are our procedure-scoped IMPACT baseline, not official leaderboard reproduction.
+
+# 38. IMPLEMENTATION PHASE — CP06
+
+**Checkpoint:** EXP-CP06 — workflow semantics infrastructure and action-baseline reliability  
+**Status:** PARTIAL — archive provenance, frozen action metrics, seed repeats, deterministic workflow tests, and review package verified; human workflow semantics and visual review pending.  
+**Last updated:** 2026-09-27
+
+| Work item | Status | Evidence / result |
+|---|---|---|
+| CP05 context/artifact audit | PASS with historical ZIP note updated | `experiments/CP06/CP06_context_and_audit.md`; CP05 reports checked against config, code, checkpoints and results. |
+| I3D archive | PASS | SHA-256 matches release manifest; official IMPACT verifier returns archive structure and CRC PASS. |
+| Metric definition and held-out action report | PASS | `experiments/CP06/metric_definition_audit.md`, `action_metrics.json`; four per-execution reports, equal-execution mean/sample SD and pooled frames. |
+| MS-TCN seed reliability | PASS | Three seeds (CP05 seed17 plus new seeds23/41), validation-only selection; `seed_reliability.md/.json`, training log/reports and checkpoints saved. Test results did not tune models. |
+| Workflow draft and human spec | HUMAN REVIEW REQUIRED | `configs/workflows/disassembly_A.draft.yaml`; no executable routes fabricated. `HUMAN_HANDOFF_CP06.md` requests explicit source-backed semantics. |
+| Deterministic workflow engine/validator | PASS for synthetic logic | Existing engine extended for event outcomes/uncertain evidence/policy-driven timeout. Validator checks graph/path structure and policies. |
+| Golden workflow tests | PASS | 20 CP06 golden tests plus repository suite (44 total passed); see execution record in EXP-CP06. |
+| Action error analysis | PASS, semantic cause pending | `experiments/CP06/action_error_analysis.md` and `action_error_events.json`; visual reason and bottleneck attribution remain undetermined. |
+| Evidence review package | HUMAN REVIEW REQUIRED | `HUMAN_HANDOFF_CP06_EVIDENCE_REVIEW.md`; representative linked CP05 events only, not converted to labels. |
+| Process compliance/anomaly/duration | NOT EVALUATED | No human-validated workflow or matching process-violation ground truth; no timing policy. |
+| Workflow integration | NOT EVALUATED | No actual ActionEvent-to-compliance trace until the reviewed workflow YAML is supplied. |
+
+# 39. IMPLEMENTATION PHASE — CP07
+
+**Checkpoint:** EXP-CP07 — procedure grounding and ActionEvent integration  
+**Status:** PASS — CP07 checkpoint deliverables complete; project process layer remains PARTIAL at human semantic and evidence-review gates.  
+**Last updated:** 2026-09-27
+
+| Work item | Status | Evidence / result |
+|---|---|---|
+| CP06 context/artifact audit | PASS | `experiments/CP07/CP07_context_and_audit.md`; checked reports, metrics, timelines, checkpoints, workflow artifacts and handoffs. |
+| Current environment audit | PASS (snapshot) | `experiments/CP07/environment_audit.json`; RTX/CUDA verified. Dependency ranges are not a lockfile. |
+| Metric aggregation boundary | PASS | `experiments/CP07/metric_aggregation_audit.md`; pooled temporal metrics retain execution boundaries; synthetic regression test. |
+| ActionEvent contract | PASS | `experiments/CP07/action_event_contract.md`; event ID/view/evidence refs and serialization tested. |
+| Error structure | PASS, causal explanation pending | `experiments/CP07/action_error_structure.md/.json`; descriptive n=4 execution and confusion measurements. |
+| Workflow specification | HUMAN REVIEW REQUIRED | No `configs/workflows/disassembly_A.yaml`; draft remains non-executable. Exact owner YAML handoff in `HUMAN_HANDOFF_CP07.md`. |
+| Workflow validator | PASS as gate | Validator correctly rejects draft as not HUMAN_VALIDATED and lacking owner routes/dispositions/completion. |
+| Workflow trace adapter | PASS for synthetic interface | `src/human_action/workflow_trace.py`; state-before/after, result, evidence and uncertainty emitted; real traces require enabled + HUMAN_VALIDATED. Separate workflow-YAML loading and automatic event evidence linking remain CP08 wiring; no real held-out execution. |
+| Workflow activation safety | PASS | Workflow defaults disabled; enabling requires `HUMAN_VALIDATED`; legacy CP01 illustrative routes/timing rules removed. Regression test included. |
+| Evidence review | HUMAN REVIEW REQUIRED | 21 category selections deduplicate to 13 unique events in `experiments/CP07/evidence_review_manifest.json`; fixed handoff in `HUMAN_HANDOFF_CP07_EVIDENCE_REVIEW.md`. |
+| Process compliance / anomaly / duration | NOT EVALUATED | No validated workflow and matching process ground truth or timing policy. |
+| Test suite | PASS | 56 repository tests and Python compileall passed after CP07 safeguards. See `experiments/EXP-CP07.md`. |

@@ -1,0 +1,82 @@
+# HUMAN_REVIEW_REQUIRED. This is a source-grounded review scaffold, NOT executable.
+# It intentionally contains no accepted route or transition semantics.
+workflow:
+  artifact_type: Research Workflow Specification / Benchmark Procedure Interpretation
+  status: HUMAN_REVIEW_REQUIRED
+  procedure_id: Disassembly_A
+  dataset: IMPACT v1.1
+  task: TAS-S
+  view: front
+  version: HUMAN_TO_SUPPLY
+  action_vocabulary:
+    - START_ANGLE_GRINDER_ASSEMBLY
+    - UNSCREW_ANTI_VIBRATION_HANDLE
+    - STORE_ANTI_VIBRATION_HANDLE
+    - REMOVE_LOCKING_LEVER_ASSEMBLY
+    - STORE_LOCKING_LEVER_ASSEMBLY
+    - EXTRACT_BEARING_PLATE_ASSEMBLY
+    - STORE_BEARING_PLATE_ASSEMBLY
+    - DETACH_ADAPTER_PLATE
+    - REMOVE_ROTOR_ASSEMBLY
+    - STORE_ROTOR_ASSEMBLY
+    - STORE_GEARBOX_HOUSING
+    - STORE_ADAPTER_PLATE
+    - INSTALL_ROTOR_ASSEMBLY
+    - ATTACH_ADAPTER_PLATE
+    - RETRIEVE_BEARING_PLATE_ASSEMBLY
+    - RETRIEVE_LOCKING_LEVER_ASSEMBLY
+    - STORE_TOOL
+  candidate_states:
+    # Engineering IDs mirror TAS-S labels for review. They do not assert procedure steps.
+    - id: START_ANGLE_GRINDER_ASSEMBLY
+      action: START_ANGLE_GRINDER_ASSEMBLY
+    - id: UNSCREW_ANTI_VIBRATION_HANDLE
+      action: UNSCREW_ANTI_VIBRATION_HANDLE
+    - id: STORE_ANTI_VIBRATION_HANDLE
+      action: STORE_ANTI_VIBRATION_HANDLE
+    - id: REMOVE_LOCKING_LEVER_ASSEMBLY
+      action: REMOVE_LOCKING_LEVER_ASSEMBLY
+    - id: STORE_LOCKING_LEVER_ASSEMBLY
+      action: STORE_LOCKING_LEVER_ASSEMBLY
+    - id: EXTRACT_BEARING_PLATE_ASSEMBLY
+      action: EXTRACT_BEARING_PLATE_ASSEMBLY
+    - id: STORE_BEARING_PLATE_ASSEMBLY
+      action: STORE_BEARING_PLATE_ASSEMBLY
+    - id: DETACH_ADAPTER_PLATE
+      action: DETACH_ADAPTER_PLATE
+    - id: REMOVE_ROTOR_ASSEMBLY
+      action: REMOVE_ROTOR_ASSEMBLY
+    - id: STORE_ROTOR_ASSEMBLY
+      action: STORE_ROTOR_ASSEMBLY
+    - id: STORE_GEARBOX_HOUSING
+      action: STORE_GEARBOX_HOUSING
+    - id: STORE_ADAPTER_PLATE
+      action: STORE_ADAPTER_PLATE
+    - id: INSTALL_ROTOR_ASSEMBLY
+      action: INSTALL_ROTOR_ASSEMBLY
+    - id: ATTACH_ADAPTER_PLATE
+      action: ATTACH_ADAPTER_PLATE
+    - id: RETRIEVE_BEARING_PLATE_ASSEMBLY
+      action: RETRIEVE_BEARING_PLATE_ASSEMBLY
+    - id: RETRIEVE_LOCKING_LEVER_ASSEMBLY
+      action: RETRIEVE_LOCKING_LEVER_ASSEMBLY
+    - id: STORE_TOOL
+      action: STORE_TOOL
+  sources:
+    - ResearchDocuments/ResearchDocuments/01_IMPACT/code/IMPACT/dataset/TAS
+    - ResearchDocuments/ResearchDocuments/01_IMPACT/code/IMPACT/dataset/PSR/README.md
+    - ResearchDocuments/ResearchDocuments/01_IMPACT/code/IMPACT/tasks/PSR/gemini_3_1_pro/configs/procedure_graph.json
+    - experiments/CP06/workflow_sources.md
+  unresolved_human_decisions:
+    - mandatory_steps_and_action_meanings
+    - optional_steps
+    - valid_order_and_alternative_paths
+    - conditional_branches_and_conditions
+    - repeated_actions_and_recovery_rework
+    - restart_behavior
+    - completion_condition
+    - timeout_policy
+    - duration_policy_and_authoritative_source_if_any
+    - evidence_requirements
+    - unknown_ambiguous_and_out_of_view_handling
+  transitions: [] # Deliberately empty; do not execute until reviewed and validated.

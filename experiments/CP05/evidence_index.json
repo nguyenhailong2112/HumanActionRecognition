@@ -1,0 +1,1594 @@
+{
+  "evidence_kind": "actual model inference events from held-out test videos",
+  "model": "MS-TCN",
+  "workflow_status": "NOT EVALUATED",
+  "records": [
+    {
+      "video_id": "SS07EL13_Disassembly_A_001_front",
+      "model": "mstcn",
+      "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "prediction_timestamp_seconds": 2.0,
+      "action_event_timestamp_seconds": 2.0,
+      "action_event_start_frame": 60,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 6756,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 0.0,
+      "confidence": 0.7980098128318787,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_001_60.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_001_60.mp4",
+      "clip_context_seconds": [
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_001_front",
+      "model": "mstcn",
+      "action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "prediction_timestamp_seconds": 13.800000190734863,
+      "action_event_timestamp_seconds": 13.800000190734863,
+      "action_event_start_frame": 414,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 6756,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 1.9073486257070726e-07,
+      "confidence": 0.3291056156158447,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_002_414.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_002_414.mp4",
+      "clip_context_seconds": [
+        12.800000190734863,
+        14.800000190734863
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_001_front",
+      "model": "mstcn",
+      "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "prediction_timestamp_seconds": 15.0,
+      "action_event_timestamp_seconds": 15.0,
+      "action_event_start_frame": 450,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 6756,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 0.0,
+      "confidence": 0.29260197281837463,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_003_450.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_003_450.mp4",
+      "clip_context_seconds": [
+        14.0,
+        16.0
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_001_front",
+      "model": "mstcn",
+      "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "prediction_timestamp_seconds": 18.0,
+      "action_event_timestamp_seconds": 18.0,
+      "action_event_start_frame": 540,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 6756,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 0.0,
+      "confidence": 0.4498206079006195,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_004_540.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_004_540.mp4",
+      "clip_context_seconds": [
+        17.0,
+        19.0
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_001_front",
+      "model": "mstcn",
+      "action": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "prediction_timestamp_seconds": 26.0,
+      "action_event_timestamp_seconds": 26.0,
+      "action_event_start_frame": 780,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 6756,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 0.0,
+      "confidence": 0.40560874342918396,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_005_780.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_005_780.mp4",
+      "clip_context_seconds": [
+        25.0,
+        27.0
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_001_front",
+      "model": "mstcn",
+      "action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "prediction_timestamp_seconds": 31.0,
+      "action_event_timestamp_seconds": 31.0,
+      "action_event_start_frame": 930,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 6756,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 0.0,
+      "confidence": 0.35258015990257263,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_006_930.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_006_930.mp4",
+      "clip_context_seconds": [
+        30.0,
+        32.0
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_001_front",
+      "model": "mstcn",
+      "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "prediction_timestamp_seconds": 32.599998474121094,
+      "action_event_timestamp_seconds": 32.599998474121094,
+      "action_event_start_frame": 978,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 6756,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 1.5258789076710855e-06,
+      "confidence": 0.8827400207519531,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_007_978.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_007_978.mp4",
+      "clip_context_seconds": [
+        31.599998474121094,
+        33.599998474121094
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_001_front",
+      "model": "mstcn",
+      "action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "prediction_timestamp_seconds": 73.19999694824219,
+      "action_event_timestamp_seconds": 73.19999694824219,
+      "action_event_start_frame": 2196,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 6756,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.051757815342171e-06,
+      "confidence": 0.45441675186157227,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_008_2196.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_008_2196.mp4",
+      "clip_context_seconds": [
+        72.19999694824219,
+        74.19999694824219
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_001_front",
+      "model": "mstcn",
+      "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "prediction_timestamp_seconds": 89.4000015258789,
+      "action_event_timestamp_seconds": 89.4000015258789,
+      "action_event_start_frame": 2682,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 6756,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 1.5258789005656581e-06,
+      "confidence": 0.8141422867774963,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_009_2682.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_009_2682.mp4",
+      "clip_context_seconds": [
+        88.4000015258789,
+        90.4000015258789
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_001_front",
+      "model": "mstcn",
+      "action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "prediction_timestamp_seconds": 109.5999984741211,
+      "action_event_timestamp_seconds": 109.5999984741211,
+      "action_event_start_frame": 3288,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 6756,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 1.5258789005656581e-06,
+      "confidence": 0.4668213427066803,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_010_3288.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_010_3288.mp4",
+      "clip_context_seconds": [
+        108.5999984741211,
+        110.5999984741211
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_001_front",
+      "model": "mstcn",
+      "action": "DETACH_ADAPTER_PLATE",
+      "prediction_timestamp_seconds": 114.80000305175781,
+      "action_event_timestamp_seconds": 114.80000305175781,
+      "action_event_start_frame": 3444,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 6756,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.051757815342171e-06,
+      "confidence": 0.9081613421440125,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_011_3444.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_011_3444.mp4",
+      "clip_context_seconds": [
+        113.80000305175781,
+        115.80000305175781
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_001_front",
+      "model": "mstcn",
+      "action": "STORE_ADAPTER_PLATE",
+      "prediction_timestamp_seconds": 133.1999969482422,
+      "action_event_timestamp_seconds": 133.1999969482422,
+      "action_event_start_frame": 3996,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 6756,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.0517578011313162e-06,
+      "confidence": 0.43137630820274353,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_012_3996.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_012_3996.mp4",
+      "clip_context_seconds": [
+        132.1999969482422,
+        134.1999969482422
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_001_front",
+      "model": "mstcn",
+      "action": "DETACH_ADAPTER_PLATE",
+      "prediction_timestamp_seconds": 134.1999969482422,
+      "action_event_timestamp_seconds": 134.1999969482422,
+      "action_event_start_frame": 4026,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 6756,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.0517578011313162e-06,
+      "confidence": 0.9345638751983643,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_013_4026.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_013_4026.mp4",
+      "clip_context_seconds": [
+        133.1999969482422,
+        135.1999969482422
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_001_front",
+      "model": "mstcn",
+      "action": "STORE_ADAPTER_PLATE",
+      "prediction_timestamp_seconds": 161.8000030517578,
+      "action_event_timestamp_seconds": 161.8000030517578,
+      "action_event_start_frame": 4854,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 6756,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.0517578011313162e-06,
+      "confidence": 0.4621521234512329,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_014_4854.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_014_4854.mp4",
+      "clip_context_seconds": [
+        160.8000030517578,
+        162.8000030517578
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_001_front",
+      "model": "mstcn",
+      "action": "DETACH_ADAPTER_PLATE",
+      "prediction_timestamp_seconds": 164.0,
+      "action_event_timestamp_seconds": 164.0,
+      "action_event_start_frame": 4920,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 6756,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 0.0,
+      "confidence": 0.5080968141555786,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_015_4920.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_015_4920.mp4",
+      "clip_context_seconds": [
+        163.0,
+        165.0
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_001_front",
+      "model": "mstcn",
+      "action": "REMOVE_ROTOR_ASSEMBLY",
+      "prediction_timestamp_seconds": 170.1999969482422,
+      "action_event_timestamp_seconds": 170.1999969482422,
+      "action_event_start_frame": 5106,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 6756,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.0517578011313162e-06,
+      "confidence": 0.5133234262466431,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_016_5106.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_016_5106.mp4",
+      "clip_context_seconds": [
+        169.1999969482422,
+        171.1999969482422
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_001_front",
+      "model": "mstcn",
+      "action": "REMOVE_ROTOR_ASSEMBLY",
+      "prediction_timestamp_seconds": 175.8000030517578,
+      "action_event_timestamp_seconds": 175.8000030517578,
+      "action_event_start_frame": 5274,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 6756,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.0517578011313162e-06,
+      "confidence": 0.7255680561065674,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_017_5274.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_017_5274.mp4",
+      "clip_context_seconds": [
+        174.8000030517578,
+        176.8000030517578
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_001_front",
+      "model": "mstcn",
+      "action": "STORE_ROTOR_ASSEMBLY",
+      "prediction_timestamp_seconds": 182.60000610351562,
+      "action_event_timestamp_seconds": 182.60000610351562,
+      "action_event_start_frame": 5478,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 6756,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 6.103515630684342e-06,
+      "confidence": 0.3811175227165222,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_018_5478.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_018_5478.mp4",
+      "clip_context_seconds": [
+        181.60000610351562,
+        183.60000610351562
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_001_front",
+      "model": "mstcn",
+      "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "prediction_timestamp_seconds": 192.0,
+      "action_event_timestamp_seconds": 192.0,
+      "action_event_start_frame": 5760,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 6756,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 0.0,
+      "confidence": 0.7759615182876587,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_019_5760.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_019_5760.mp4",
+      "clip_context_seconds": [
+        191.0,
+        193.0
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_001_front",
+      "model": "mstcn",
+      "action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "prediction_timestamp_seconds": 203.8000030517578,
+      "action_event_timestamp_seconds": 203.8000030517578,
+      "action_event_start_frame": 6114,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 6756,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.0517578011313162e-06,
+      "confidence": 0.4089737832546234,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_020_6114.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_020_6114.mp4",
+      "clip_context_seconds": [
+        202.8000030517578,
+        204.8000030517578
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_001_front",
+      "model": "mstcn",
+      "action": "DETACH_ADAPTER_PLATE",
+      "prediction_timestamp_seconds": 206.1999969482422,
+      "action_event_timestamp_seconds": 206.1999969482422,
+      "action_event_start_frame": 6186,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 6756,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.0517578011313162e-06,
+      "confidence": 0.6844561696052551,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_021_6186.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_021_6186.mp4",
+      "clip_context_seconds": [
+        205.1999969482422,
+        207.1999969482422
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_001_front",
+      "model": "mstcn",
+      "action": "STORE_ADAPTER_PLATE",
+      "prediction_timestamp_seconds": 210.1999969482422,
+      "action_event_timestamp_seconds": 210.1999969482422,
+      "action_event_start_frame": 6306,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 6756,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.0517578011313162e-06,
+      "confidence": 0.4490170478820801,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_022_6306.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_022_6306.mp4",
+      "clip_context_seconds": [
+        209.1999969482422,
+        211.1999969482422
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_001_front",
+      "model": "mstcn",
+      "action": "REMOVE_ROTOR_ASSEMBLY",
+      "prediction_timestamp_seconds": 217.39999389648438,
+      "action_event_timestamp_seconds": 217.39999389648438,
+      "action_event_start_frame": 6522,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 6756,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 6.103515630684342e-06,
+      "confidence": 0.5459401607513428,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_023_6522.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_023_6522.mp4",
+      "clip_context_seconds": [
+        216.39999389648438,
+        218.39999389648438
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_001_front",
+      "model": "mstcn",
+      "action": "STORE_ROTOR_ASSEMBLY",
+      "prediction_timestamp_seconds": 221.1999969482422,
+      "action_event_timestamp_seconds": 221.1999969482422,
+      "action_event_start_frame": 6636,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 6756,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.0517578011313162e-06,
+      "confidence": 0.3970705568790436,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_024_6636.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_024_6636.mp4",
+      "clip_context_seconds": [
+        220.1999969482422,
+        222.1999969482422
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_002_front",
+      "model": "mstcn",
+      "action": "START_ANGLE_GRINDER_ASSEMBLY",
+      "prediction_timestamp_seconds": 0.0,
+      "action_event_timestamp_seconds": 0.0,
+      "action_event_start_frame": 0,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3939,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 0.0,
+      "confidence": 0.7562846541404724,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_001_0.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_001_0.mp4",
+      "clip_context_seconds": [
+        0,
+        1.0
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_002_front",
+      "model": "mstcn",
+      "action": "UNSCREW_ANTI_VIBRATION_HANDLE",
+      "prediction_timestamp_seconds": 3.4000000953674316,
+      "action_event_timestamp_seconds": 3.4000000953674316,
+      "action_event_start_frame": 102,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3939,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 9.536743172944284e-08,
+      "confidence": 0.8571937680244446,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_002_102.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_002_102.mp4",
+      "clip_context_seconds": [
+        2.4000000953674316,
+        4.400000095367432
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_002_front",
+      "model": "mstcn",
+      "action": "STORE_ANTI_VIBRATION_HANDLE",
+      "prediction_timestamp_seconds": 8.0,
+      "action_event_timestamp_seconds": 8.0,
+      "action_event_start_frame": 240,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3939,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 0.0,
+      "confidence": 0.6000964641571045,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_003_240.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_003_240.mp4",
+      "clip_context_seconds": [
+        7.0,
+        9.0
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_002_front",
+      "model": "mstcn",
+      "action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "prediction_timestamp_seconds": 10.399999618530273,
+      "action_event_timestamp_seconds": 10.399999618530273,
+      "action_event_start_frame": 312,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3939,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.8146972691777137e-07,
+      "confidence": 0.6218956112861633,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_004_312.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_004_312.mp4",
+      "clip_context_seconds": [
+        9.399999618530273,
+        11.399999618530273
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_002_front",
+      "model": "mstcn",
+      "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "prediction_timestamp_seconds": 14.800000190734863,
+      "action_event_timestamp_seconds": 14.800000190734863,
+      "action_event_start_frame": 444,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3939,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 1.9073486257070726e-07,
+      "confidence": 0.842777669429779,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_005_444.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_005_444.mp4",
+      "clip_context_seconds": [
+        13.800000190734863,
+        15.800000190734863
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_002_front",
+      "model": "mstcn",
+      "action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "prediction_timestamp_seconds": 27.799999237060547,
+      "action_event_timestamp_seconds": 27.799999237060547,
+      "action_event_start_frame": 834,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3939,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 7.629394538355427e-07,
+      "confidence": 0.340904176235199,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_006_834.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_006_834.mp4",
+      "clip_context_seconds": [
+        26.799999237060547,
+        28.799999237060547
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_002_front",
+      "model": "mstcn",
+      "action": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "prediction_timestamp_seconds": 29.399999618530273,
+      "action_event_timestamp_seconds": 29.399999618530273,
+      "action_event_start_frame": 882,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3939,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.8146972514141453e-07,
+      "confidence": 0.515993595123291,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_007_882.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_007_882.mp4",
+      "clip_context_seconds": [
+        28.399999618530273,
+        30.399999618530273
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_002_front",
+      "model": "mstcn",
+      "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "prediction_timestamp_seconds": 33.599998474121094,
+      "action_event_timestamp_seconds": 33.599998474121094,
+      "action_event_start_frame": 1008,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3939,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 1.5258789076710855e-06,
+      "confidence": 0.8849934339523315,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_008_1008.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_008_1008.mp4",
+      "clip_context_seconds": [
+        32.599998474121094,
+        34.599998474121094
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_002_front",
+      "model": "mstcn",
+      "action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "prediction_timestamp_seconds": 53.20000076293945,
+      "action_event_timestamp_seconds": 53.20000076293945,
+      "action_event_start_frame": 1596,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3939,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 7.629394502828291e-07,
+      "confidence": 0.5402261018753052,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_009_1596.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_009_1596.mp4",
+      "clip_context_seconds": [
+        52.20000076293945,
+        54.20000076293945
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_002_front",
+      "model": "mstcn",
+      "action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "prediction_timestamp_seconds": 57.79999923706055,
+      "action_event_timestamp_seconds": 57.79999923706055,
+      "action_event_start_frame": 1734,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3939,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 7.629394502828291e-07,
+      "confidence": 0.27142950892448425,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_010_1734.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_010_1734.mp4",
+      "clip_context_seconds": [
+        56.79999923706055,
+        58.79999923706055
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_002_front",
+      "model": "mstcn",
+      "action": "DETACH_ADAPTER_PLATE",
+      "prediction_timestamp_seconds": 60.0,
+      "action_event_timestamp_seconds": 60.0,
+      "action_event_start_frame": 1800,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3939,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 0.0,
+      "confidence": 0.8401639461517334,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_011_1800.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_011_1800.mp4",
+      "clip_context_seconds": [
+        59.0,
+        61.0
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_002_front",
+      "model": "mstcn",
+      "action": "STORE_ADAPTER_PLATE",
+      "prediction_timestamp_seconds": 66.4000015258789,
+      "action_event_timestamp_seconds": 66.4000015258789,
+      "action_event_start_frame": 1992,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3939,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 1.5258789005656581e-06,
+      "confidence": 0.41356581449508667,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_012_1992.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_012_1992.mp4",
+      "clip_context_seconds": [
+        65.4000015258789,
+        67.4000015258789
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_002_front",
+      "model": "mstcn",
+      "action": "DETACH_ADAPTER_PLATE",
+      "prediction_timestamp_seconds": 83.19999694824219,
+      "action_event_timestamp_seconds": 83.19999694824219,
+      "action_event_start_frame": 2496,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3939,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.051757815342171e-06,
+      "confidence": 0.9076481461524963,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_013_2496.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_013_2496.mp4",
+      "clip_context_seconds": [
+        82.19999694824219,
+        84.19999694824219
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_002_front",
+      "model": "mstcn",
+      "action": "STORE_ADAPTER_PLATE",
+      "prediction_timestamp_seconds": 96.80000305175781,
+      "action_event_timestamp_seconds": 96.80000305175781,
+      "action_event_start_frame": 2904,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3939,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.051757815342171e-06,
+      "confidence": 0.4337013363838196,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_014_2904.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_014_2904.mp4",
+      "clip_context_seconds": [
+        95.80000305175781,
+        97.80000305175781
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_002_front",
+      "model": "mstcn",
+      "action": "DETACH_ADAPTER_PLATE",
+      "prediction_timestamp_seconds": 98.4000015258789,
+      "action_event_timestamp_seconds": 98.4000015258789,
+      "action_event_start_frame": 2952,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3939,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 1.5258789005656581e-06,
+      "confidence": 0.8334810137748718,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_015_2952.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_015_2952.mp4",
+      "clip_context_seconds": [
+        97.4000015258789,
+        99.4000015258789
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_002_front",
+      "model": "mstcn",
+      "action": "STORE_ADAPTER_PLATE",
+      "prediction_timestamp_seconds": 110.80000305175781,
+      "action_event_timestamp_seconds": 110.80000305175781,
+      "action_event_start_frame": 3324,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3939,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.051757815342171e-06,
+      "confidence": 0.4077623784542084,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_016_3324.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_016_3324.mp4",
+      "clip_context_seconds": [
+        109.80000305175781,
+        111.80000305175781
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_002_front",
+      "model": "mstcn",
+      "action": "REMOVE_ROTOR_ASSEMBLY",
+      "prediction_timestamp_seconds": 117.80000305175781,
+      "action_event_timestamp_seconds": 117.80000305175781,
+      "action_event_start_frame": 3534,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3939,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.051757815342171e-06,
+      "confidence": 0.7480427026748657,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_017_3534.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_017_3534.mp4",
+      "clip_context_seconds": [
+        116.80000305175781,
+        118.80000305175781
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_002_front",
+      "model": "mstcn",
+      "action": "STORE_ROTOR_ASSEMBLY",
+      "prediction_timestamp_seconds": 126.5999984741211,
+      "action_event_timestamp_seconds": 126.5999984741211,
+      "action_event_start_frame": 3798,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3939,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 1.5258789005656581e-06,
+      "confidence": 0.38214558362960815,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_018_3798.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_018_3798.mp4",
+      "clip_context_seconds": [
+        125.5999984741211,
+        127.5999984741211
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_003_front",
+      "model": "mstcn",
+      "action": "START_ANGLE_GRINDER_ASSEMBLY",
+      "prediction_timestamp_seconds": 0.0,
+      "action_event_timestamp_seconds": 0.0,
+      "action_event_start_frame": 0,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 4040,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 0.0,
+      "confidence": 0.3931669592857361,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_001_0.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_001_0.mp4",
+      "clip_context_seconds": [
+        0,
+        1.0
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_003_front",
+      "model": "mstcn",
+      "action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "prediction_timestamp_seconds": 7.800000190734863,
+      "action_event_timestamp_seconds": 7.800000190734863,
+      "action_event_start_frame": 234,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 4040,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 1.9073486345888568e-07,
+      "confidence": 0.3554098904132843,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_002_234.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_002_234.mp4",
+      "clip_context_seconds": [
+        6.800000190734863,
+        8.800000190734863
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_003_front",
+      "model": "mstcn",
+      "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "prediction_timestamp_seconds": 8.600000381469727,
+      "action_event_timestamp_seconds": 8.600000381469727,
+      "action_event_start_frame": 258,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 4040,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.8146972691777137e-07,
+      "confidence": 0.47587358951568604,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_003_258.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_003_258.mp4",
+      "clip_context_seconds": [
+        7.600000381469727,
+        9.600000381469727
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_003_front",
+      "model": "mstcn",
+      "action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "prediction_timestamp_seconds": 14.0,
+      "action_event_timestamp_seconds": 14.0,
+      "action_event_start_frame": 420,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 4040,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 0.0,
+      "confidence": 0.7294279336929321,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_004_420.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_004_420.mp4",
+      "clip_context_seconds": [
+        13.0,
+        15.0
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_003_front",
+      "model": "mstcn",
+      "action": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "prediction_timestamp_seconds": 23.399999618530273,
+      "action_event_timestamp_seconds": 23.399999618530273,
+      "action_event_start_frame": 702,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 4040,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.8146972514141453e-07,
+      "confidence": 0.5043771862983704,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_005_702.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_005_702.mp4",
+      "clip_context_seconds": [
+        22.399999618530273,
+        24.399999618530273
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_003_front",
+      "model": "mstcn",
+      "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "prediction_timestamp_seconds": 26.399999618530273,
+      "action_event_timestamp_seconds": 26.399999618530273,
+      "action_event_start_frame": 792,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 4040,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.8146972514141453e-07,
+      "confidence": 0.9169061183929443,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_006_792.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_006_792.mp4",
+      "clip_context_seconds": [
+        25.399999618530273,
+        27.399999618530273
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_003_front",
+      "model": "mstcn",
+      "action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "prediction_timestamp_seconds": 66.4000015258789,
+      "action_event_timestamp_seconds": 66.4000015258789,
+      "action_event_start_frame": 1992,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 4040,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 1.5258789005656581e-06,
+      "confidence": 0.5600102543830872,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_007_1992.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_007_1992.mp4",
+      "clip_context_seconds": [
+        65.4000015258789,
+        67.4000015258789
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_003_front",
+      "model": "mstcn",
+      "action": "REMOVE_ROTOR_ASSEMBLY",
+      "prediction_timestamp_seconds": 69.80000305175781,
+      "action_event_timestamp_seconds": 69.80000305175781,
+      "action_event_start_frame": 2094,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 4040,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.051757815342171e-06,
+      "confidence": 0.8824566006660461,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_008_2094.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_008_2094.mp4",
+      "clip_context_seconds": [
+        68.80000305175781,
+        70.80000305175781
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_003_front",
+      "model": "mstcn",
+      "action": "DETACH_ADAPTER_PLATE",
+      "prediction_timestamp_seconds": 84.0,
+      "action_event_timestamp_seconds": 84.0,
+      "action_event_start_frame": 2520,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 4040,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 0.0,
+      "confidence": 0.959213137626648,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_009_2520.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_009_2520.mp4",
+      "clip_context_seconds": [
+        83.0,
+        85.0
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_003_front",
+      "model": "mstcn",
+      "action": "STORE_ADAPTER_PLATE",
+      "prediction_timestamp_seconds": 110.80000305175781,
+      "action_event_timestamp_seconds": 110.80000305175781,
+      "action_event_start_frame": 3324,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 4040,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.051757815342171e-06,
+      "confidence": 0.4746715724468231,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_010_3324.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_010_3324.mp4",
+      "clip_context_seconds": [
+        109.80000305175781,
+        111.80000305175781
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_003_front",
+      "model": "mstcn",
+      "action": "DETACH_ADAPTER_PLATE",
+      "prediction_timestamp_seconds": 113.0,
+      "action_event_timestamp_seconds": 113.0,
+      "action_event_start_frame": 3390,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 4040,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 0.0,
+      "confidence": 0.42970725893974304,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_011_3390.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_011_3390.mp4",
+      "clip_context_seconds": [
+        112.0,
+        114.0
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_003_front",
+      "model": "mstcn",
+      "action": "REMOVE_ROTOR_ASSEMBLY",
+      "prediction_timestamp_seconds": 115.80000305175781,
+      "action_event_timestamp_seconds": 115.80000305175781,
+      "action_event_start_frame": 3474,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 4040,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.051757815342171e-06,
+      "confidence": 0.6921396851539612,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_012_3474.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_012_3474.mp4",
+      "clip_context_seconds": [
+        114.80000305175781,
+        116.80000305175781
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_003_front",
+      "model": "mstcn",
+      "action": "STORE_ROTOR_ASSEMBLY",
+      "prediction_timestamp_seconds": 127.19999694824219,
+      "action_event_timestamp_seconds": 127.19999694824219,
+      "action_event_start_frame": 3816,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 4040,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.051757815342171e-06,
+      "confidence": 0.4196026921272278,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_013_3816.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_013_3816.mp4",
+      "clip_context_seconds": [
+        126.19999694824219,
+        128.1999969482422
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_004_front",
+      "model": "mstcn",
+      "action": "START_ANGLE_GRINDER_ASSEMBLY",
+      "prediction_timestamp_seconds": 0.0,
+      "action_event_timestamp_seconds": 0.0,
+      "action_event_start_frame": 0,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3543,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 0.0,
+      "confidence": 0.59284508228302,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_001_0.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_001_0.mp4",
+      "clip_context_seconds": [
+        0,
+        1.0
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_004_front",
+      "model": "mstcn",
+      "action": "UNSCREW_ANTI_VIBRATION_HANDLE",
+      "prediction_timestamp_seconds": 2.0,
+      "action_event_timestamp_seconds": 2.0,
+      "action_event_start_frame": 60,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3543,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 0.0,
+      "confidence": 0.44259247183799744,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_002_60.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_002_60.mp4",
+      "clip_context_seconds": [
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_004_front",
+      "model": "mstcn",
+      "action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "prediction_timestamp_seconds": 4.0,
+      "action_event_timestamp_seconds": 4.0,
+      "action_event_start_frame": 120,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3543,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 0.0,
+      "confidence": 0.8743876218795776,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_003_120.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_003_120.mp4",
+      "clip_context_seconds": [
+        3.0,
+        5.0
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_004_front",
+      "model": "mstcn",
+      "action": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "prediction_timestamp_seconds": 22.200000762939453,
+      "action_event_timestamp_seconds": 22.200000762939453,
+      "action_event_start_frame": 666,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3543,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 7.629394538355427e-07,
+      "confidence": 0.47530418634414673,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_004_666.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_004_666.mp4",
+      "clip_context_seconds": [
+        21.200000762939453,
+        23.200000762939453
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_004_front",
+      "model": "mstcn",
+      "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "prediction_timestamp_seconds": 26.200000762939453,
+      "action_event_timestamp_seconds": 26.200000762939453,
+      "action_event_start_frame": 786,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3543,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 7.629394538355427e-07,
+      "confidence": 0.6269205212593079,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_005_786.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_005_786.mp4",
+      "clip_context_seconds": [
+        25.200000762939453,
+        27.200000762939453
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_004_front",
+      "model": "mstcn",
+      "action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "prediction_timestamp_seconds": 31.200000762939453,
+      "action_event_timestamp_seconds": 31.200000762939453,
+      "action_event_start_frame": 936,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3543,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 7.629394538355427e-07,
+      "confidence": 0.7674828171730042,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_006_936.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_006_936.mp4",
+      "clip_context_seconds": [
+        30.200000762939453,
+        32.20000076293945
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_004_front",
+      "model": "mstcn",
+      "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "prediction_timestamp_seconds": 40.400001525878906,
+      "action_event_timestamp_seconds": 40.400001525878906,
+      "action_event_start_frame": 1212,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3543,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 1.5258789076710855e-06,
+      "confidence": 0.8842733502388,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_007_1212.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_007_1212.mp4",
+      "clip_context_seconds": [
+        39.400001525878906,
+        41.400001525878906
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_004_front",
+      "model": "mstcn",
+      "action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "prediction_timestamp_seconds": 54.400001525878906,
+      "action_event_timestamp_seconds": 54.400001525878906,
+      "action_event_start_frame": 1632,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3543,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 1.5258789076710855e-06,
+      "confidence": 0.543607771396637,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_008_1632.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_008_1632.mp4",
+      "clip_context_seconds": [
+        53.400001525878906,
+        55.400001525878906
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_004_front",
+      "model": "mstcn",
+      "action": "DETACH_ADAPTER_PLATE",
+      "prediction_timestamp_seconds": 58.400001525878906,
+      "action_event_timestamp_seconds": 58.400001525878906,
+      "action_event_start_frame": 1752,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3543,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 1.5258789076710855e-06,
+      "confidence": 0.8942051529884338,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_009_1752.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_009_1752.mp4",
+      "clip_context_seconds": [
+        57.400001525878906,
+        59.400001525878906
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_004_front",
+      "model": "mstcn",
+      "action": "STORE_ADAPTER_PLATE",
+      "prediction_timestamp_seconds": 90.19999694824219,
+      "action_event_timestamp_seconds": 90.19999694824219,
+      "action_event_start_frame": 2706,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3543,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.051757815342171e-06,
+      "confidence": 0.492548406124115,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_010_2706.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_010_2706.mp4",
+      "clip_context_seconds": [
+        89.19999694824219,
+        91.19999694824219
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_004_front",
+      "model": "mstcn",
+      "action": "DETACH_ADAPTER_PLATE",
+      "prediction_timestamp_seconds": 92.80000305175781,
+      "action_event_timestamp_seconds": 92.80000305175781,
+      "action_event_start_frame": 2784,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3543,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.051757815342171e-06,
+      "confidence": 0.3711434602737427,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_011_2784.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_011_2784.mp4",
+      "clip_context_seconds": [
+        91.80000305175781,
+        93.80000305175781
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_004_front",
+      "model": "mstcn",
+      "action": "REMOVE_ROTOR_ASSEMBLY",
+      "prediction_timestamp_seconds": 97.19999694824219,
+      "action_event_timestamp_seconds": 97.19999694824219,
+      "action_event_start_frame": 2916,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3543,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 3.051757815342171e-06,
+      "confidence": 0.8396930694580078,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_012_2916.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_012_2916.mp4",
+      "clip_context_seconds": [
+        96.19999694824219,
+        98.19999694824219
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_004_front",
+      "model": "mstcn",
+      "action": "STORE_ROTOR_ASSEMBLY",
+      "prediction_timestamp_seconds": 109.5999984741211,
+      "action_event_timestamp_seconds": 109.5999984741211,
+      "action_event_start_frame": 3288,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3543,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 1.5258789005656581e-06,
+      "confidence": 0.3475686311721802,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_013_3288.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_013_3288.mp4",
+      "clip_context_seconds": [
+        108.5999984741211,
+        110.5999984741211
+      ]
+    },
+    {
+      "video_id": "SS07EL13_Disassembly_A_004_front",
+      "model": "mstcn",
+      "action": "STORE_ROTOR_ASSEMBLY",
+      "prediction_timestamp_seconds": 115.0,
+      "action_event_timestamp_seconds": 115.0,
+      "action_event_start_frame": 3450,
+      "source_video_fps": 30.0,
+      "source_video_frame_count": 3543,
+      "source_video_resolution": [
+        1280,
+        720
+      ],
+      "timestamp_frame_delta_seconds": 0.0,
+      "confidence": 0.3475089371204376,
+      "workflow_decision": "NOT_EVALUATED: no process-owner-approved workflow specification",
+      "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_014_3450.jpg",
+      "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_014_3450.mp4",
+      "clip_context_seconds": [
+        114.0,
+        116.0
+      ]
+    }
+  ]
+}

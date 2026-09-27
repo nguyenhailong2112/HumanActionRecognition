@@ -1112,3 +1112,11 @@ Nguyên tắc:
 > **Ý tưởng hay nhưng chưa cần thiết không được chen ngang Core Roadmap.**
 
 Nó chỉ đi vào Backlog.
+
+---
+
+# CURRENT READINESS ADDENDUM — 2026-09-27
+
+The project has passed readiness for a bounded action-segmentation experiment on the primary PC: the IMPACT v1.1 target split/features/videos were validated in CP05–CP06, CUDA training was executed, and Framewise/MS-TCN baselines plus held-out analysis exist. This does not mark the full project ready for factory process evaluation or deployment.
+
+Current gates before process-level evaluation: owner-validated Research Workflow Specification; semantic review of the selected actual action-event evidence; matching process-violation ground truth if process metrics are required; validated uncertainty/evidence policy. The current hardware/software snapshot is in `experiments/CP07/environment_audit.json`; experiment evidence is in CP05–CP07 reports. Raw data remains outside the source repository.

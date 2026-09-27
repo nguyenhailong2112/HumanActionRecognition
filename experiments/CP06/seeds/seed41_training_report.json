@@ -1,0 +1,340 @@
+{
+  "experiment_id": "EXP-CP06-seed41",
+  "dataset": "IMPACT",
+  "dataset_version": "v1.1",
+  "feature_name": "I3D",
+  "official_split": {
+    "name": "IMPACT TAS-S S2 (cross-subject)",
+    "split_dir": "ResearchDocuments/ResearchDocuments/01_IMPACT/code/IMPACT/dataset/TAS/splits_TAS-S",
+    "split_id": 2,
+    "procedure": "Disassembly_A",
+    "view": "front",
+    "require_cross_worker_test": true
+  },
+  "action_classes": [
+    "NULL",
+    "START_ANGLE_GRINDER_ASSEMBLY",
+    "UNSCREW_ANTI_VIBRATION_HANDLE",
+    "STORE_ANTI_VIBRATION_HANDLE",
+    "REMOVE_LOCKING_LEVER_ASSEMBLY",
+    "STORE_LOCKING_LEVER_ASSEMBLY",
+    "EXTRACT_BEARING_PLATE_ASSEMBLY",
+    "STORE_BEARING_PLATE_ASSEMBLY",
+    "DETACH_ADAPTER_PLATE",
+    "REMOVE_ROTOR_ASSEMBLY",
+    "STORE_ROTOR_ASSEMBLY",
+    "STORE_GEARBOX_HOUSING",
+    "STORE_ADAPTER_PLATE",
+    "INSTALL_ROTOR_ASSEMBLY",
+    "ATTACH_ADAPTER_PLATE",
+    "RETRIEVE_BEARING_PLATE_ASSEMBLY",
+    "RETRIEVE_LOCKING_LEVER_ASSEMBLY",
+    "STORE_TOOL"
+  ],
+  "config_path": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\experiments\\CP06\\seeds\\seed41_run_config_as_executed.yaml",
+  "config_sha256": "76bc632286aebe127d0d03448a463b158f879fe84f9d7b43f02df558b8b4c59c",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "pytorch": "2.14.0+cu132",
+    "numpy": "2.5.3",
+    "device": "cuda:0"
+  },
+  "split_video_ids": {
+    "train": [
+      "LE06AS03_Disassembly_A_002_front",
+      "LE06AS03_Disassembly_A_003_front",
+      "LE06AS03_Disassembly_A_004_front",
+      "TO08CO25_Disassembly_A_002_front",
+      "TO08CO25_Disassembly_A_003_front",
+      "TO08CO25_Disassembly_A_004_front",
+      "KE03ER16_Disassembly_A_001_front",
+      "KE03ER16_Disassembly_A_002_front",
+      "KE03ER16_Disassembly_A_003_front",
+      "KE03ER16_Disassembly_A_004_front",
+      "ER10WE06_Disassembly_A_001_front",
+      "ER10WE06_Disassembly_A_002_front",
+      "ER07AD15_Disassembly_A_001_front",
+      "ER07AD15_Disassembly_A_002_front",
+      "ER07AD15_Disassembly_A_003_front",
+      "ER07AD15_Disassembly_A_004_front",
+      "LE07UF17_Disassembly_A_001_front",
+      "LE07UF17_Disassembly_A_002_front",
+      "LE07UF17_Disassembly_A_003_front",
+      "LE07UF17_Disassembly_A_004_front",
+      "KI03AR28_Disassembly_A_001_front",
+      "KI03AR28_Disassembly_A_002_front",
+      "KI03AR28_Disassembly_A_003_front",
+      "KI03AR28_Disassembly_A_004_front",
+      "KJ03JM25_Disassembly_A_003_front",
+      "KJ03JM25_Disassembly_A_004_front",
+      "NA07GE21_Disassembly_A_001_front",
+      "NA07GE21_Disassembly_A_002_front",
+      "NA07GE21_Disassembly_A_004_front",
+      "AL07EJ17_Disassembly_A_001_front",
+      "AL07EJ17_Disassembly_A_002_front",
+      "AL07EJ17_Disassembly_A_003_front",
+      "AL07EJ17_Disassembly_A_004_front",
+      "MA07LF04_Disassembly_A_003_front",
+      "MA07LF04_Disassembly_A_004_front",
+      "KI05KO01_Disassembly_A_001_front",
+      "KI05KO01_Disassembly_A_002_front",
+      "KI05KO01_Disassembly_A_003_front",
+      "KI05KO01_Disassembly_A_004_front"
+    ],
+    "val": [
+      "LE06AS03_Disassembly_A_001_front",
+      "MA07LF04_Disassembly_A_001_front",
+      "ER10WE06_Disassembly_A_003_front",
+      "NA07GE21_Disassembly_A_003_front",
+      "ER10WE06_Disassembly_A_004_front"
+    ],
+    "test": [
+      "SS07EL13_Disassembly_A_001_front",
+      "SS07EL13_Disassembly_A_002_front",
+      "SS07EL13_Disassembly_A_003_front",
+      "SS07EL13_Disassembly_A_004_front"
+    ]
+  },
+  "epochs_requested": 12,
+  "models": {
+    "framewise": {
+      "checkpoint": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\models\\cp06_framewise_seed41_best.pt",
+      "final_checkpoint": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\models\\cp06_framewise_seed41_final.pt",
+      "best_epoch": 12,
+      "best_val_loss": 1.6131658554077148,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 2.5390021800994873,
+          "val_loss": 2.2239529609680178
+        },
+        {
+          "epoch": 2,
+          "train_loss": 1.8575262870544043,
+          "val_loss": 1.9693312644958496
+        },
+        {
+          "epoch": 3,
+          "train_loss": 1.5791925696226268,
+          "val_loss": 1.9742488622665406
+        },
+        {
+          "epoch": 4,
+          "train_loss": 1.4285890261332195,
+          "val_loss": 2.009804058074951
+        },
+        {
+          "epoch": 5,
+          "train_loss": 1.3099935391010382,
+          "val_loss": 1.7985761404037475
+        },
+        {
+          "epoch": 6,
+          "train_loss": 1.227772029546591,
+          "val_loss": 1.7338436841964722
+        },
+        {
+          "epoch": 7,
+          "train_loss": 1.1653768297953484,
+          "val_loss": 1.684743046760559
+        },
+        {
+          "epoch": 8,
+          "train_loss": 1.1072037006035829,
+          "val_loss": 1.6660287857055665
+        },
+        {
+          "epoch": 9,
+          "train_loss": 1.0564404252247932,
+          "val_loss": 1.6694867610931396
+        },
+        {
+          "epoch": 10,
+          "train_loss": 1.015515929613358,
+          "val_loss": 1.6509568691253662
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.9852191209793091,
+          "val_loss": 1.6610425233840942
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.9563058523031381,
+          "val_loss": 1.6131658554077148
+        }
+      ],
+      "train_seconds": 7.754850499972235,
+      "train_videos": [
+        "KI05KO01_Disassembly_A_003_front",
+        "TO08CO25_Disassembly_A_003_front",
+        "KI05KO01_Disassembly_A_002_front",
+        "KI05KO01_Disassembly_A_004_front",
+        "LE07UF17_Disassembly_A_002_front",
+        "KI03AR28_Disassembly_A_001_front",
+        "TO08CO25_Disassembly_A_004_front",
+        "KE03ER16_Disassembly_A_002_front",
+        "KJ03JM25_Disassembly_A_003_front",
+        "ER10WE06_Disassembly_A_002_front",
+        "ER07AD15_Disassembly_A_003_front",
+        "LE06AS03_Disassembly_A_004_front",
+        "TO08CO25_Disassembly_A_002_front",
+        "KI05KO01_Disassembly_A_001_front",
+        "KI03AR28_Disassembly_A_002_front",
+        "NA07GE21_Disassembly_A_004_front",
+        "LE06AS03_Disassembly_A_003_front",
+        "AL07EJ17_Disassembly_A_001_front",
+        "ER10WE06_Disassembly_A_001_front",
+        "LE07UF17_Disassembly_A_004_front",
+        "MA07LF04_Disassembly_A_003_front",
+        "ER07AD15_Disassembly_A_002_front",
+        "ER07AD15_Disassembly_A_004_front",
+        "MA07LF04_Disassembly_A_004_front",
+        "KI03AR28_Disassembly_A_004_front",
+        "KJ03JM25_Disassembly_A_004_front",
+        "NA07GE21_Disassembly_A_002_front",
+        "LE07UF17_Disassembly_A_003_front",
+        "NA07GE21_Disassembly_A_001_front",
+        "AL07EJ17_Disassembly_A_003_front",
+        "KE03ER16_Disassembly_A_001_front",
+        "KI03AR28_Disassembly_A_003_front",
+        "LE06AS03_Disassembly_A_002_front",
+        "ER07AD15_Disassembly_A_001_front",
+        "KE03ER16_Disassembly_A_004_front",
+        "AL07EJ17_Disassembly_A_004_front",
+        "AL07EJ17_Disassembly_A_002_front",
+        "KE03ER16_Disassembly_A_003_front",
+        "LE07UF17_Disassembly_A_001_front"
+      ],
+      "val_videos": [
+        "LE06AS03_Disassembly_A_001_front",
+        "MA07LF04_Disassembly_A_001_front",
+        "ER10WE06_Disassembly_A_003_front",
+        "NA07GE21_Disassembly_A_003_front",
+        "ER10WE06_Disassembly_A_004_front"
+      ],
+      "test_evaluation": "DEFERRED: run tools/evaluate.py once after training/configuration freeze",
+      "artifact_copy_note": "CP06 paired-run Framewise checkpoints are stored under CP06-specific paths; seed 41 was copied before reproducing and restoring the CP05 seed-17 checkpoint."
+    },
+    "mstcn": {
+      "checkpoint": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\models\\cp06_mstcn_seed41_best.pt",
+      "final_checkpoint": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\models\\cp06_mstcn_seed41_final.pt",
+      "best_epoch": 6,
+      "best_val_loss": 1.2537123322486878,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 6.777525657262558,
+          "val_loss": 2.1520715713500977
+        },
+        {
+          "epoch": 2,
+          "train_loss": 5.135115501208183,
+          "val_loss": 2.0998971223831178
+        },
+        {
+          "epoch": 3,
+          "train_loss": 4.261461814244588,
+          "val_loss": 1.4348126173019409
+        },
+        {
+          "epoch": 4,
+          "train_loss": 3.657395112208831,
+          "val_loss": 1.5263056993484496
+        },
+        {
+          "epoch": 5,
+          "train_loss": 3.432153652875851,
+          "val_loss": 1.4448363304138183
+        },
+        {
+          "epoch": 6,
+          "train_loss": 3.0600548829787817,
+          "val_loss": 1.2537123322486878
+        },
+        {
+          "epoch": 7,
+          "train_loss": 2.6284664410811205,
+          "val_loss": 1.9545235633850098
+        },
+        {
+          "epoch": 8,
+          "train_loss": 2.770152128659762,
+          "val_loss": 1.3516714930534364
+        },
+        {
+          "epoch": 9,
+          "train_loss": 2.5146861290320373,
+          "val_loss": 1.6178372144699096
+        },
+        {
+          "epoch": 10,
+          "train_loss": 2.201194399442428,
+          "val_loss": 1.5967878818511962
+        },
+        {
+          "epoch": 11,
+          "train_loss": 2.107988174145038,
+          "val_loss": 1.26938955783844
+        },
+        {
+          "epoch": 12,
+          "train_loss": 1.889158899967487,
+          "val_loss": 1.5036900043487549
+        }
+      ],
+      "train_seconds": 12.20111939997878,
+      "train_videos": [
+        "KI05KO01_Disassembly_A_003_front",
+        "TO08CO25_Disassembly_A_003_front",
+        "KI05KO01_Disassembly_A_002_front",
+        "KI05KO01_Disassembly_A_004_front",
+        "LE07UF17_Disassembly_A_002_front",
+        "KI03AR28_Disassembly_A_001_front",
+        "TO08CO25_Disassembly_A_004_front",
+        "KE03ER16_Disassembly_A_002_front",
+        "KJ03JM25_Disassembly_A_003_front",
+        "ER10WE06_Disassembly_A_002_front",
+        "ER07AD15_Disassembly_A_003_front",
+        "LE06AS03_Disassembly_A_004_front",
+        "TO08CO25_Disassembly_A_002_front",
+        "KI05KO01_Disassembly_A_001_front",
+        "KI03AR28_Disassembly_A_002_front",
+        "NA07GE21_Disassembly_A_004_front",
+        "LE06AS03_Disassembly_A_003_front",
+        "AL07EJ17_Disassembly_A_001_front",
+        "ER10WE06_Disassembly_A_001_front",
+        "LE07UF17_Disassembly_A_004_front",
+        "MA07LF04_Disassembly_A_003_front",
+        "ER07AD15_Disassembly_A_002_front",
+        "ER07AD15_Disassembly_A_004_front",
+        "MA07LF04_Disassembly_A_004_front",
+        "KI03AR28_Disassembly_A_004_front",
+        "KJ03JM25_Disassembly_A_004_front",
+        "NA07GE21_Disassembly_A_002_front",
+        "LE07UF17_Disassembly_A_003_front",
+        "NA07GE21_Disassembly_A_001_front",
+        "AL07EJ17_Disassembly_A_003_front",
+        "KE03ER16_Disassembly_A_001_front",
+        "KI03AR28_Disassembly_A_003_front",
+        "LE06AS03_Disassembly_A_002_front",
+        "ER07AD15_Disassembly_A_001_front",
+        "KE03ER16_Disassembly_A_004_front",
+        "AL07EJ17_Disassembly_A_004_front",
+        "AL07EJ17_Disassembly_A_002_front",
+        "KE03ER16_Disassembly_A_003_front",
+        "LE07UF17_Disassembly_A_001_front"
+      ],
+      "val_videos": [
+        "LE06AS03_Disassembly_A_001_front",
+        "MA07LF04_Disassembly_A_001_front",
+        "ER10WE06_Disassembly_A_003_front",
+        "NA07GE21_Disassembly_A_003_front",
+        "ER10WE06_Disassembly_A_004_front"
+      ],
+      "test_evaluation": "DEFERRED: run tools/evaluate.py once after training/configuration freeze"
+    }
+  },
+  "run_config_snapshot": "experiments/CP06/seeds/seed41_run_config_as_executed.yaml",
+  "executed_config_path_original": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\configs\\cp06_seed41.yaml"
+}

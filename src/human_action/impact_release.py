@@ -124,18 +124,30 @@ def load_release_sequence(config: dict[str, Any], video_id: str, split: str, con
     project_root = Path(config_path).resolve().parent.parent
     dataset = config["dataset"]
     view = dataset["view"]
-    annotation_zip_path = project_root / dataset["annotation_archive"]
+    annotation_zip_value = dataset.get("annotation_archive")
+    annotation_zip_path = project_root / annotation_zip_value if annotation_zip_value else None
+    annotation_root_value = dataset.get("annotation_root")
+    annotation_root = project_root / annotation_root_value if annotation_root_value else None
     feature_archive_value = dataset.get("feature_archive")
     feature_zip_path = project_root / feature_archive_value if feature_archive_value else None
     feature_root_values = dataset.get("feature_roots", [])
     if dataset.get("feature_root"):
         feature_root_values = [dataset["feature_root"], *feature_root_values]
     feature_roots = [project_root / value for value in feature_root_values]
-    with ZipFile(annotation_zip_path) as archive:
-        member = annotation_member(video_id, view)
-        if member not in archive.namelist():
-            raise FileNotFoundError(f"TAS-S JSON missing in official annotation bundle: {member}")
-        labels, metadata = parse_tas_s_annotation(archive.read(member), video_id, config["actions"]["class_order"])
+    member = annotation_member(video_id, view)
+    if annotation_zip_path and annotation_zip_path.is_file():
+        with ZipFile(annotation_zip_path) as archive:
+            if member not in archive.namelist():
+                raise FileNotFoundError(f"TAS-S JSON missing in official annotation bundle: {member}")
+            annotation_payload = archive.read(member)
+    elif annotation_root:
+        annotation_file = annotation_root / "TAS-S" / view / f"{video_id}.json"
+        if not annotation_file.is_file():
+            raise FileNotFoundError(f"TAS-S JSON missing in extracted annotation release: {annotation_file}")
+        annotation_payload = annotation_file.read_bytes()
+    else:
+        raise FileNotFoundError("Configure annotation_archive or annotation_root for IMPACT release data")
+    labels, metadata = parse_tas_s_annotation(annotation_payload, video_id, config["actions"]["class_order"])
     fps = metadata["fps"]
     sample_fps = float(dataset.get("sample_fps", fps))
     stride = max(1, int(round(fps / sample_fps)))
@@ -165,8 +177,13 @@ def load_release_sequence(config: dict[str, Any], video_id: str, split: str, con
     if not np.isfinite(features).all():
         raise ValueError(f"Non-finite feature values for {video_id}")
     timestamps = (frame_indices / fps).astype(np.float32)
-    video_path = project_root / dataset.get("video_root", "") / view / f"{video_id}.mp4"
-    return SequenceData(video_id, video_path, annotation_zip_path, video_id.split("_", 1)[0], features, labels, timestamps, frame_indices, fps, metadata["frame_count"])
+    video_root_value = dataset.get("video_root", "")
+    video_roots = list(dataset.get("video_roots", []))
+    if video_root_value:
+        video_roots.insert(0, video_root_value)
+    candidates = [project_root / root / view / f"{video_id}.mp4" for root in video_roots]
+    video_path = next((path for path in candidates if path.is_file()), candidates[0] if candidates else project_root / view / f"{video_id}.mp4")
+    return SequenceData(video_id, video_path, annotation_zip_path or annotation_root, video_id.split("_", 1)[0], features, labels, timestamps, frame_indices, fps, metadata["frame_count"])
 
 
 def audit_release_annotation(archive: ZipFile, video_id: str, view: str, class_order: list[str]) -> dict[str, Any]:

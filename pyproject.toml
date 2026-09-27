@@ -3,9 +3,9 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "human-action-cp01"
+name = "human-action-rnd"
 version = "0.1.0"
-description = "Human Action and Procedure Understanding CP01 baseline"
+description = "Human Action and Procedure Understanding research baseline"
 requires-python = ">=3.10"
 dependencies = [
   "numpy>=2.1,<3",

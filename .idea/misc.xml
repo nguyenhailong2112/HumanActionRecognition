@@ -3,4 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="myCondaEnv" />
   </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="~\PycharmProjects\HumanActionRecognition\.venv" project-jdk-type="Python SDK" />
 </project>

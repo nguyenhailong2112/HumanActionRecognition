@@ -1,0 +1,1083 @@
+{
+  "split": "test",
+  "video_ids": [
+    "SS07EL13_Disassembly_A_001_front",
+    "SS07EL13_Disassembly_A_002_front",
+    "SS07EL13_Disassembly_A_003_front",
+    "SS07EL13_Disassembly_A_004_front"
+  ],
+  "models": {
+    "framewise": {
+      "confusion": [
+        [
+          110,
+          49,
+          19,
+          37,
+          36,
+          18,
+          62,
+          1,
+          84,
+          78,
+          22,
+          5,
+          121,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          31,
+          0,
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          15,
+          52,
+          1,
+          1,
+          0,
+          7,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          3,
+          4,
+          19,
+          1,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          22,
+          8,
+          3,
+          11,
+          110,
+          16,
+          110,
+          0,
+          4,
+          2,
+          1,
+          1,
+          11,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          10,
+          1,
+          0,
+          1,
+          5,
+          26,
+          3,
+          2,
+          0,
+          1,
+          3,
+          0,
+          30,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          43,
+          17,
+          55,
+          16,
+          102,
+          8,
+          343,
+          5,
+          47,
+          40,
+          2,
+          1,
+          17,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          29,
+          5,
+          19,
+          7,
+          5,
+          2,
+          3,
+          4,
+          90,
+          4,
+          4,
+          0,
+          41,
+          0,
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          36,
+          2,
+          2,
+          2,
+          3,
+          1,
+          8,
+          1,
+          307,
+          14,
+          6,
+          1,
+          35,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          46,
+          4,
+          4,
+          2,
+          12,
+          0,
+          30,
+          2,
+          19,
+          179,
+          12,
+          0,
+          41,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          4,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4,
+          7,
+          5,
+          1,
+          17,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          19,
+          5,
+          0,
+          3,
+          0,
+          2,
+          0,
+          0,
+          12,
+          5,
+          5,
+          0,
+          67,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          23,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          3
+        ]
+      ],
+      "classes": {
+        "NULL": {
+          "support": 643,
+          "precision": 0.3395061728395062,
+          "recall": 0.17107309486780714,
+          "f1": 0.22750775594622544
+        },
+        "START_ANGLE_GRINDER_ASSEMBLY": {
+          "support": 36,
+          "precision": 0.18452380952380953,
+          "recall": 0.8611111111111112,
+          "f1": 0.303921568627451
+        },
+        "UNSCREW_ANTI_VIBRATION_HANDLE": {
+          "support": 78,
+          "precision": 0.3291139240506329,
+          "recall": 0.6666666666666666,
+          "f1": 0.4406779661016949
+        },
+        "STORE_ANTI_VIBRATION_HANDLE": {
+          "support": 34,
+          "precision": 0.1919191919191919,
+          "recall": 0.5588235294117647,
+          "f1": 0.2857142857142857
+        },
+        "REMOVE_LOCKING_LEVER_ASSEMBLY": {
+          "support": 299,
+          "precision": 0.4,
+          "recall": 0.36789297658862874,
+          "f1": 0.38327526132404177
+        },
+        "STORE_LOCKING_LEVER_ASSEMBLY": {
+          "support": 82,
+          "precision": 0.33766233766233766,
+          "recall": 0.3170731707317073,
+          "f1": 0.32704402515723274
+        },
+        "EXTRACT_BEARING_PLATE_ASSEMBLY": {
+          "support": 696,
+          "precision": 0.6017543859649123,
+          "recall": 0.492816091954023,
+          "f1": 0.5418641390205371
+        },
+        "STORE_BEARING_PLATE_ASSEMBLY": {
+          "support": 216,
+          "precision": 0.26666666666666666,
+          "recall": 0.018518518518518517,
+          "f1": 0.034632034632034625
+        },
+        "DETACH_ADAPTER_PLATE": {
+          "support": 418,
+          "precision": 0.5414462081128748,
+          "recall": 0.7344497607655502,
+          "f1": 0.6233502538071066
+        },
+        "REMOVE_ROTOR_ASSEMBLY": {
+          "support": 353,
+          "precision": 0.5391566265060241,
+          "recall": 0.5070821529745042,
+          "f1": 0.5226277372262774
+        },
+        "STORE_ROTOR_ASSEMBLY": {
+          "support": 39,
+          "precision": 0.07936507936507936,
+          "recall": 0.1282051282051282,
+          "f1": 0.0980392156862745
+        },
+        "STORE_GEARBOX_HOUSING": {
+          "support": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "STORE_ADAPTER_PLATE": {
+          "support": 118,
+          "precision": 0.17585301837270342,
+          "recall": 0.5677966101694916,
+          "f1": 0.2685370741482966
+        },
+        "INSTALL_ROTOR_ASSEMBLY": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "ATTACH_ADAPTER_PLATE": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "RETRIEVE_BEARING_PLATE_ASSEMBLY": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "RETRIEVE_LOCKING_LEVER_ASSEMBLY": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "STORE_TOOL": {
+          "support": 30,
+          "precision": 0.3333333333333333,
+          "recall": 0.1,
+          "f1": 0.15384615384615383
+        }
+      },
+      "top_confusions": [
+        [
+          121,
+          "NULL",
+          "STORE_ADAPTER_PLATE"
+        ],
+        [
+          110,
+          "REMOVE_LOCKING_LEVER_ASSEMBLY",
+          "EXTRACT_BEARING_PLATE_ASSEMBLY"
+        ],
+        [
+          102,
+          "EXTRACT_BEARING_PLATE_ASSEMBLY",
+          "REMOVE_LOCKING_LEVER_ASSEMBLY"
+        ],
+        [
+          90,
+          "STORE_BEARING_PLATE_ASSEMBLY",
+          "DETACH_ADAPTER_PLATE"
+        ],
+        [
+          84,
+          "NULL",
+          "DETACH_ADAPTER_PLATE"
+        ],
+        [
+          78,
+          "NULL",
+          "REMOVE_ROTOR_ASSEMBLY"
+        ],
+        [
+          62,
+          "NULL",
+          "EXTRACT_BEARING_PLATE_ASSEMBLY"
+        ],
+        [
+          55,
+          "EXTRACT_BEARING_PLATE_ASSEMBLY",
+          "UNSCREW_ANTI_VIBRATION_HANDLE"
+        ],
+        [
+          49,
+          "NULL",
+          "START_ANGLE_GRINDER_ASSEMBLY"
+        ],
+        [
+          47,
+          "EXTRACT_BEARING_PLATE_ASSEMBLY",
+          "DETACH_ADAPTER_PLATE"
+        ],
+        [
+          46,
+          "REMOVE_ROTOR_ASSEMBLY",
+          "NULL"
+        ],
+        [
+          43,
+          "EXTRACT_BEARING_PLATE_ASSEMBLY",
+          "NULL"
+        ]
+      ]
+    },
+    "mstcn": {
+      "confusion": [
+        [
+          158,
+          5,
+          3,
+          7,
+          16,
+          8,
+          179,
+          27,
+          127,
+          55,
+          45,
+          0,
+          13,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          14,
+          20,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          32,
+          10,
+          22,
+          0,
+          4,
+          4,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          19,
+          0,
+          8,
+          1,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          18,
+          0,
+          0,
+          1,
+          137,
+          5,
+          138,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          34,
+          0,
+          0,
+          0,
+          3,
+          31,
+          6,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          12,
+          0,
+          0,
+          0,
+          76,
+          7,
+          556,
+          20,
+          25,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8,
+          21,
+          169,
+          0,
+          0,
+          0,
+          10,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          383,
+          18,
+          0,
+          0,
+          10,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          86,
+          0,
+          0,
+          0,
+          0,
+          0,
+          38,
+          8,
+          0,
+          214,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          11,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4,
+          0,
+          10,
+          14,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          35,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          45,
+          5,
+          0,
+          0,
+          33,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          22,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "classes": {
+        "NULL": {
+          "support": 643,
+          "precision": 0.34649122807017546,
+          "recall": 0.24572317262830481,
+          "f1": 0.2875341219290264
+        },
+        "START_ANGLE_GRINDER_ASSEMBLY": {
+          "support": 36,
+          "precision": 0.5714285714285714,
+          "recall": 0.5555555555555556,
+          "f1": 0.5633802816901409
+        },
+        "UNSCREW_ANTI_VIBRATION_HANDLE": {
+          "support": 78,
+          "precision": 0.6666666666666666,
+          "recall": 0.28205128205128205,
+          "f1": 0.3963963963963964
+        },
+        "STORE_ANTI_VIBRATION_HANDLE": {
+          "support": 34,
+          "precision": 0.1111111111111111,
+          "recall": 0.029411764705882353,
+          "f1": 0.04651162790697674
+        },
+        "REMOVE_LOCKING_LEVER_ASSEMBLY": {
+          "support": 299,
+          "precision": 0.5661157024793388,
+          "recall": 0.45819397993311034,
+          "f1": 0.5064695009242144
+        },
+        "STORE_LOCKING_LEVER_ASSEMBLY": {
+          "support": 82,
+          "precision": 0.5636363636363636,
+          "recall": 0.3780487804878049,
+          "f1": 0.45255474452554745
+        },
+        "EXTRACT_BEARING_PLATE_ASSEMBLY": {
+          "support": 696,
+          "precision": 0.5959271168274384,
+          "recall": 0.7988505747126436,
+          "f1": 0.6826273787599754
+        },
+        "STORE_BEARING_PLATE_ASSEMBLY": {
+          "support": 216,
+          "precision": 0.23863636363636365,
+          "recall": 0.09722222222222222,
+          "f1": 0.13815789473684212
+        },
+        "DETACH_ADAPTER_PLATE": {
+          "support": 418,
+          "precision": 0.5113484646194927,
+          "recall": 0.916267942583732,
+          "f1": 0.6563838903170522
+        },
+        "REMOVE_ROTOR_ASSEMBLY": {
+          "support": 353,
+          "precision": 0.7086092715231788,
+          "recall": 0.6062322946175638,
+          "f1": 0.6534351145038167
+        },
+        "STORE_ROTOR_ASSEMBLY": {
+          "support": 39,
+          "precision": 0.175,
+          "recall": 0.358974358974359,
+          "f1": 0.23529411764705882
+        },
+        "STORE_GEARBOX_HOUSING": {
+          "support": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "STORE_ADAPTER_PLATE": {
+          "support": 118,
+          "precision": 0.5,
+          "recall": 0.2796610169491525,
+          "f1": 0.358695652173913
+        },
+        "INSTALL_ROTOR_ASSEMBLY": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "ATTACH_ADAPTER_PLATE": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "RETRIEVE_BEARING_PLATE_ASSEMBLY": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "RETRIEVE_LOCKING_LEVER_ASSEMBLY": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "STORE_TOOL": {
+          "support": 30,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "top_confusions": [
+        [
+          179,
+          "NULL",
+          "EXTRACT_BEARING_PLATE_ASSEMBLY"
+        ],
+        [
+          169,
+          "STORE_BEARING_PLATE_ASSEMBLY",
+          "DETACH_ADAPTER_PLATE"
+        ],
+        [
+          138,
+          "REMOVE_LOCKING_LEVER_ASSEMBLY",
+          "EXTRACT_BEARING_PLATE_ASSEMBLY"
+        ],
+        [
+          127,
+          "NULL",
+          "DETACH_ADAPTER_PLATE"
+        ],
+        [
+          86,
+          "REMOVE_ROTOR_ASSEMBLY",
+          "NULL"
+        ],
+        [
+          76,
+          "EXTRACT_BEARING_PLATE_ASSEMBLY",
+          "REMOVE_LOCKING_LEVER_ASSEMBLY"
+        ],
+        [
+          55,
+          "NULL",
+          "REMOVE_ROTOR_ASSEMBLY"
+        ],
+        [
+          45,
+          "STORE_ADAPTER_PLATE",
+          "DETACH_ADAPTER_PLATE"
+        ],
+        [
+          45,
+          "NULL",
+          "STORE_ROTOR_ASSEMBLY"
+        ],
+        [
+          38,
+          "REMOVE_ROTOR_ASSEMBLY",
+          "EXTRACT_BEARING_PLATE_ASSEMBLY"
+        ],
+        [
+          35,
+          "STORE_ADAPTER_PLATE",
+          "NULL"
+        ],
+        [
+          34,
+          "STORE_LOCKING_LEVER_ASSEMBLY",
+          "NULL"
+        ]
+      ]
+    }
+  }
+}

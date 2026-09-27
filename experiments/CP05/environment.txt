@@ -1,0 +1,14 @@
+CP05 environment snapshot (2026-09-27)
+Python: 3.12.14
+OS: Windows
+Device: cuda:0
+GPU: NVIDIA GeForce RTX 5060 Ti
+GPU VRAM: 16 GiB (torch reports 17,102,864,384 bytes)
+NVIDIA driver: 596.21
+System-reported CUDA: 13.2
+PyTorch: 2.14.0+cu132 (torch.version.cuda=13.2; torch.cuda.is_available=True)
+NumPy: 2.5.3
+OpenCV: 4.14.0
+PyYAML: 6.0.3
+Environment: .venv-cp05 (created from Codex bundled Python 3.12.14 runtime; original .venv is unusable on this machine)
+Install: python -m venv .venv-cp05; pip install -r requirements.txt; pip install --force-reinstall --no-deps torch==2.14.0+cu132 --index-url https://download.pytorch.org/whl/cu132

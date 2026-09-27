@@ -1,0 +1,337 @@
+{
+  "experiment_id": "EXP-CP05",
+  "dataset": "IMPACT",
+  "dataset_version": "v1.1",
+  "feature_name": "I3D",
+  "official_split": {
+    "name": "IMPACT TAS-S S2 (cross-subject)",
+    "split_dir": "ResearchDocuments/ResearchDocuments/01_IMPACT/code/IMPACT/dataset/TAS/splits_TAS-S",
+    "split_id": 2,
+    "procedure": "Disassembly_A",
+    "view": "front",
+    "require_cross_worker_test": true
+  },
+  "action_classes": [
+    "NULL",
+    "START_ANGLE_GRINDER_ASSEMBLY",
+    "UNSCREW_ANTI_VIBRATION_HANDLE",
+    "STORE_ANTI_VIBRATION_HANDLE",
+    "REMOVE_LOCKING_LEVER_ASSEMBLY",
+    "STORE_LOCKING_LEVER_ASSEMBLY",
+    "EXTRACT_BEARING_PLATE_ASSEMBLY",
+    "STORE_BEARING_PLATE_ASSEMBLY",
+    "DETACH_ADAPTER_PLATE",
+    "REMOVE_ROTOR_ASSEMBLY",
+    "STORE_ROTOR_ASSEMBLY",
+    "STORE_GEARBOX_HOUSING",
+    "STORE_ADAPTER_PLATE",
+    "INSTALL_ROTOR_ASSEMBLY",
+    "ATTACH_ADAPTER_PLATE",
+    "RETRIEVE_BEARING_PLATE_ASSEMBLY",
+    "RETRIEVE_LOCKING_LEVER_ASSEMBLY",
+    "STORE_TOOL"
+  ],
+  "config_path": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\configs\\cp05.yaml",
+  "config_sha256": "bb6052d1b90d6c69466e5b838f36cb8d5d7453dc476bb5b399df1afbf291f2fa",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "pytorch": "2.14.0+cu132",
+    "numpy": "2.5.3",
+    "device": "cuda:0"
+  },
+  "split_video_ids": {
+    "train": [
+      "LE06AS03_Disassembly_A_002_front",
+      "LE06AS03_Disassembly_A_003_front",
+      "LE06AS03_Disassembly_A_004_front",
+      "TO08CO25_Disassembly_A_002_front",
+      "TO08CO25_Disassembly_A_003_front",
+      "TO08CO25_Disassembly_A_004_front",
+      "KE03ER16_Disassembly_A_001_front",
+      "KE03ER16_Disassembly_A_002_front",
+      "KE03ER16_Disassembly_A_003_front",
+      "KE03ER16_Disassembly_A_004_front",
+      "ER10WE06_Disassembly_A_001_front",
+      "ER10WE06_Disassembly_A_002_front",
+      "ER07AD15_Disassembly_A_001_front",
+      "ER07AD15_Disassembly_A_002_front",
+      "ER07AD15_Disassembly_A_003_front",
+      "ER07AD15_Disassembly_A_004_front",
+      "LE07UF17_Disassembly_A_001_front",
+      "LE07UF17_Disassembly_A_002_front",
+      "LE07UF17_Disassembly_A_003_front",
+      "LE07UF17_Disassembly_A_004_front",
+      "KI03AR28_Disassembly_A_001_front",
+      "KI03AR28_Disassembly_A_002_front",
+      "KI03AR28_Disassembly_A_003_front",
+      "KI03AR28_Disassembly_A_004_front",
+      "KJ03JM25_Disassembly_A_003_front",
+      "KJ03JM25_Disassembly_A_004_front",
+      "NA07GE21_Disassembly_A_001_front",
+      "NA07GE21_Disassembly_A_002_front",
+      "NA07GE21_Disassembly_A_004_front",
+      "AL07EJ17_Disassembly_A_001_front",
+      "AL07EJ17_Disassembly_A_002_front",
+      "AL07EJ17_Disassembly_A_003_front",
+      "AL07EJ17_Disassembly_A_004_front",
+      "MA07LF04_Disassembly_A_003_front",
+      "MA07LF04_Disassembly_A_004_front",
+      "KI05KO01_Disassembly_A_001_front",
+      "KI05KO01_Disassembly_A_002_front",
+      "KI05KO01_Disassembly_A_003_front",
+      "KI05KO01_Disassembly_A_004_front"
+    ],
+    "val": [
+      "LE06AS03_Disassembly_A_001_front",
+      "MA07LF04_Disassembly_A_001_front",
+      "ER10WE06_Disassembly_A_003_front",
+      "NA07GE21_Disassembly_A_003_front",
+      "ER10WE06_Disassembly_A_004_front"
+    ],
+    "test": [
+      "SS07EL13_Disassembly_A_001_front",
+      "SS07EL13_Disassembly_A_002_front",
+      "SS07EL13_Disassembly_A_003_front",
+      "SS07EL13_Disassembly_A_004_front"
+    ]
+  },
+  "epochs_requested": 12,
+  "models": {
+    "framewise": {
+      "checkpoint": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\models\\cp05_framewise_best.pt",
+      "final_checkpoint": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\models\\cp05_framewise_final.pt",
+      "best_epoch": 11,
+      "best_val_loss": 1.6067528963088988,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 2.5976697573295007,
+          "val_loss": 2.7439977169036864
+        },
+        {
+          "epoch": 2,
+          "train_loss": 1.84166965729151,
+          "val_loss": 2.2032076358795165
+        },
+        {
+          "epoch": 3,
+          "train_loss": 1.569301221615229,
+          "val_loss": 2.1282904148101807
+        },
+        {
+          "epoch": 4,
+          "train_loss": 1.408631579998212,
+          "val_loss": 1.9962544202804566
+        },
+        {
+          "epoch": 5,
+          "train_loss": 1.3096051689905999,
+          "val_loss": 1.80535089969635
+        },
+        {
+          "epoch": 6,
+          "train_loss": 1.2270669081272223,
+          "val_loss": 1.7405170917510986
+        },
+        {
+          "epoch": 7,
+          "train_loss": 1.1597452668043284,
+          "val_loss": 1.7202163457870483
+        },
+        {
+          "epoch": 8,
+          "train_loss": 1.1103309713877165,
+          "val_loss": 1.707326555252075
+        },
+        {
+          "epoch": 9,
+          "train_loss": 1.0603854931317842,
+          "val_loss": 1.6823535919189454
+        },
+        {
+          "epoch": 10,
+          "train_loss": 1.0226447811493506,
+          "val_loss": 1.698675847053528
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.9875739140388293,
+          "val_loss": 1.6067528963088988
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.9536244639983544,
+          "val_loss": 1.6510678768157958
+        }
+      ],
+      "train_seconds": 22.684104999992996,
+      "train_videos": [
+        "KJ03JM25_Disassembly_A_004_front",
+        "ER07AD15_Disassembly_A_004_front",
+        "AL07EJ17_Disassembly_A_003_front",
+        "KI03AR28_Disassembly_A_001_front",
+        "TO08CO25_Disassembly_A_003_front",
+        "NA07GE21_Disassembly_A_004_front",
+        "LE06AS03_Disassembly_A_004_front",
+        "LE07UF17_Disassembly_A_002_front",
+        "NA07GE21_Disassembly_A_002_front",
+        "ER07AD15_Disassembly_A_002_front",
+        "ER10WE06_Disassembly_A_001_front",
+        "LE07UF17_Disassembly_A_004_front",
+        "KE03ER16_Disassembly_A_001_front",
+        "KI03AR28_Disassembly_A_003_front",
+        "KI05KO01_Disassembly_A_001_front",
+        "LE06AS03_Disassembly_A_003_front",
+        "KE03ER16_Disassembly_A_003_front",
+        "NA07GE21_Disassembly_A_001_front",
+        "MA07LF04_Disassembly_A_004_front",
+        "MA07LF04_Disassembly_A_003_front",
+        "KE03ER16_Disassembly_A_004_front",
+        "AL07EJ17_Disassembly_A_004_front",
+        "ER10WE06_Disassembly_A_002_front",
+        "LE07UF17_Disassembly_A_001_front",
+        "TO08CO25_Disassembly_A_004_front",
+        "LE06AS03_Disassembly_A_002_front",
+        "KE03ER16_Disassembly_A_002_front",
+        "KJ03JM25_Disassembly_A_003_front",
+        "KI03AR28_Disassembly_A_004_front",
+        "AL07EJ17_Disassembly_A_001_front",
+        "AL07EJ17_Disassembly_A_002_front",
+        "TO08CO25_Disassembly_A_002_front",
+        "KI05KO01_Disassembly_A_003_front",
+        "ER07AD15_Disassembly_A_001_front",
+        "LE07UF17_Disassembly_A_003_front",
+        "KI03AR28_Disassembly_A_002_front",
+        "KI05KO01_Disassembly_A_004_front",
+        "ER07AD15_Disassembly_A_003_front",
+        "KI05KO01_Disassembly_A_002_front"
+      ],
+      "val_videos": [
+        "LE06AS03_Disassembly_A_001_front",
+        "MA07LF04_Disassembly_A_001_front",
+        "ER10WE06_Disassembly_A_003_front",
+        "NA07GE21_Disassembly_A_003_front",
+        "ER10WE06_Disassembly_A_004_front"
+      ],
+      "test_evaluation": "DEFERRED: run tools/evaluate.py once after training/configuration freeze"
+    },
+    "mstcn": {
+      "checkpoint": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\models\\cp05_mstcn_best.pt",
+      "final_checkpoint": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\models\\cp05_mstcn_final.pt",
+      "best_epoch": 11,
+      "best_val_loss": 1.270315909385681,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 7.018048641009209,
+          "val_loss": 2.180569648742676
+        },
+        {
+          "epoch": 2,
+          "train_loss": 5.385466759021465,
+          "val_loss": 2.067115235328674
+        },
+        {
+          "epoch": 3,
+          "train_loss": 4.266310991385044,
+          "val_loss": 1.6850456953048707
+        },
+        {
+          "epoch": 4,
+          "train_loss": 3.542953216112577,
+          "val_loss": 1.4120158433914185
+        },
+        {
+          "epoch": 5,
+          "train_loss": 3.173155809060121,
+          "val_loss": 1.767118763923645
+        },
+        {
+          "epoch": 6,
+          "train_loss": 2.8449117984527197,
+          "val_loss": 1.5814499020576478
+        },
+        {
+          "epoch": 7,
+          "train_loss": 2.5494125745235343,
+          "val_loss": 1.2729473471641541
+        },
+        {
+          "epoch": 8,
+          "train_loss": 2.495021193455427,
+          "val_loss": 1.9069851517677308
+        },
+        {
+          "epoch": 9,
+          "train_loss": 2.4060208247258115,
+          "val_loss": 1.2746960282325746
+        },
+        {
+          "epoch": 10,
+          "train_loss": 2.231510040087578,
+          "val_loss": 1.862789797782898
+        },
+        {
+          "epoch": 11,
+          "train_loss": 2.302245665819217,
+          "val_loss": 1.270315909385681
+        },
+        {
+          "epoch": 12,
+          "train_loss": 1.9380005598068237,
+          "val_loss": 1.6586583852767944
+        }
+      ],
+      "train_seconds": 31.491303300019354,
+      "train_videos": [
+        "KJ03JM25_Disassembly_A_004_front",
+        "ER07AD15_Disassembly_A_004_front",
+        "AL07EJ17_Disassembly_A_003_front",
+        "KI03AR28_Disassembly_A_001_front",
+        "TO08CO25_Disassembly_A_003_front",
+        "NA07GE21_Disassembly_A_004_front",
+        "LE06AS03_Disassembly_A_004_front",
+        "LE07UF17_Disassembly_A_002_front",
+        "NA07GE21_Disassembly_A_002_front",
+        "ER07AD15_Disassembly_A_002_front",
+        "ER10WE06_Disassembly_A_001_front",
+        "LE07UF17_Disassembly_A_004_front",
+        "KE03ER16_Disassembly_A_001_front",
+        "KI03AR28_Disassembly_A_003_front",
+        "KI05KO01_Disassembly_A_001_front",
+        "LE06AS03_Disassembly_A_003_front",
+        "KE03ER16_Disassembly_A_003_front",
+        "NA07GE21_Disassembly_A_001_front",
+        "MA07LF04_Disassembly_A_004_front",
+        "MA07LF04_Disassembly_A_003_front",
+        "KE03ER16_Disassembly_A_004_front",
+        "AL07EJ17_Disassembly_A_004_front",
+        "ER10WE06_Disassembly_A_002_front",
+        "LE07UF17_Disassembly_A_001_front",
+        "TO08CO25_Disassembly_A_004_front",
+        "LE06AS03_Disassembly_A_002_front",
+        "KE03ER16_Disassembly_A_002_front",
+        "KJ03JM25_Disassembly_A_003_front",
+        "KI03AR28_Disassembly_A_004_front",
+        "AL07EJ17_Disassembly_A_001_front",
+        "AL07EJ17_Disassembly_A_002_front",
+        "TO08CO25_Disassembly_A_002_front",
+        "KI05KO01_Disassembly_A_003_front",
+        "ER07AD15_Disassembly_A_001_front",
+        "LE07UF17_Disassembly_A_003_front",
+        "KI03AR28_Disassembly_A_002_front",
+        "KI05KO01_Disassembly_A_004_front",
+        "ER07AD15_Disassembly_A_003_front",
+        "KI05KO01_Disassembly_A_002_front"
+      ],
+      "val_videos": [
+        "LE06AS03_Disassembly_A_001_front",
+        "MA07LF04_Disassembly_A_001_front",
+        "ER10WE06_Disassembly_A_003_front",
+        "NA07GE21_Disassembly_A_003_front",
+        "ER10WE06_Disassembly_A_004_front"
+      ],
+      "test_evaluation": "DEFERRED: run tools/evaluate.py once after training/configuration freeze"
+    }
+  }
+}

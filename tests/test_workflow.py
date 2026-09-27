@@ -1,5 +1,6 @@
 import unittest
 import sys
+import itertools
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
@@ -8,8 +9,13 @@ from human_action.schemas import ActionEvent
 from human_action.workflow import WorkflowEngine
 
 
-def event(action, start=1.0, duration=2.0):
-    return ActionEvent("W1", action, start, start + duration, duration, 0.9, "demo", 30, 90)
+_clock = itertools.count()
+
+
+def event(action, start=None, duration=2.0, worker="W1"):
+    if start is None:
+        start = float(next(_clock) * 3)
+    return ActionEvent(worker, action, start, start + duration, duration, 0.9, "demo", 30, 90, "sufficient")
 
 
 def workflow(paths=None):
@@ -21,6 +27,10 @@ def workflow(paths=None):
 
 
 class WorkflowTests(unittest.TestCase):
+    def setUp(self):
+        global _clock
+        _clock = itertools.count()
+
     def test_valid_sequence_and_completion(self):
         engine = WorkflowEngine(workflow(), "W1")
         result = engine.consume([event("A"), event("B"), event("C"), event("D")])
@@ -36,7 +46,7 @@ class WorkflowTests(unittest.TestCase):
         self.assertEqual(engine.state().expected_step, "A")
         self.assertEqual(engine.events, [])
         self.assertEqual(engine.violations, [])
-        result = engine.consume([event("A"), event("B"), event("C"), event("D")])
+        result = engine.consume([event("A", worker="W2"), event("B", worker="W2"), event("C", worker="W2"), event("D", worker="W2")])
         self.assertTrue(result.state.completed)
         self.assertEqual(result.violations, [])
 
@@ -50,7 +60,7 @@ class WorkflowTests(unittest.TestCase):
         self.assertTrue(result.state.completed)
         self.assertEqual(result.violations, [])
 
-    def test_sop_approved_finite_rework_path_is_valid(self):
+    def test_process_owner_approved_finite_rework_path_is_valid(self):
         engine = WorkflowEngine(workflow([
             {"id": "canonical", "steps": ["A", "B", "C", "D"]},
             {"id": "rework", "steps": ["A", "B", "A", "B", "C", "D"]},

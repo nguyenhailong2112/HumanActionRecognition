@@ -1073,3 +1073,11 @@ Execution Anomaly
 ```
 
 mà không cần xây dựng lại toàn bộ hệ thống cho từng bài toán.
+
+---
+
+# IMPLEMENTATION STATUS ADDENDUM — 2026-09-27
+
+This SOW is the target scope. The repository does not yet implement the full target. Completed evidence-backed slice: IMPACT v1.1 TAS-S action segmentation on one fixed procedure/view and official S2 filtered subset; Framewise/MS-TCN training and held-out action metrics; structured decoded events; evidence references; deterministic workflow engine/validator and synthetic tests. CP07 audit confirmed the end-to-end process path is still gated on human-validated procedure semantics and matching process ground truth.
+
+Not completed: person/object/tool/hand/pose tracking, multi-worker visual identity association, object/zone state, valid process anomaly metrics, stream inference/latency, UI/API, and production deployment. These remain roadmap scope, not current capabilities. See `experiments/EXP-CP05.md` through `experiments/EXP-CP07.md` and `CHECKSHEET.md` for checkpoint evidence and status.

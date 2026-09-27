@@ -1,0 +1,39 @@
+seed=17 best_epoch=11 best_val_loss=1.27031591 device=cuda:0
+epoch=1 train_loss=7.01804864 val_loss=2.18056965
+epoch=2 train_loss=5.38546676 val_loss=2.06711524
+epoch=3 train_loss=4.26631099 val_loss=1.68504570
+epoch=4 train_loss=3.54295322 val_loss=1.41201584
+epoch=5 train_loss=3.17315581 val_loss=1.76711876
+epoch=6 train_loss=2.84491180 val_loss=1.58144990
+epoch=7 train_loss=2.54941257 val_loss=1.27294735
+epoch=8 train_loss=2.49502119 val_loss=1.90698515
+epoch=9 train_loss=2.40602082 val_loss=1.27469603
+epoch=10 train_loss=2.23151004 val_loss=1.86278980
+epoch=11 train_loss=2.30224567 val_loss=1.27031591
+epoch=12 train_loss=1.93800056 val_loss=1.65865839
+seed=23 best_epoch=11 best_val_loss=1.53172622 device=cuda:0
+epoch=1 train_loss=6.93706865 val_loss=2.15848532
+epoch=2 train_loss=5.16758915 val_loss=1.93734035
+epoch=3 train_loss=4.22508828 val_loss=1.57195559
+epoch=4 train_loss=3.67548534 val_loss=2.22561483
+epoch=5 train_loss=3.35962583 val_loss=1.58953884
+epoch=6 train_loss=2.99293481 val_loss=1.67462161
+epoch=7 train_loss=2.68491408 val_loss=1.80065851
+epoch=8 train_loss=2.66354164 val_loss=2.36465076
+epoch=9 train_loss=2.36070241 val_loss=1.64312365
+epoch=10 train_loss=2.18638122 val_loss=1.61323183
+epoch=11 train_loss=2.14063235 val_loss=1.53172622
+epoch=12 train_loss=2.02998313 val_loss=1.68281217
+seed=41 best_epoch=6 best_val_loss=1.25371233 device=cuda:0
+epoch=1 train_loss=6.77752566 val_loss=2.15207157
+epoch=2 train_loss=5.13511550 val_loss=2.09989712
+epoch=3 train_loss=4.26146181 val_loss=1.43481262
+epoch=4 train_loss=3.65739511 val_loss=1.52630570
+epoch=5 train_loss=3.43215365 val_loss=1.44483633
+epoch=6 train_loss=3.06005488 val_loss=1.25371233
+epoch=7 train_loss=2.62846644 val_loss=1.95452356
+epoch=8 train_loss=2.77015213 val_loss=1.35167149
+epoch=9 train_loss=2.51468613 val_loss=1.61783721
+epoch=10 train_loss=2.20119440 val_loss=1.59678788
+epoch=11 train_loss=2.10798817 val_loss=1.26938956
+epoch=12 train_loss=1.88915890 val_loss=1.50369000

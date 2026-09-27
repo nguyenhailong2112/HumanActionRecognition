@@ -1,5 +1,7 @@
 # HUMAN HANDOFF — CP02 data and procedure grounding
 
+> **Historical handoff — acquisition portion completed in CP05/CP06.** Do not repeat its archive download/preflight steps. Current dataset and archive evidence is recorded in `experiments/CP06/CP06_context_and_audit.md`; current outstanding human actions are in the CP07 handoffs.
+
 This handoff covers two independent human dependencies. Do not merge them: obtaining benchmark inputs enables action evaluation; process-owner input establishes the meaning of workflow compliance.
 
 ## A. Obtain the official CP02 action features

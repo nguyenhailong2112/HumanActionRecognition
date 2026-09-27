@@ -1,0 +1,20 @@
+[
+  {
+    "seed": 23,
+    "executed_config_sha256": "0503ce07744164269b6c271d4b83fa734b670a899deab16e8b338a5528d7e1a8",
+    "current_rerun_config_sha256": "e79e48d3469d039219092d791ebf949753f1372a884ff086f38ba0ad7bcfcd9c",
+    "framewise_best": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\models\\cp06_framewise_seed23_best.pt",
+    "framewise_best_sha256": "cb4a382cd92e772c57d8cb517def92752a68d5461cf475eba88e6d633c85a6d9",
+    "framewise_final": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\models\\cp06_framewise_seed23_final.pt",
+    "framewise_final_sha256": "8636832956ab96c63f15be8dea0505612a84d640c4c608c1a0e52480667b7ff3"
+  },
+  {
+    "seed": 41,
+    "executed_config_sha256": "76bc632286aebe127d0d03448a463b158f879fe84f9d7b43f02df558b8b4c59c",
+    "current_rerun_config_sha256": "ac106cbd91b8b0fd726dcad144407e7eb6fbac37a2afe6b08641a50e97e57606",
+    "framewise_best": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\models\\cp06_framewise_seed41_best.pt",
+    "framewise_best_sha256": "09626c4d90adf062ba7b445dacc962c3cc1802e16d06aa950c4d4e699a47b72d",
+    "framewise_final": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\models\\cp06_framewise_seed41_final.pt",
+    "framewise_final_sha256": "e7df8e01bcff6cbf96abfaecfd2d942e67f2d1706aa175b25fc13fa5704d63d5"
+  }
+]

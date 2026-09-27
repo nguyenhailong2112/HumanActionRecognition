@@ -44,6 +44,17 @@ class ActionEvent:
     video_id: str = ""
     start_frame: int = 0
     end_frame: int = 0
+    evidence_status: str = "unknown"
+    view: str = ""
+    event_id: str = ""
+    evidence_refs: tuple[str, ...] = ()
+
+    @classmethod
+    def from_dict(cls, value: dict[str, Any]) -> "ActionEvent":
+        data = dict(value)
+        if "evidence_refs" in data:
+            data["evidence_refs"] = tuple(data["evidence_refs"])
+        return cls(**data)
 
 
 @dataclass(frozen=True)

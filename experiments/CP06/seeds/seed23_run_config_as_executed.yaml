@@ -1,0 +1,79 @@
+experiment_id: EXP-CP06-seed23
+seed: 23
+dataset:
+  source: impact_official_release
+  name: IMPACT
+  version: v1.1
+  annotation_root: D:/HaiLongRnD/Datasets/HumanActionRecognition/IMPACT/v1.1/annotations/IMPACT-v1.1-eye-tracking-ego/IMPACT-v1.1/annotations
+  feature_roots:
+  - D:/HaiLongRnD/Datasets/HumanActionRecognition/IMPACT/v1.1/features/IMPACT-v1.1-features-I3D/IMPACT-v1.1/features
+  feature_name: I3D
+  feature_dimension: 1024
+  sample_fps: 5.0
+  view: front
+  video_roots:
+  - D:/HaiLongRnD/Datasets/HumanActionRecognition/IMPACT/v1.1/videos/IMPACT-v1.1-videos-front/IMPACT-v1.1/videos
+  official_split:
+    name: IMPACT TAS-S S2 (cross-subject)
+    split_dir: ResearchDocuments/ResearchDocuments/01_IMPACT/code/IMPACT/dataset/TAS/splits_TAS-S
+    split_id: 2
+    procedure: Disassembly_A
+    view: front
+    require_cross_worker_test: true
+actions:
+  background: 'NULL'
+  class_order:
+  - 'NULL'
+  - START_ANGLE_GRINDER_ASSEMBLY
+  - UNSCREW_ANTI_VIBRATION_HANDLE
+  - STORE_ANTI_VIBRATION_HANDLE
+  - REMOVE_LOCKING_LEVER_ASSEMBLY
+  - STORE_LOCKING_LEVER_ASSEMBLY
+  - EXTRACT_BEARING_PLATE_ASSEMBLY
+  - STORE_BEARING_PLATE_ASSEMBLY
+  - DETACH_ADAPTER_PLATE
+  - REMOVE_ROTOR_ASSEMBLY
+  - STORE_ROTOR_ASSEMBLY
+  - STORE_GEARBOX_HOUSING
+  - STORE_ADAPTER_PLATE
+  - INSTALL_ROTOR_ASSEMBLY
+  - ATTACH_ADAPTER_PLATE
+  - RETRIEVE_BEARING_PLATE_ASSEMBLY
+  - RETRIEVE_LOCKING_LEVER_ASSEMBLY
+  - STORE_TOOL
+features:
+  image_size: 8
+  difference_size: 8
+  normalize: true
+temporal:
+  smoothing_window: 5
+  min_segment_seconds: 0.4
+model:
+  input_dim: 1024
+  hidden_dim: 32
+  layers: 5
+  stages: 3
+  dropout: 0.2
+  epochs: 12
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  batch_windows: 1
+  seed: 23
+  checkpoint: models/cp06_mstcn_seed23_best.pt
+  final_checkpoint: models/cp06_mstcn_seed23_final.pt
+  baseline_checkpoint: models/cp05_framewise_best.pt
+  baseline_final_checkpoint: models/cp05_framewise_final.pt
+workflow:
+  id: angle_grinder_disassembly_A
+  version: awaiting-process-owner-confirmation
+  enabled: false
+  status: HUMAN_REVIEW_REQUIRED
+  handoff: HUMAN_HANDOFF_CP05.md
+evidence:
+  output_dir: results/cp06/seed23
+  context_seconds: 2.0
+  save_clip: true
+  clip_fps: 10
+runtime:
+  device: cuda:0
+  log_level: INFO

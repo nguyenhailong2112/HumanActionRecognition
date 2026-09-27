@@ -1093,3 +1093,18 @@ Nội dung:
 12. Initial Research Matrix
 13. Development Checkpoints
 14. Definition of Done
+
+---
+
+# CURRENT EXECUTION STATUS — 2026-09-27
+
+Roadmap phases above describe the intended system, not completed implementation. Current evidenced implementation is a procedure-scoped research slice:
+
+| Checkpoint | Current status | Evidence boundary |
+|---|---|---|
+| CP01–CP04 | Historical / superseded where later evidence applies | Initial implementation, protocol work and acquisition states remain as dated history. CP05–CP06 supersede old missing-data/environment status. |
+| CP05 | PARTIAL, action baseline established | IMPACT v1.1 TAS-S S2, `Disassembly_A/front`, 39/5/4; Framewise and our MS-TCN trained/evaluated; not official leaderboard reproduction. |
+| CP06 | PARTIAL, action reliability and synthetic workflow logic | Three-seed study, per-execution/pooled metrics, error review package, deterministic engine/validator tests. No validated process semantics. |
+| CP07 | Implementation/audit package CLOSED; system remains PARTIAL | Event contract, trace adapter, activation gate, review handoff, boundary audit and 56-test suite; no human-validated workflow or process metrics. See `experiments/EXP-CP07.md`. |
+
+Current next gate: process owner completes `HUMAN_HANDOFF_CP07.md` and the evidence review handoff. CP08 should validate that input, add narrow workflow-YAML and event-evidence-reference plumbing to the current API, and only then run frozen ActionEvents through actual workflow semantics. Do not mark the full architecture above as implemented: person/object/tool/pose/zone tracking, validated compliance evaluation, streaming runtime, and factory deployment remain future work.

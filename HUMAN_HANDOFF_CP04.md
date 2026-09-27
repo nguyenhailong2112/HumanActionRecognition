@@ -1,5 +1,7 @@
 # HUMAN HANDOFF — CP04 official data and process grounding
 
+> **Historical handoff — data acquisition and hardware blockers superseded by CP05/CP06.** Do not follow the old download or CPU-only instructions. Current outstanding semantic and evidence-review work is in `HUMAN_HANDOFF_CP07.md` and `HUMAN_HANDOFF_CP07_EVIDENCE_REVIEW.md`.
+
 CP04 has two independent human dependencies: official features enable a reproducible action experiment; the process owner establishes the meaning of compliance. Do not infer one from the other.
 
 ## A. Official I3D feature archive

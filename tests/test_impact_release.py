@@ -50,6 +50,8 @@ class ImpactReleaseTests(unittest.TestCase):
 
     def test_official_s2_is_execution_and_test_worker_disjoint_for_disassembly_a(self):
         split_dir = PROJECT_ROOT / "ResearchDocuments/01_IMPACT/code/IMPACT/dataset/TAS/splits_TAS-S"
+        if not split_dir.is_dir():
+            split_dir = PROJECT_ROOT / "ResearchDocuments/ResearchDocuments/01_IMPACT/code/IMPACT/dataset/TAS/splits_TAS-S"
         result = validate_official_split_integrity(split_dir, 2, "Disassembly_A", "front", cross_worker_test=True)
         self.assertEqual(result["counts"], {"train": 39, "val": 5, "test": 4})
         self.assertFalse(any(result["execution_overlap"].values()))
@@ -58,10 +60,10 @@ class ImpactReleaseTests(unittest.TestCase):
     def test_process_owner_workflow_checks_reject_unapproved_and_unknown_steps(self):
         vocabulary = {"START", "REMOVE", "STORE"}
         approved = {"workflow": {
-            "id": "procedure", "version": "SOP-1", "approved_by": "owner", "approved_on": "2026-09-26",
+            "id": "procedure", "version": "research-1", "status": "HUMAN_VALIDATED", "approved_by": "owner", "approved_on": "2026-09-26",
             "action_vocabulary": sorted(vocabulary), "valid_paths": [{"id": "main", "steps": ["START", "REMOVE", "STORE"]}],
             "action_disposition": {label: {"status": "required"} for label in vocabulary},
-            "completion": {"condition": "SOP-defined completion confirmation"},
+            "completion": {"condition": "process-owner-defined completion confirmation"},
             "valid_transitions": [["START", "REMOVE"], ["REMOVE", "STORE"]],
         }}
         self.assertEqual(validate_workflow(approved, vocabulary), [])
@@ -71,7 +73,7 @@ class ImpactReleaseTests(unittest.TestCase):
     def test_workflow_validation_rejects_unreachable_transition_and_incomplete_metadata(self):
         vocabulary = {"A", "B"}
         config = {"workflow": {
-            "id": "procedure", "version": "SOP-1", "approved_by": "owner", "approved_on": "2026-09-26",
+            "id": "procedure", "version": "research-1", "approved_by": "owner", "approved_on": "2026-09-26",
             "action_vocabulary": ["A", "B"], "action_disposition": {"A": {"status": "required"}, "B": {"status": "required"}},
             "valid_paths": [{"id": "main", "steps": ["A", "B"]}],
             "valid_transitions": [["A", "B"], ["B", "A"]],

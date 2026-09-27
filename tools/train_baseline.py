@@ -44,7 +44,7 @@ def _new_model(config, kind: str, num_classes: int):
     return FramewiseBaseline(int(model_cfg["input_dim"]), num_classes)
 
 
-def train_one(config, config_path: Path, kind: str, checkpoint_path: Path, epochs: int, device: torch.device) -> dict:
+def train_one(config, config_path: Path, kind: str, checkpoint_path: Path, final_checkpoint_path: Path, epochs: int, device: torch.device) -> dict:
     started_at = time.perf_counter()
     train_sequences = load_split(config, "train", config_path)
     val_sequences = load_split(config, "val", config_path)
@@ -109,7 +109,18 @@ def train_one(config, config_path: Path, kind: str, checkpoint_path: Path, epoch
                 "best_epoch": best_epoch,
                 "best_val_loss": best_val,
             }, checkpoint_path)
-    return {"checkpoint": str(checkpoint_path), "best_epoch": best_epoch, "best_val_loss": best_val, "history": history, "train_seconds": time.perf_counter() - started_at, "train_videos": [item.video_id for item in train_sequences], "val_videos": [item.video_id for item in val_sequences]}
+    final_checkpoint_path.parent.mkdir(parents=True, exist_ok=True)
+    torch.save({
+        "model_kind": kind,
+        "model_state_dict": model.state_dict(),
+        "feature_mean": torch.as_tensor(mean),
+        "feature_std": torch.as_tensor(std),
+        "class_order": config["actions"]["class_order"],
+        "model_config": config["model"],
+        "final_epoch": epochs,
+        "final_val_loss": history[-1]["val_loss"] if history else None,
+    }, final_checkpoint_path)
+    return {"checkpoint": str(checkpoint_path), "final_checkpoint": str(final_checkpoint_path), "best_epoch": best_epoch, "best_val_loss": best_val, "history": history, "train_seconds": time.perf_counter() - started_at, "train_videos": [item.video_id for item in train_sequences], "val_videos": [item.video_id for item in val_sequences]}
 
 
 def evaluate_split(config, config_path, kind: str, checkpoint_path: Path, split: str, device: torch.device) -> list[dict]:
@@ -141,9 +152,10 @@ def main() -> None:
     device = torch.device(config.get("runtime", {}).get("device", "cpu"))
     epochs = args.epochs or int(config["model"]["epochs"])
     train_report = {}
-    for kind, key in (("framewise", "baseline_checkpoint"), ("mstcn", "checkpoint")):
+    for kind, key, final_key in (("framewise", "baseline_checkpoint", "baseline_final_checkpoint"), ("mstcn", "checkpoint", "final_checkpoint")):
         checkpoint = PROJECT_ROOT / config["model"][key]
-        train_report[kind] = train_one(config, config_path, kind, checkpoint, epochs, device)
+        final_checkpoint = PROJECT_ROOT / config["model"][final_key]
+        train_report[kind] = train_one(config, config_path, kind, checkpoint, final_checkpoint, epochs, device)
         train_report[kind]["test_evaluation"] = (
             "DEFERRED: run tools/evaluate.py once after training/configuration freeze"
             if args.defer_test_eval

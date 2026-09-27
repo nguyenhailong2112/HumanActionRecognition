@@ -1,5 +1,7 @@
 # HUMAN ACTION REQUIRED — CP01.1 procedure validation
 
+> **Historical handoff — superseded by CP07.** Its dataset paths/counts describe the old CP01.1 machine state (2/48 local trials) and must not be used as current acquisition instructions. Current owner action is defined in `HUMAN_HANDOFF_CP07.md`; current evidence review is in `HUMAN_HANDOFF_CP07_EVIDENCE_REVIEW.md`.
+
 > **CP02 clarification:** IMPACT v1.1 does include PPR-L/R phase labels (`NORMAL`, `ANOMALY`, `RECOVERY`) and ATR annotations. These are real task-specific anomaly/phase annotations, but they are not SOP-grounded workflow labels for skip, wrong order, repeat, timeout, or compliance. See `HUMAN_HANDOFF_CP02.md` for the separate CP02 data and process handoff.
 
 ## Task

@@ -79,23 +79,10 @@ model:
 
 workflow:
   id: angle_grinder_A
-  version: cp01-v1
-  worker_id: W1
-  # Variants are deliberately limited to the two procedure modes present in
-  # the quick-start sample. Use the same source label mapping as the model.
-  duration_limits_seconds:
-    START: {min: 0.5, max: 60.0}
-    REMOVE: {min: 0.4, max: 90.0}
-    STORE: {min: 0.4, max: 45.0}
-    RETRIEVE: {min: 0.4, max: 45.0}
-    INSTALL: {min: 0.4, max: 90.0}
-    ATTACH: {min: 0.4, max: 60.0}
-    FINISH: {min: 0.5, max: 60.0}
-  valid_paths:
-    - id: disassembly_A
-      steps: [START, REMOVE, STORE, REMOVE, STORE, REMOVE, STORE, REMOVE, STORE, FINISH]
-    - id: reassembly_A
-      steps: [START, RETRIEVE, INSTALL, ATTACH, RETRIEVE, INSTALL, RETRIEVE, INSTALL, FINISH]
+  version: legacy-scaffold
+  enabled: false
+  status: HUMAN_REVIEW_REQUIRED
+  note: Legacy illustrative workflow removed from execution; not a validated Disassembly_A procedure.
 
 evidence:
   output_dir: results/cp01

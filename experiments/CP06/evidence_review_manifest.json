@@ -1,0 +1,293 @@
+{
+  "status": "HUMAN_REVIEW_REQUIRED",
+  "source": "69 actual CP05 MS-TCN held-out event records",
+  "selection": {
+    "ground-truth boundary candidate": [
+      {
+        "event_id": "CP05-MSTCN-001",
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "source_video": "D:\\HaiLongRnD\\Datasets\\HumanActionRecognition\\IMPACT\\v1.1\\videos\\IMPACT-v1.1-videos-front\\IMPACT-v1.1\\videos\\front\\SS07EL13_Disassembly_A_001_front.mp4",
+        "timestamp_seconds": 2.0,
+        "gt_action_at_event_start": "START_ANGLE_GRINDER_ASSEMBLY",
+        "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "confidence": 0.7980098128318787,
+        "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_001_60.jpg",
+        "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_001_60.mp4",
+        "review_status": "HUMAN_REVIEW_REQUIRED",
+        "review_reason": "confusing-class pair candidate"
+      },
+      {
+        "event_id": "CP05-MSTCN-006",
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "source_video": "D:\\HaiLongRnD\\Datasets\\HumanActionRecognition\\IMPACT\\v1.1\\videos\\IMPACT-v1.1-videos-front\\IMPACT-v1.1\\videos\\front\\SS07EL13_Disassembly_A_001_front.mp4",
+        "timestamp_seconds": 31.0,
+        "gt_action_at_event_start": "STORE_ANTI_VIBRATION_HANDLE",
+        "predicted_action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+        "confidence": 0.35258015990257263,
+        "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_006_930.jpg",
+        "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_006_930.mp4",
+        "review_status": "HUMAN_REVIEW_REQUIRED",
+        "review_reason": "rare-action candidate"
+      },
+      {
+        "event_id": "CP05-MSTCN-010",
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "source_video": "D:\\HaiLongRnD\\Datasets\\HumanActionRecognition\\IMPACT\\v1.1\\videos\\IMPACT-v1.1-videos-front\\IMPACT-v1.1\\videos\\front\\SS07EL13_Disassembly_A_001_front.mp4",
+        "timestamp_seconds": 109.5999984741211,
+        "gt_action_at_event_start": "NULL",
+        "predicted_action": "STORE_BEARING_PLATE_ASSEMBLY",
+        "confidence": 0.4668213427066803,
+        "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_010_3288.jpg",
+        "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_010_3288.mp4",
+        "review_status": "HUMAN_REVIEW_REQUIRED",
+        "review_reason": "ground-truth boundary candidate"
+      }
+    ],
+    "rare-action candidate": [
+      {
+        "event_id": "CP05-MSTCN-001",
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "source_video": "D:\\HaiLongRnD\\Datasets\\HumanActionRecognition\\IMPACT\\v1.1\\videos\\IMPACT-v1.1-videos-front\\IMPACT-v1.1\\videos\\front\\SS07EL13_Disassembly_A_001_front.mp4",
+        "timestamp_seconds": 2.0,
+        "gt_action_at_event_start": "START_ANGLE_GRINDER_ASSEMBLY",
+        "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "confidence": 0.7980098128318787,
+        "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_001_60.jpg",
+        "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_001_60.mp4",
+        "review_status": "HUMAN_REVIEW_REQUIRED",
+        "review_reason": "confusing-class pair candidate"
+      },
+      {
+        "event_id": "CP05-MSTCN-005",
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "source_video": "D:\\HaiLongRnD\\Datasets\\HumanActionRecognition\\IMPACT\\v1.1\\videos\\IMPACT-v1.1-videos-front\\IMPACT-v1.1\\videos\\front\\SS07EL13_Disassembly_A_001_front.mp4",
+        "timestamp_seconds": 26.0,
+        "gt_action_at_event_start": "UNSCREW_ANTI_VIBRATION_HANDLE",
+        "predicted_action": "STORE_LOCKING_LEVER_ASSEMBLY",
+        "confidence": 0.40560874342918396,
+        "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_005_780.jpg",
+        "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_005_780.mp4",
+        "review_status": "HUMAN_REVIEW_REQUIRED",
+        "review_reason": "rare-action candidate"
+      },
+      {
+        "event_id": "CP05-MSTCN-006",
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "source_video": "D:\\HaiLongRnD\\Datasets\\HumanActionRecognition\\IMPACT\\v1.1\\videos\\IMPACT-v1.1-videos-front\\IMPACT-v1.1\\videos\\front\\SS07EL13_Disassembly_A_001_front.mp4",
+        "timestamp_seconds": 31.0,
+        "gt_action_at_event_start": "STORE_ANTI_VIBRATION_HANDLE",
+        "predicted_action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+        "confidence": 0.35258015990257263,
+        "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_006_930.jpg",
+        "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_006_930.mp4",
+        "review_status": "HUMAN_REVIEW_REQUIRED",
+        "review_reason": "rare-action candidate"
+      }
+    ],
+    "confusing-class pair candidate": [
+      {
+        "event_id": "CP05-MSTCN-001",
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "source_video": "D:\\HaiLongRnD\\Datasets\\HumanActionRecognition\\IMPACT\\v1.1\\videos\\IMPACT-v1.1-videos-front\\IMPACT-v1.1\\videos\\front\\SS07EL13_Disassembly_A_001_front.mp4",
+        "timestamp_seconds": 2.0,
+        "gt_action_at_event_start": "START_ANGLE_GRINDER_ASSEMBLY",
+        "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "confidence": 0.7980098128318787,
+        "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_001_60.jpg",
+        "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_001_60.mp4",
+        "review_status": "HUMAN_REVIEW_REQUIRED",
+        "review_reason": "confusing-class pair candidate"
+      },
+      {
+        "event_id": "CP05-MSTCN-002",
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "source_video": "D:\\HaiLongRnD\\Datasets\\HumanActionRecognition\\IMPACT\\v1.1\\videos\\IMPACT-v1.1-videos-front\\IMPACT-v1.1\\videos\\front\\SS07EL13_Disassembly_A_001_front.mp4",
+        "timestamp_seconds": 13.800000190734863,
+        "gt_action_at_event_start": "NULL",
+        "predicted_action": "STORE_BEARING_PLATE_ASSEMBLY",
+        "confidence": 0.3291056156158447,
+        "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_002_414.jpg",
+        "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_002_414.mp4",
+        "review_status": "HUMAN_REVIEW_REQUIRED",
+        "review_reason": "low-confidence / possible ambiguity review candidate"
+      },
+      {
+        "event_id": "CP05-MSTCN-003",
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "source_video": "D:\\HaiLongRnD\\Datasets\\HumanActionRecognition\\IMPACT\\v1.1\\videos\\IMPACT-v1.1-videos-front\\IMPACT-v1.1\\videos\\front\\SS07EL13_Disassembly_A_001_front.mp4",
+        "timestamp_seconds": 15.0,
+        "gt_action_at_event_start": "NULL",
+        "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "confidence": 0.29260197281837463,
+        "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_003_450.jpg",
+        "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_003_450.mp4",
+        "review_status": "HUMAN_REVIEW_REQUIRED",
+        "review_reason": "low-confidence / possible ambiguity review candidate"
+      }
+    ],
+    "NULL leakage candidate": [
+      {
+        "event_id": "CP05-MSTCN-002",
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "source_video": "D:\\HaiLongRnD\\Datasets\\HumanActionRecognition\\IMPACT\\v1.1\\videos\\IMPACT-v1.1-videos-front\\IMPACT-v1.1\\videos\\front\\SS07EL13_Disassembly_A_001_front.mp4",
+        "timestamp_seconds": 13.800000190734863,
+        "gt_action_at_event_start": "NULL",
+        "predicted_action": "STORE_BEARING_PLATE_ASSEMBLY",
+        "confidence": 0.3291056156158447,
+        "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_002_414.jpg",
+        "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_002_414.mp4",
+        "review_status": "HUMAN_REVIEW_REQUIRED",
+        "review_reason": "low-confidence / possible ambiguity review candidate"
+      },
+      {
+        "event_id": "CP05-MSTCN-003",
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "source_video": "D:\\HaiLongRnD\\Datasets\\HumanActionRecognition\\IMPACT\\v1.1\\videos\\IMPACT-v1.1-videos-front\\IMPACT-v1.1\\videos\\front\\SS07EL13_Disassembly_A_001_front.mp4",
+        "timestamp_seconds": 15.0,
+        "gt_action_at_event_start": "NULL",
+        "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "confidence": 0.29260197281837463,
+        "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_003_450.jpg",
+        "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_003_450.mp4",
+        "review_status": "HUMAN_REVIEW_REQUIRED",
+        "review_reason": "low-confidence / possible ambiguity review candidate"
+      },
+      {
+        "event_id": "CP05-MSTCN-004",
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "source_video": "D:\\HaiLongRnD\\Datasets\\HumanActionRecognition\\IMPACT\\v1.1\\videos\\IMPACT-v1.1-videos-front\\IMPACT-v1.1\\videos\\front\\SS07EL13_Disassembly_A_001_front.mp4",
+        "timestamp_seconds": 18.0,
+        "gt_action_at_event_start": "NULL",
+        "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "confidence": 0.4498206079006195,
+        "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_004_540.jpg",
+        "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_004_540.mp4",
+        "review_status": "HUMAN_REVIEW_REQUIRED",
+        "review_reason": "low-confidence / possible ambiguity review candidate"
+      }
+    ],
+    "low-confidence / possible ambiguity review candidate": [
+      {
+        "event_id": "CP05-MSTCN-002",
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "source_video": "D:\\HaiLongRnD\\Datasets\\HumanActionRecognition\\IMPACT\\v1.1\\videos\\IMPACT-v1.1-videos-front\\IMPACT-v1.1\\videos\\front\\SS07EL13_Disassembly_A_001_front.mp4",
+        "timestamp_seconds": 13.800000190734863,
+        "gt_action_at_event_start": "NULL",
+        "predicted_action": "STORE_BEARING_PLATE_ASSEMBLY",
+        "confidence": 0.3291056156158447,
+        "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_002_414.jpg",
+        "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_002_414.mp4",
+        "review_status": "HUMAN_REVIEW_REQUIRED",
+        "review_reason": "low-confidence / possible ambiguity review candidate"
+      },
+      {
+        "event_id": "CP05-MSTCN-003",
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "source_video": "D:\\HaiLongRnD\\Datasets\\HumanActionRecognition\\IMPACT\\v1.1\\videos\\IMPACT-v1.1-videos-front\\IMPACT-v1.1\\videos\\front\\SS07EL13_Disassembly_A_001_front.mp4",
+        "timestamp_seconds": 15.0,
+        "gt_action_at_event_start": "NULL",
+        "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "confidence": 0.29260197281837463,
+        "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_003_450.jpg",
+        "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_003_450.mp4",
+        "review_status": "HUMAN_REVIEW_REQUIRED",
+        "review_reason": "low-confidence / possible ambiguity review candidate"
+      },
+      {
+        "event_id": "CP05-MSTCN-004",
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "source_video": "D:\\HaiLongRnD\\Datasets\\HumanActionRecognition\\IMPACT\\v1.1\\videos\\IMPACT-v1.1-videos-front\\IMPACT-v1.1\\videos\\front\\SS07EL13_Disassembly_A_001_front.mp4",
+        "timestamp_seconds": 18.0,
+        "gt_action_at_event_start": "NULL",
+        "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "confidence": 0.4498206079006195,
+        "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_004_540.jpg",
+        "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_004_540.mp4",
+        "review_status": "HUMAN_REVIEW_REQUIRED",
+        "review_reason": "low-confidence / possible ambiguity review candidate"
+      }
+    ],
+    "high-confidence correct candidate": [
+      {
+        "event_id": "CP05-MSTCN-007",
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "source_video": "D:\\HaiLongRnD\\Datasets\\HumanActionRecognition\\IMPACT\\v1.1\\videos\\IMPACT-v1.1-videos-front\\IMPACT-v1.1\\videos\\front\\SS07EL13_Disassembly_A_001_front.mp4",
+        "timestamp_seconds": 32.599998474121094,
+        "gt_action_at_event_start": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "confidence": 0.8827400207519531,
+        "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_007_978.jpg",
+        "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_007_978.mp4",
+        "review_status": "HUMAN_REVIEW_REQUIRED",
+        "review_reason": "high-confidence correct candidate"
+      },
+      {
+        "event_id": "CP05-MSTCN-026",
+        "video_id": "SS07EL13_Disassembly_A_002_front",
+        "source_video": "D:\\HaiLongRnD\\Datasets\\HumanActionRecognition\\IMPACT\\v1.1\\videos\\IMPACT-v1.1-videos-front\\IMPACT-v1.1\\videos\\front\\SS07EL13_Disassembly_A_002_front.mp4",
+        "timestamp_seconds": 3.4000000953674316,
+        "gt_action_at_event_start": "UNSCREW_ANTI_VIBRATION_HANDLE",
+        "predicted_action": "UNSCREW_ANTI_VIBRATION_HANDLE",
+        "confidence": 0.8571937680244446,
+        "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_002_102.jpg",
+        "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_002_102.mp4",
+        "review_status": "HUMAN_REVIEW_REQUIRED",
+        "review_reason": "high-confidence correct candidate"
+      },
+      {
+        "event_id": "CP05-MSTCN-032",
+        "video_id": "SS07EL13_Disassembly_A_002_front",
+        "source_video": "D:\\HaiLongRnD\\Datasets\\HumanActionRecognition\\IMPACT\\v1.1\\videos\\IMPACT-v1.1-videos-front\\IMPACT-v1.1\\videos\\front\\SS07EL13_Disassembly_A_002_front.mp4",
+        "timestamp_seconds": 33.599998474121094,
+        "gt_action_at_event_start": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "confidence": 0.8849934339523315,
+        "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_008_1008.jpg",
+        "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_008_1008.mp4",
+        "review_status": "HUMAN_REVIEW_REQUIRED",
+        "review_reason": "high-confidence correct candidate"
+      }
+    ],
+    "high-confidence wrong candidate": [
+      {
+        "event_id": "CP05-MSTCN-009",
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "source_video": "D:\\HaiLongRnD\\Datasets\\HumanActionRecognition\\IMPACT\\v1.1\\videos\\IMPACT-v1.1-videos-front\\IMPACT-v1.1\\videos\\front\\SS07EL13_Disassembly_A_001_front.mp4",
+        "timestamp_seconds": 89.4000015258789,
+        "gt_action_at_event_start": "NULL",
+        "predicted_action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "confidence": 0.8141422867774963,
+        "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_009_2682.jpg",
+        "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_009_2682.mp4",
+        "review_status": "HUMAN_REVIEW_REQUIRED",
+        "review_reason": "high-confidence wrong candidate"
+      },
+      {
+        "event_id": "CP05-MSTCN-011",
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "source_video": "D:\\HaiLongRnD\\Datasets\\HumanActionRecognition\\IMPACT\\v1.1\\videos\\IMPACT-v1.1-videos-front\\IMPACT-v1.1\\videos\\front\\SS07EL13_Disassembly_A_001_front.mp4",
+        "timestamp_seconds": 114.80000305175781,
+        "gt_action_at_event_start": "NULL",
+        "predicted_action": "DETACH_ADAPTER_PLATE",
+        "confidence": 0.9081613421440125,
+        "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_011_3444.jpg",
+        "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_011_3444.mp4",
+        "review_status": "HUMAN_REVIEW_REQUIRED",
+        "review_reason": "high-confidence wrong candidate"
+      },
+      {
+        "event_id": "CP05-MSTCN-013",
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "source_video": "D:\\HaiLongRnD\\Datasets\\HumanActionRecognition\\IMPACT\\v1.1\\videos\\IMPACT-v1.1-videos-front\\IMPACT-v1.1\\videos\\front\\SS07EL13_Disassembly_A_001_front.mp4",
+        "timestamp_seconds": 134.1999969482422,
+        "gt_action_at_event_start": "STORE_BEARING_PLATE_ASSEMBLY",
+        "predicted_action": "DETACH_ADAPTER_PLATE",
+        "confidence": 0.9345638751983643,
+        "snapshot": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_013_4026.jpg",
+        "clip": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_013_4026.mp4",
+        "review_status": "HUMAN_REVIEW_REQUIRED",
+        "review_reason": "high-confidence wrong candidate"
+      }
+    ]
+  }
+}

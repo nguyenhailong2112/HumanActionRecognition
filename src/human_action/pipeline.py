@@ -14,7 +14,7 @@ from .metrics import action_metrics, sequence_exact_match, violation_counts
 from .model import FramewiseBaseline, MSTCN
 from .schemas import ActionEvent, to_dict
 from .temporal import decode_segments, to_action_events
-from .workflow import WorkflowEngine
+from .workflow import WorkflowEngine, workflow_is_enabled
 
 
 def create_model(config: dict[str, Any], model_kind: str) -> torch.nn.Module:
@@ -34,7 +34,7 @@ def load_checkpoint(config: dict[str, Any], config_path: str | Path, model_kind:
     if not path.is_absolute():
         path = project_root / path
     if not path.is_file():
-        raise FileNotFoundError(f"Model checkpoint not found: {path}. Train with `python tools/train_baseline.py --config configs/cp01.yaml` first.")
+        raise FileNotFoundError(f"Model checkpoint not found: {path}. Train the configured model with `python tools/train_baseline.py --config {config_path}` first.")
     device = torch.device(config.get("runtime", {}).get("device", "cpu"))
     checkpoint = torch.load(path, map_location=device, weights_only=True)
     if checkpoint.get("class_order") != config["actions"]["class_order"]:
@@ -60,6 +60,7 @@ def predict_features(model: torch.nn.Module, features: np.ndarray, mean: np.ndar
 
 
 def predict_video(video_path: Path, video_id: str, worker_id: str, config: dict[str, Any], config_path: str | Path, model_kind: str, checkpoint_path: str | Path | None = None):
+    run_workflow = workflow_is_enabled(config)
     model, mean, std, device, actual_checkpoint = load_checkpoint(config, config_path, model_kind, checkpoint_path)
     if video_id:
         # Prefer annotation-aligned cached loader for a known IMPACT release sample.
@@ -86,9 +87,9 @@ def predict_video(video_path: Path, video_id: str, worker_id: str, config: dict[
         int(temporal["smoothing_window"]),
         float(temporal["min_segment_seconds"]),
     )
-    events = to_action_events(segments, worker_id, video_id or video_path.stem, config["actions"]["background"])
+    events = to_action_events(segments, worker_id, video_id or video_path.stem, config["actions"]["background"], config["dataset"].get("view", ""))
     final_result = None
-    if config.get("workflow", {}).get("enabled", True):
+    if run_workflow:
         engine = WorkflowEngine(config, worker_id, video_id or video_path.stem)
         engine.consume(events)
         final_result = engine.finalize(float(frame_count / fps))
@@ -109,6 +110,7 @@ def predict_video(video_path: Path, video_id: str, worker_id: str, config: dict[
 
 
 def evaluate_video(video_id: str, split: str, config: dict[str, Any], config_path: str | Path, model_kind: str, checkpoint_path: str | Path | None = None) -> dict:
+    run_workflow = workflow_is_enabled(config)
     sequence = load_sequence(config, video_id, split, config_path)
     model, mean, std, device, actual_checkpoint = load_checkpoint(config, config_path, model_kind, checkpoint_path)
     if device.type == "cuda":
@@ -121,9 +123,9 @@ def evaluate_video(video_id: str, split: str, config: dict[str, Any], config_pat
     metrics = action_metrics(sequence.labels, predicted, config["actions"]["class_order"], background_id=0)
     temporal = config["temporal"]
     segments = decode_segments(predicted, probabilities, config["actions"]["class_order"], sequence.timestamps, sequence.frame_indices, int(temporal["smoothing_window"]), float(temporal["min_segment_seconds"]))
-    events = to_action_events(segments, sequence.worker_id, video_id, config["actions"]["background"])
+    events = to_action_events(segments, sequence.worker_id, video_id, config["actions"]["background"], config["dataset"].get("view", ""))
     process = None
-    if config.get("workflow", {}).get("enabled", True):
+    if run_workflow:
         engine = WorkflowEngine(config, sequence.worker_id, video_id)
         engine.consume(events)
         process = engine.finalize(float(sequence.frame_count / sequence.fps))

@@ -1,0 +1,1082 @@
+{
+  "scope": "Frozen CP05 seed-17 MS-TCN predictions; test only; no model/workflow tuning",
+  "measurements": [
+    {
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "frames": 1126,
+      "duration_seconds": 225.1999969482422,
+      "frame_accuracy": 0.27797513321492007,
+      "macro_f1_actions": 0.12267599498541414,
+      "normalized_edit_score": 39.28571428571429,
+      "mismatched_frames": 813,
+      "mismatch_run_count": 56,
+      "gt_action_support_frames": 688,
+      "gt_null_frames": 438,
+      "gt_null_fraction": 0.38898756660746003,
+      "gt_action_segments": 23,
+      "predicted_action_segments": 28,
+      "gt_boundary_density_per_minute": 6.1278864063091705,
+      "predicted_boundary_density_per_minute": 6.394316250061743,
+      "mean_predicted_non_null_segment_duration_seconds": 7.491664886474609,
+      "predicted_null_duration_fraction": 0.20159843503736471,
+      "top_frame_confusions": [
+        {
+          "gt": "NULL",
+          "predicted": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+          "frames": 170
+        },
+        {
+          "gt": "STORE_BEARING_PLATE_ASSEMBLY",
+          "predicted": "DETACH_ADAPTER_PLATE",
+          "frames": 167
+        },
+        {
+          "gt": "NULL",
+          "predicted": "DETACH_ADAPTER_PLATE",
+          "frames": 100
+        },
+        {
+          "gt": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+          "predicted": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+          "frames": 54
+        },
+        {
+          "gt": "REMOVE_ROTOR_ASSEMBLY",
+          "predicted": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+          "frames": 38
+        }
+      ],
+      "per_action_frequency_duration_support_and_mismatch": [
+        {
+          "action": "START_ANGLE_GRINDER_ASSEMBLY",
+          "gt_support_frames": 12,
+          "gt_frequency_segments": 1,
+          "gt_total_duration_seconds": 2.4,
+          "gt_mean_segment_duration_seconds": 2.4,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 12,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "UNSCREW_ANTI_VIBRATION_HANDLE",
+          "gt_support_frames": 30,
+          "gt_frequency_segments": 1,
+          "gt_total_duration_seconds": 6.0,
+          "gt_mean_segment_duration_seconds": 6.0,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 30,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "STORE_ANTI_VIBRATION_HANDLE",
+          "gt_support_frames": 15,
+          "gt_frequency_segments": 1,
+          "gt_total_duration_seconds": 3.0,
+          "gt_mean_segment_duration_seconds": 3.0,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 15,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+          "gt_support_frames": 69,
+          "gt_frequency_segments": 2,
+          "gt_total_duration_seconds": 13.8,
+          "gt_mean_segment_duration_seconds": 6.9,
+          "pred_frequency_segments": 1,
+          "pred_total_duration_seconds": 1.5999984741210938,
+          "pred_mean_segment_duration_seconds": 1.5999984741210938,
+          "mismatched_gt_frames": 69,
+          "mismatched_pred_frames": 8
+        },
+        {
+          "action": "STORE_LOCKING_LEVER_ASSEMBLY",
+          "gt_support_frames": 33,
+          "gt_frequency_segments": 2,
+          "gt_total_duration_seconds": 6.6,
+          "gt_mean_segment_duration_seconds": 3.3,
+          "pred_frequency_segments": 1,
+          "pred_total_duration_seconds": 0.7999973297119141,
+          "pred_mean_segment_duration_seconds": 0.7999973297119141,
+          "mismatched_gt_frames": 33,
+          "mismatched_pred_frames": 4
+        },
+        {
+          "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+          "gt_support_frames": 183,
+          "gt_frequency_segments": 4,
+          "gt_total_duration_seconds": 36.6,
+          "gt_mean_segment_duration_seconds": 9.15,
+          "pred_frequency_segments": 6,
+          "pred_total_duration_seconds": 89.99999046325684,
+          "pred_mean_segment_duration_seconds": 14.999998410542807,
+          "mismatched_gt_frames": 7,
+          "mismatched_pred_frames": 273
+        },
+        {
+          "action": "STORE_BEARING_PLATE_ASSEMBLY",
+          "gt_support_frames": 180,
+          "gt_frequency_segments": 4,
+          "gt_total_duration_seconds": 36.0,
+          "gt_mean_segment_duration_seconds": 9.0,
+          "pred_frequency_segments": 4,
+          "pred_total_duration_seconds": 7.799995422363281,
+          "pred_mean_segment_duration_seconds": 1.9499988555908203,
+          "mismatched_gt_frames": 175,
+          "mismatched_pred_frames": 35
+        },
+        {
+          "action": "DETACH_ADAPTER_PLATE",
+          "gt_support_frames": 0,
+          "gt_frequency_segments": 0,
+          "gt_total_duration_seconds": 0,
+          "gt_mean_segment_duration_seconds": null,
+          "pred_frequency_segments": 4,
+          "pred_total_duration_seconds": 56.19999694824219,
+          "pred_mean_segment_duration_seconds": 14.049999237060547,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 279
+        },
+        {
+          "action": "REMOVE_ROTOR_ASSEMBLY",
+          "gt_support_frames": 108,
+          "gt_frequency_segments": 3,
+          "gt_total_duration_seconds": 21.6,
+          "gt_mean_segment_duration_seconds": 7.2,
+          "pred_frequency_segments": 3,
+          "pred_total_duration_seconds": 13.599990844726562,
+          "pred_mean_segment_duration_seconds": 4.5333302815755205,
+          "mismatched_gt_frames": 74,
+          "mismatched_pred_frames": 34
+        },
+        {
+          "action": "STORE_ROTOR_ASSEMBLY",
+          "gt_support_frames": 13,
+          "gt_frequency_segments": 2,
+          "gt_total_duration_seconds": 2.6,
+          "gt_mean_segment_duration_seconds": 1.3,
+          "pred_frequency_segments": 2,
+          "pred_total_duration_seconds": 4.79998779296875,
+          "pred_mean_segment_duration_seconds": 2.399993896484375,
+          "mismatched_gt_frames": 13,
+          "mismatched_pred_frames": 24
+        },
+        {
+          "action": "STORE_GEARBOX_HOUSING",
+          "gt_support_frames": 0,
+          "gt_frequency_segments": 0,
+          "gt_total_duration_seconds": 0,
+          "gt_mean_segment_duration_seconds": null,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "STORE_ADAPTER_PLATE",
+          "gt_support_frames": 35,
+          "gt_frequency_segments": 2,
+          "gt_total_duration_seconds": 7.0,
+          "gt_mean_segment_duration_seconds": 3.5,
+          "pred_frequency_segments": 3,
+          "pred_total_duration_seconds": 5.0,
+          "pred_mean_segment_duration_seconds": 1.6666666666666667,
+          "mismatched_gt_frames": 24,
+          "mismatched_pred_frames": 15
+        },
+        {
+          "action": "INSTALL_ROTOR_ASSEMBLY",
+          "gt_support_frames": 0,
+          "gt_frequency_segments": 0,
+          "gt_total_duration_seconds": 0,
+          "gt_mean_segment_duration_seconds": null,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "ATTACH_ADAPTER_PLATE",
+          "gt_support_frames": 0,
+          "gt_frequency_segments": 0,
+          "gt_total_duration_seconds": 0,
+          "gt_mean_segment_duration_seconds": null,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "RETRIEVE_BEARING_PLATE_ASSEMBLY",
+          "gt_support_frames": 0,
+          "gt_frequency_segments": 0,
+          "gt_total_duration_seconds": 0,
+          "gt_mean_segment_duration_seconds": null,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "RETRIEVE_LOCKING_LEVER_ASSEMBLY",
+          "gt_support_frames": 0,
+          "gt_frequency_segments": 0,
+          "gt_total_duration_seconds": 0,
+          "gt_mean_segment_duration_seconds": null,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "STORE_TOOL",
+          "gt_support_frames": 10,
+          "gt_frequency_segments": 1,
+          "gt_total_duration_seconds": 2.0,
+          "gt_mean_segment_duration_seconds": 2.0,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 10,
+          "mismatched_pred_frames": 0
+        }
+      ],
+      "interpretation": "descriptive only; four executions do not support causal attribution"
+    },
+    {
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "frames": 657,
+      "duration_seconds": 131.39999389648438,
+      "frame_accuracy": 0.4855403348554033,
+      "macro_f1_actions": 0.36669427765032386,
+      "normalized_edit_score": 53.57142857142857,
+      "mismatched_frames": 338,
+      "mismatch_run_count": 42,
+      "gt_action_support_frames": 567,
+      "gt_null_frames": 90,
+      "gt_null_fraction": 0.136986301369863,
+      "gt_action_segments": 28,
+      "predicted_action_segments": 18,
+      "gt_boundary_density_per_minute": 12.785388721733788,
+      "predicted_boundary_density_per_minute": 8.219178463971721,
+      "mean_predicted_non_null_segment_duration_seconds": 5.944442696041531,
+      "predicted_null_duration_fraction": 0.1856924532278611,
+      "top_frame_confusions": [
+        {
+          "gt": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+          "predicted": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+          "frames": 58
+        },
+        {
+          "gt": "REMOVE_ROTOR_ASSEMBLY",
+          "predicted": "NULL",
+          "frames": 48
+        },
+        {
+          "gt": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+          "predicted": "DETACH_ADAPTER_PLATE",
+          "frames": 25
+        },
+        {
+          "gt": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+          "predicted": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+          "frames": 23
+        },
+        {
+          "gt": "NULL",
+          "predicted": "STORE_ROTOR_ASSEMBLY",
+          "frames": 17
+        }
+      ],
+      "per_action_frequency_duration_support_and_mismatch": [
+        {
+          "action": "START_ANGLE_GRINDER_ASSEMBLY",
+          "gt_support_frames": 8,
+          "gt_frequency_segments": 1,
+          "gt_total_duration_seconds": 1.6,
+          "gt_mean_segment_duration_seconds": 1.6,
+          "pred_frequency_segments": 1,
+          "pred_total_duration_seconds": 3.4000000953674316,
+          "pred_mean_segment_duration_seconds": 3.4000000953674316,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 9
+        },
+        {
+          "action": "UNSCREW_ANTI_VIBRATION_HANDLE",
+          "gt_support_frames": 21,
+          "gt_frequency_segments": 1,
+          "gt_total_duration_seconds": 4.2,
+          "gt_mean_segment_duration_seconds": 4.2,
+          "pred_frequency_segments": 1,
+          "pred_total_duration_seconds": 4.599999904632568,
+          "pred_mean_segment_duration_seconds": 4.599999904632568,
+          "mismatched_gt_frames": 9,
+          "mismatched_pred_frames": 11
+        },
+        {
+          "action": "STORE_ANTI_VIBRATION_HANDLE",
+          "gt_support_frames": 9,
+          "gt_frequency_segments": 1,
+          "gt_total_duration_seconds": 1.8,
+          "gt_mean_segment_duration_seconds": 1.8,
+          "pred_frequency_segments": 1,
+          "pred_total_duration_seconds": 1.8000001907348633,
+          "pred_mean_segment_duration_seconds": 1.8000001907348633,
+          "mismatched_gt_frames": 8,
+          "mismatched_pred_frames": 8
+        },
+        {
+          "action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+          "gt_support_frames": 81,
+          "gt_frequency_segments": 3,
+          "gt_total_duration_seconds": 16.2,
+          "gt_mean_segment_duration_seconds": 5.3999999999999995,
+          "pred_frequency_segments": 2,
+          "pred_total_duration_seconds": 8.999999046325684,
+          "pred_mean_segment_duration_seconds": 4.499999523162842,
+          "mismatched_gt_frames": 62,
+          "mismatched_pred_frames": 26
+        },
+        {
+          "action": "STORE_LOCKING_LEVER_ASSEMBLY",
+          "gt_support_frames": 22,
+          "gt_frequency_segments": 1,
+          "gt_total_duration_seconds": 4.4,
+          "gt_mean_segment_duration_seconds": 4.4,
+          "pred_frequency_segments": 1,
+          "pred_total_duration_seconds": 3.3999996185302734,
+          "pred_mean_segment_duration_seconds": 3.3999996185302734,
+          "mismatched_gt_frames": 12,
+          "mismatched_pred_frames": 7
+        },
+        {
+          "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+          "gt_support_frames": 175,
+          "gt_frequency_segments": 2,
+          "gt_total_duration_seconds": 35.0,
+          "gt_mean_segment_duration_seconds": 17.5,
+          "pred_frequency_segments": 2,
+          "pred_total_duration_seconds": 32.600003242492676,
+          "pred_mean_segment_duration_seconds": 16.300001621246338,
+          "mismatched_gt_frames": 77,
+          "mismatched_pred_frames": 65
+        },
+        {
+          "action": "STORE_BEARING_PLATE_ASSEMBLY",
+          "gt_support_frames": 15,
+          "gt_frequency_segments": 2,
+          "gt_total_duration_seconds": 3.0,
+          "gt_mean_segment_duration_seconds": 1.5,
+          "pred_frequency_segments": 2,
+          "pred_total_duration_seconds": 3.8000030517578125,
+          "pred_mean_segment_duration_seconds": 1.9000015258789062,
+          "mismatched_gt_frames": 15,
+          "mismatched_pred_frames": 18
+        },
+        {
+          "action": "DETACH_ADAPTER_PLATE",
+          "gt_support_frames": 119,
+          "gt_frequency_segments": 7,
+          "gt_total_duration_seconds": 23.8,
+          "gt_mean_segment_duration_seconds": 3.4,
+          "pred_frequency_segments": 3,
+          "pred_total_duration_seconds": 32.399986267089844,
+          "pred_mean_segment_duration_seconds": 10.799995422363281,
+          "mismatched_gt_frames": 17,
+          "mismatched_pred_frames": 60
+        },
+        {
+          "action": "REMOVE_ROTOR_ASSEMBLY",
+          "gt_support_frames": 78,
+          "gt_frequency_segments": 3,
+          "gt_total_duration_seconds": 15.600000000000001,
+          "gt_mean_segment_duration_seconds": 5.2,
+          "pred_frequency_segments": 1,
+          "pred_total_duration_seconds": 8.799995422363281,
+          "pred_mean_segment_duration_seconds": 8.799995422363281,
+          "mismatched_gt_frames": 48,
+          "mismatched_pred_frames": 14
+        },
+        {
+          "action": "STORE_ROTOR_ASSEMBLY",
+          "gt_support_frames": 10,
+          "gt_frequency_segments": 2,
+          "gt_total_duration_seconds": 2.0,
+          "gt_mean_segment_duration_seconds": 1.0,
+          "pred_frequency_segments": 1,
+          "pred_total_duration_seconds": 3.4000015258789062,
+          "pred_mean_segment_duration_seconds": 3.4000015258789062,
+          "mismatched_gt_frames": 10,
+          "mismatched_pred_frames": 17
+        },
+        {
+          "action": "STORE_GEARBOX_HOUSING",
+          "gt_support_frames": 0,
+          "gt_frequency_segments": 0,
+          "gt_total_duration_seconds": 0,
+          "gt_mean_segment_duration_seconds": null,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "STORE_ADAPTER_PLATE",
+          "gt_support_frames": 29,
+          "gt_frequency_segments": 5,
+          "gt_total_duration_seconds": 5.8,
+          "gt_mean_segment_duration_seconds": 1.16,
+          "pred_frequency_segments": 3,
+          "pred_total_duration_seconds": 3.7999801635742188,
+          "pred_mean_segment_duration_seconds": 1.2666600545247395,
+          "mismatched_gt_frames": 26,
+          "mismatched_pred_frames": 16
+        },
+        {
+          "action": "INSTALL_ROTOR_ASSEMBLY",
+          "gt_support_frames": 0,
+          "gt_frequency_segments": 0,
+          "gt_total_duration_seconds": 0,
+          "gt_mean_segment_duration_seconds": null,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "ATTACH_ADAPTER_PLATE",
+          "gt_support_frames": 0,
+          "gt_frequency_segments": 0,
+          "gt_total_duration_seconds": 0,
+          "gt_mean_segment_duration_seconds": null,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "RETRIEVE_BEARING_PLATE_ASSEMBLY",
+          "gt_support_frames": 0,
+          "gt_frequency_segments": 0,
+          "gt_total_duration_seconds": 0,
+          "gt_mean_segment_duration_seconds": null,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "RETRIEVE_LOCKING_LEVER_ASSEMBLY",
+          "gt_support_frames": 0,
+          "gt_frequency_segments": 0,
+          "gt_total_duration_seconds": 0,
+          "gt_mean_segment_duration_seconds": null,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "STORE_TOOL",
+          "gt_support_frames": 0,
+          "gt_frequency_segments": 0,
+          "gt_total_duration_seconds": 0,
+          "gt_mean_segment_duration_seconds": null,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 0
+        }
+      ],
+      "interpretation": "descriptive only; four executions do not support causal attribution"
+    },
+    {
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "frames": 674,
+      "duration_seconds": 134.8000030517578,
+      "frame_accuracy": 0.7700296735905044,
+      "macro_f1_actions": 0.5072016727023434,
+      "normalized_edit_score": 52.17391304347826,
+      "mismatched_frames": 155,
+      "mismatch_run_count": 33,
+      "gt_action_support_frames": 604,
+      "gt_null_frames": 70,
+      "gt_null_fraction": 0.10385756676557864,
+      "gt_action_segments": 23,
+      "predicted_action_segments": 18,
+      "gt_boundary_density_per_minute": 10.237388492269806,
+      "predicted_boundary_density_per_minute": 5.78635001736989,
+      "mean_predicted_non_null_segment_duration_seconds": 9.353843661455008,
+      "predicted_null_duration_fraction": 0.09792279108799579,
+      "top_frame_confusions": [
+        {
+          "gt": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+          "predicted": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+          "frames": 26
+        },
+        {
+          "gt": "DETACH_ADAPTER_PLATE",
+          "predicted": "REMOVE_ROTOR_ASSEMBLY",
+          "frames": 18
+        },
+        {
+          "gt": "NULL",
+          "predicted": "REMOVE_ROTOR_ASSEMBLY",
+          "frames": 14
+        },
+        {
+          "gt": "STORE_TOOL",
+          "predicted": "NULL",
+          "frames": 14
+        },
+        {
+          "gt": "UNSCREW_ANTI_VIBRATION_HANDLE",
+          "predicted": "NULL",
+          "frames": 12
+        }
+      ],
+      "per_action_frequency_duration_support_and_mismatch": [
+        {
+          "action": "START_ANGLE_GRINDER_ASSEMBLY",
+          "gt_support_frames": 7,
+          "gt_frequency_segments": 1,
+          "gt_total_duration_seconds": 1.4,
+          "gt_mean_segment_duration_seconds": 1.4,
+          "pred_frequency_segments": 1,
+          "pred_total_duration_seconds": 1.600000023841858,
+          "pred_mean_segment_duration_seconds": 1.600000023841858,
+          "mismatched_gt_frames": 4,
+          "mismatched_pred_frames": 5
+        },
+        {
+          "action": "UNSCREW_ANTI_VIBRATION_HANDLE",
+          "gt_support_frames": 12,
+          "gt_frequency_segments": 1,
+          "gt_total_duration_seconds": 2.4,
+          "gt_mean_segment_duration_seconds": 2.4,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 12,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "STORE_ANTI_VIBRATION_HANDLE",
+          "gt_support_frames": 5,
+          "gt_frequency_segments": 1,
+          "gt_total_duration_seconds": 1.0,
+          "gt_mean_segment_duration_seconds": 1.0,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 5,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+          "gt_support_frames": 75,
+          "gt_frequency_segments": 3,
+          "gt_total_duration_seconds": 15.0,
+          "gt_mean_segment_duration_seconds": 5.0,
+          "pred_frequency_segments": 2,
+          "pred_total_duration_seconds": 10.200000762939453,
+          "pred_mean_segment_duration_seconds": 5.100000381469727,
+          "mismatched_gt_frames": 31,
+          "mismatched_pred_frames": 8
+        },
+        {
+          "action": "STORE_LOCKING_LEVER_ASSEMBLY",
+          "gt_support_frames": 14,
+          "gt_frequency_segments": 2,
+          "gt_total_duration_seconds": 2.8000000000000003,
+          "gt_mean_segment_duration_seconds": 1.4000000000000001,
+          "pred_frequency_segments": 1,
+          "pred_total_duration_seconds": 3.000001907348633,
+          "pred_mean_segment_duration_seconds": 3.000001907348633,
+          "mismatched_gt_frames": 4,
+          "mismatched_pred_frames": 5
+        },
+        {
+          "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+          "gt_support_frames": 191,
+          "gt_frequency_segments": 3,
+          "gt_total_duration_seconds": 38.2,
+          "gt_mean_segment_duration_seconds": 12.733333333333334,
+          "pred_frequency_segments": 2,
+          "pred_total_duration_seconds": 45.399993896484375,
+          "pred_mean_segment_duration_seconds": 22.699996948242188,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 35
+        },
+        {
+          "action": "STORE_BEARING_PLATE_ASSEMBLY",
+          "gt_support_frames": 13,
+          "gt_frequency_segments": 2,
+          "gt_total_duration_seconds": 2.6,
+          "gt_mean_segment_duration_seconds": 1.3,
+          "pred_frequency_segments": 1,
+          "pred_total_duration_seconds": 2.399993896484375,
+          "pred_mean_segment_duration_seconds": 2.399993896484375,
+          "mismatched_gt_frames": 5,
+          "mismatched_pred_frames": 4
+        },
+        {
+          "action": "DETACH_ADAPTER_PLATE",
+          "gt_support_frames": 149,
+          "gt_frequency_segments": 3,
+          "gt_total_duration_seconds": 29.8,
+          "gt_mean_segment_duration_seconds": 9.933333333333334,
+          "pred_frequency_segments": 2,
+          "pred_total_duration_seconds": 28.199989318847656,
+          "pred_mean_segment_duration_seconds": 14.099994659423828,
+          "mismatched_gt_frames": 18,
+          "mismatched_pred_frames": 10
+        },
+        {
+          "action": "REMOVE_ROTOR_ASSEMBLY",
+          "gt_support_frames": 91,
+          "gt_frequency_segments": 3,
+          "gt_total_duration_seconds": 18.2,
+          "gt_mean_segment_duration_seconds": 6.066666666666666,
+          "pred_frequency_segments": 2,
+          "pred_total_duration_seconds": 25.599990844726562,
+          "pred_mean_segment_duration_seconds": 12.799995422363281,
+          "mismatched_gt_frames": 1,
+          "mismatched_pred_frames": 37
+        },
+        {
+          "action": "STORE_ROTOR_ASSEMBLY",
+          "gt_support_frames": 5,
+          "gt_frequency_segments": 1,
+          "gt_total_duration_seconds": 1.0,
+          "gt_mean_segment_duration_seconds": 1.0,
+          "pred_frequency_segments": 1,
+          "pred_total_duration_seconds": 3.0,
+          "pred_mean_segment_duration_seconds": 3.0,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 12
+        },
+        {
+          "action": "STORE_GEARBOX_HOUSING",
+          "gt_support_frames": 0,
+          "gt_frequency_segments": 0,
+          "gt_total_duration_seconds": 0,
+          "gt_mean_segment_duration_seconds": null,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "STORE_ADAPTER_PLATE",
+          "gt_support_frames": 28,
+          "gt_frequency_segments": 2,
+          "gt_total_duration_seconds": 5.6,
+          "gt_mean_segment_duration_seconds": 2.8,
+          "pred_frequency_segments": 1,
+          "pred_total_duration_seconds": 2.1999969482421875,
+          "pred_mean_segment_duration_seconds": 2.1999969482421875,
+          "mismatched_gt_frames": 17,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "INSTALL_ROTOR_ASSEMBLY",
+          "gt_support_frames": 0,
+          "gt_frequency_segments": 0,
+          "gt_total_duration_seconds": 0,
+          "gt_mean_segment_duration_seconds": null,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "ATTACH_ADAPTER_PLATE",
+          "gt_support_frames": 0,
+          "gt_frequency_segments": 0,
+          "gt_total_duration_seconds": 0,
+          "gt_mean_segment_duration_seconds": null,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "RETRIEVE_BEARING_PLATE_ASSEMBLY",
+          "gt_support_frames": 0,
+          "gt_frequency_segments": 0,
+          "gt_total_duration_seconds": 0,
+          "gt_mean_segment_duration_seconds": null,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "RETRIEVE_LOCKING_LEVER_ASSEMBLY",
+          "gt_support_frames": 0,
+          "gt_frequency_segments": 0,
+          "gt_total_duration_seconds": 0,
+          "gt_mean_segment_duration_seconds": null,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "STORE_TOOL",
+          "gt_support_frames": 14,
+          "gt_frequency_segments": 1,
+          "gt_total_duration_seconds": 2.8,
+          "gt_mean_segment_duration_seconds": 2.8,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 14,
+          "mismatched_pred_frames": 0
+        }
+      ],
+      "interpretation": "descriptive only; four executions do not support causal attribution"
+    },
+    {
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "frames": 591,
+      "duration_seconds": 118.19999694824219,
+      "frame_accuracy": 0.7428087986463621,
+      "macro_f1_actions": 0.5617939642501695,
+      "normalized_edit_score": 56.52173913043479,
+      "mismatched_frames": 152,
+      "mismatch_run_count": 28,
+      "gt_action_support_frames": 546,
+      "gt_null_frames": 45,
+      "gt_null_fraction": 0.07614213197969544,
+      "gt_action_segments": 23,
+      "predicted_action_segments": 15,
+      "gt_boundary_density_per_minute": 11.675127204988668,
+      "predicted_boundary_density_per_minute": 7.106599168253972,
+      "mean_predicted_non_null_segment_duration_seconds": 7.871427280562265,
+      "predicted_null_duration_fraction": 0.06768183229402731,
+      "top_frame_confusions": [
+        {
+          "gt": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+          "predicted": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+          "frames": 46
+        },
+        {
+          "gt": "REMOVE_ROTOR_ASSEMBLY",
+          "predicted": "NULL",
+          "frames": 16
+        },
+        {
+          "gt": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+          "predicted": "STORE_BEARING_PLATE_ASSEMBLY",
+          "frames": 10
+        },
+        {
+          "gt": "STORE_ADAPTER_PLATE",
+          "predicted": "NULL",
+          "frames": 10
+        },
+        {
+          "gt": "NULL",
+          "predicted": "DETACH_ADAPTER_PLATE",
+          "frames": 9
+        }
+      ],
+      "per_action_frequency_duration_support_and_mismatch": [
+        {
+          "action": "START_ANGLE_GRINDER_ASSEMBLY",
+          "gt_support_frames": 9,
+          "gt_frequency_segments": 1,
+          "gt_total_duration_seconds": 1.8,
+          "gt_mean_segment_duration_seconds": 1.8,
+          "pred_frequency_segments": 1,
+          "pred_total_duration_seconds": 2.000000238418579,
+          "pred_mean_segment_duration_seconds": 2.000000238418579,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 1
+        },
+        {
+          "action": "UNSCREW_ANTI_VIBRATION_HANDLE",
+          "gt_support_frames": 15,
+          "gt_frequency_segments": 1,
+          "gt_total_duration_seconds": 3.0,
+          "gt_mean_segment_duration_seconds": 3.0,
+          "pred_frequency_segments": 1,
+          "pred_total_duration_seconds": 2.0,
+          "pred_mean_segment_duration_seconds": 2.0,
+          "mismatched_gt_frames": 5,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "STORE_ANTI_VIBRATION_HANDLE",
+          "gt_support_frames": 5,
+          "gt_frequency_segments": 1,
+          "gt_total_duration_seconds": 1.0,
+          "gt_mean_segment_duration_seconds": 1.0,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 5,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+          "gt_support_frames": 74,
+          "gt_frequency_segments": 2,
+          "gt_total_duration_seconds": 14.8,
+          "gt_mean_segment_duration_seconds": 7.4,
+          "pred_frequency_segments": 2,
+          "pred_total_duration_seconds": 27.400001525878906,
+          "pred_mean_segment_duration_seconds": 13.700000762939453,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 63
+        },
+        {
+          "action": "STORE_LOCKING_LEVER_ASSEMBLY",
+          "gt_support_frames": 13,
+          "gt_frequency_segments": 2,
+          "gt_total_duration_seconds": 2.6,
+          "gt_mean_segment_duration_seconds": 1.3,
+          "pred_frequency_segments": 1,
+          "pred_total_duration_seconds": 4.0,
+          "pred_mean_segment_duration_seconds": 4.0,
+          "mismatched_gt_frames": 2,
+          "mismatched_pred_frames": 8
+        },
+        {
+          "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+          "gt_support_frames": 147,
+          "gt_frequency_segments": 3,
+          "gt_total_duration_seconds": 29.4,
+          "gt_mean_segment_duration_seconds": 9.799999999999999,
+          "pred_frequency_segments": 2,
+          "pred_total_duration_seconds": 19.0,
+          "pred_mean_segment_duration_seconds": 9.5,
+          "mismatched_gt_frames": 56,
+          "mismatched_pred_frames": 4
+        },
+        {
+          "action": "STORE_BEARING_PLATE_ASSEMBLY",
+          "gt_support_frames": 8,
+          "gt_frequency_segments": 2,
+          "gt_total_duration_seconds": 1.6,
+          "gt_mean_segment_duration_seconds": 0.8,
+          "pred_frequency_segments": 1,
+          "pred_total_duration_seconds": 3.5999984741210938,
+          "pred_mean_segment_duration_seconds": 3.5999984741210938,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 10
+        },
+        {
+          "action": "DETACH_ADAPTER_PLATE",
+          "gt_support_frames": 150,
+          "gt_frequency_segments": 3,
+          "gt_total_duration_seconds": 30.0,
+          "gt_mean_segment_duration_seconds": 10.0,
+          "pred_frequency_segments": 2,
+          "pred_total_duration_seconds": 33.399986267089844,
+          "pred_mean_segment_duration_seconds": 16.699993133544922,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 17
+        },
+        {
+          "action": "REMOVE_ROTOR_ASSEMBLY",
+          "gt_support_frames": 76,
+          "gt_frequency_segments": 2,
+          "gt_total_duration_seconds": 15.200000000000001,
+          "gt_mean_segment_duration_seconds": 7.6000000000000005,
+          "pred_frequency_segments": 1,
+          "pred_total_duration_seconds": 12.400001525878906,
+          "pred_mean_segment_duration_seconds": 12.400001525878906,
+          "mismatched_gt_frames": 16,
+          "mismatched_pred_frames": 3
+        },
+        {
+          "action": "STORE_ROTOR_ASSEMBLY",
+          "gt_support_frames": 11,
+          "gt_frequency_segments": 2,
+          "gt_total_duration_seconds": 2.2,
+          "gt_mean_segment_duration_seconds": 1.1,
+          "pred_frequency_segments": 2,
+          "pred_total_duration_seconds": 4.399993896484375,
+          "pred_mean_segment_duration_seconds": 2.1999969482421875,
+          "mismatched_gt_frames": 2,
+          "mismatched_pred_frames": 13
+        },
+        {
+          "action": "STORE_GEARBOX_HOUSING",
+          "gt_support_frames": 6,
+          "gt_frequency_segments": 1,
+          "gt_total_duration_seconds": 1.2,
+          "gt_mean_segment_duration_seconds": 1.2,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 6,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "STORE_ADAPTER_PLATE",
+          "gt_support_frames": 26,
+          "gt_frequency_segments": 2,
+          "gt_total_duration_seconds": 5.2,
+          "gt_mean_segment_duration_seconds": 2.6,
+          "pred_frequency_segments": 1,
+          "pred_total_duration_seconds": 2.0,
+          "pred_mean_segment_duration_seconds": 2.0,
+          "mismatched_gt_frames": 18,
+          "mismatched_pred_frames": 2
+        },
+        {
+          "action": "INSTALL_ROTOR_ASSEMBLY",
+          "gt_support_frames": 0,
+          "gt_frequency_segments": 0,
+          "gt_total_duration_seconds": 0,
+          "gt_mean_segment_duration_seconds": null,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "ATTACH_ADAPTER_PLATE",
+          "gt_support_frames": 0,
+          "gt_frequency_segments": 0,
+          "gt_total_duration_seconds": 0,
+          "gt_mean_segment_duration_seconds": null,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "RETRIEVE_BEARING_PLATE_ASSEMBLY",
+          "gt_support_frames": 0,
+          "gt_frequency_segments": 0,
+          "gt_total_duration_seconds": 0,
+          "gt_mean_segment_duration_seconds": null,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "RETRIEVE_LOCKING_LEVER_ASSEMBLY",
+          "gt_support_frames": 0,
+          "gt_frequency_segments": 0,
+          "gt_total_duration_seconds": 0,
+          "gt_mean_segment_duration_seconds": null,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 0,
+          "mismatched_pred_frames": 0
+        },
+        {
+          "action": "STORE_TOOL",
+          "gt_support_frames": 6,
+          "gt_frequency_segments": 1,
+          "gt_total_duration_seconds": 1.2,
+          "gt_mean_segment_duration_seconds": 1.2,
+          "pred_frequency_segments": 0,
+          "pred_total_duration_seconds": 0,
+          "pred_mean_segment_duration_seconds": null,
+          "mismatched_gt_frames": 6,
+          "mismatched_pred_frames": 0
+        }
+      ],
+      "interpretation": "descriptive only; four executions do not support causal attribution"
+    }
+  ],
+  "error_category_counts": {
+    "class confusion": 63,
+    "boundary error": 135,
+    "NULL/background leakage": 96,
+    "rare-class failure": 71,
+    "short-action failure": 30
+  },
+  "top_confusions_by_mismatched_frames": [
+    {
+      "gt": "NULL",
+      "predicted": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "mismatched_frames": 179
+    },
+    {
+      "gt": "STORE_BEARING_PLATE_ASSEMBLY",
+      "predicted": "DETACH_ADAPTER_PLATE",
+      "mismatched_frames": 169
+    },
+    {
+      "gt": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "predicted": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "mismatched_frames": 138
+    },
+    {
+      "gt": "NULL",
+      "predicted": "DETACH_ADAPTER_PLATE",
+      "mismatched_frames": 127
+    },
+    {
+      "gt": "REMOVE_ROTOR_ASSEMBLY",
+      "predicted": "NULL",
+      "mismatched_frames": 86
+    },
+    {
+      "gt": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "predicted": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "mismatched_frames": 76
+    },
+    {
+      "gt": "NULL",
+      "predicted": "REMOVE_ROTOR_ASSEMBLY",
+      "mismatched_frames": 55
+    },
+    {
+      "gt": "STORE_ADAPTER_PLATE",
+      "predicted": "DETACH_ADAPTER_PLATE",
+      "mismatched_frames": 45
+    },
+    {
+      "gt": "NULL",
+      "predicted": "STORE_ROTOR_ASSEMBLY",
+      "mismatched_frames": 45
+    },
+    {
+      "gt": "REMOVE_ROTOR_ASSEMBLY",
+      "predicted": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "mismatched_frames": 38
+    }
+  ],
+  "temporal_postprocessing_comparison": {
+    "raw_correct_decoded_wrong_frames": 3,
+    "raw_wrong_decoded_correct_frames": 2,
+    "evaluation": "post-decoding comparison against TAS-S labels; descriptive diagnosis only"
+  },
+  "human_review_required_for_visual_reason": true
+}
