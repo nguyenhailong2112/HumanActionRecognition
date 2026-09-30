@@ -132,12 +132,17 @@ def evaluate_split(config, config_path, kind: str, checkpoint_path: Path, split:
     with torch.inference_mode():
         for sequence in load_split(config, split, config_path):
             predicted, probabilities = predict_features(model, sequence.features, checkpoint["feature_mean"], checkpoint["feature_std"], device)
-            results.append({"video_id": sequence.video_id, "metrics": action_metrics(sequence.labels, predicted, config["actions"]["class_order"]), "predicted": predicted, "probabilities": probabilities, "sequence": sequence})
+            results.append({"video_id": sequence.video_id, "metrics": action_metrics(
+                sequence.labels,
+                predicted,
+                config["actions"]["class_order"],
+                background_label=config["actions"].get("background", "NULL"),
+            ), "predicted": predicted, "probabilities": probabilities, "sequence": sequence})
     return results
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Train framewise and MS-TCN temporal baselines for CP01.")
+    parser = argparse.ArgumentParser(description="Train framewise and MS-TCN temporal action baselines.")
     parser.add_argument("--config", default="configs/cp01.yaml")
     parser.add_argument("--epochs", type=int)
     parser.add_argument("--defer-test-eval", action="store_true", help="Keep final test evaluation separate from training and run it once after configuration freeze.")

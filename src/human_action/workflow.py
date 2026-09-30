@@ -31,19 +31,28 @@ def workflow_is_enabled(config: dict[str, Any]) -> bool:
 
 
 class WorkflowEngine:
-    """Deterministic evaluator over configured valid paths; perception stays outside this module."""
+    """Deterministic evaluator for reviewed routes or prerequisite DAGs; perception stays outside."""
 
     def __init__(self, config: dict[str, Any], worker_id: str, video_id: str = "", branch_decisions: dict[str, bool] | None = None) -> None:
         workflow = config["workflow"]
         self.workflow_id = workflow["id"]
         self.worker_id = worker_id
         self.video_id = video_id
-        self.paths = [(str(path["id"]), list(path["steps"])) for path in workflow["valid_paths"]]
+        self.partial_order = "prerequisites" in workflow
+        self.prerequisites = {
+            str(action): set(steps) for action, steps in workflow.get("prerequisites", {}).items()
+        }
+        self.required_actions = set(workflow.get("required_actions", self.prerequisites))
+        self.completed_actions: set[str] = set()
+        self.observations: list[ActionEvent] = []
+        self.paths = [(str(path["id"]), list(path["steps"])) for path in workflow.get("valid_paths", [])]
         self.path_conditions = {str(item["path_id"]): str(item["condition_id"]) for item in workflow.get("conditional_paths", []) if isinstance(item, dict) and item.get("path_id") and item.get("condition_id")}
         self.branch_decisions = dict(branch_decisions or {})
         if any(not isinstance(value, bool) for value in self.branch_decisions.values()):
             raise ValueError("branch_decisions values must be explicit booleans")
-        if not self.paths or any(not steps for _, steps in self.paths):
+        if self.partial_order and (not self.prerequisites or not self.required_actions):
+            raise ValueError("Prerequisite workflow must define prerequisites and required_actions")
+        if not self.partial_order and (not self.paths or any(not steps for _, steps in self.paths)):
             raise ValueError("Workflow must define non-empty valid_paths")
         duration_policy = workflow.get("duration_policy", {})
         self.duration_limits = workflow.get("duration_limits_seconds", {})
@@ -62,6 +71,8 @@ class WorkflowEngine:
         if video_id is not None:
             self.video_id = video_id
         self.candidates = [(i, 0) for i in range(len(self.paths))]
+        self.completed_actions.clear()
+        self.observations.clear()
         self.events.clear()
         self.violations.clear()
         self.event_statuses.clear()
@@ -85,6 +96,15 @@ class WorkflowEngine:
         )
 
     def state(self) -> WorkflowState:
+        if self.partial_order:
+            ready = tuple(sorted(
+                action for action in self.required_actions - self.completed_actions
+                if self.prerequisites.get(action, set()) <= self.completed_actions
+            ))
+            completed = self.required_actions <= self.completed_actions
+            current = self.events[-1].action if self.events else None
+            return WorkflowState(self.workflow_id, len(self.completed_actions), current,
+                                 ready[0] if len(ready) == 1 else None, ready, None, completed)
         if not self.candidates:
             return WorkflowState(self.workflow_id, -1, self.events[-1].action if self.events else None, None, (), None, False)
         next_steps = tuple(dict.fromkeys(self.paths[path_id][1][position] for path_id, position in self.candidates if position < len(self.paths[path_id][1])))
@@ -104,6 +124,8 @@ class WorkflowEngine:
         return WorkflowResult(state, list(self.violations), state.selected_path, list(self.event_statuses))
 
     def _consume_one(self, event: ActionEvent) -> str:
+        # Preserve every received observation for audit, including uncertain or malformed events.
+        self.observations.append(event)
         if event.worker_id != self.worker_id:
             self.violations.append(self._violation("INSUFFICIENT_EVIDENCE", self.state().expected_step, event, "Event worker does not match this workflow execution; event was isolated."))
             return "insufficient_evidence"
@@ -126,6 +148,8 @@ class WorkflowEngine:
         if self.events and event.start_time < self.events[-1].end_time:
             self.violations.append(self._violation("INSUFFICIENT_EVIDENCE", self.state().expected_step, event, "Overlapping event interval; event was not applied."))
             return "insufficient_evidence"
+        # Keep the prior event-history meaning: evidence-valid observations are
+        # recorded before the workflow transition is judged.
         self.events.append(event)
         state = self.state()
         expected_steps = set(state.next_valid_steps)
@@ -138,6 +162,9 @@ class WorkflowEngine:
             if event.duration > maximum:
                 self.violations.append(self._violation("TOO_SLOW", event.action, event, f"{event.action} took {event.duration:.2f}s; maximum is {maximum:.2f}s."))
                 self.violations.append(self._violation("TIMEOUT", event.action, event, f"{event.action} exceeded its {maximum:.2f}s timeout."))
+
+        if self.partial_order:
+            return self._consume_partial_order(event)
 
         direct: list[tuple[int, int]] = []
         unresolved_direct: list[tuple[int, int]] = []
@@ -174,20 +201,21 @@ class WorkflowEngine:
                     if decision is None:
                         unresolved_future = True
                     else:
-                        future_matches.append((later - position, path_id, later))
+                        future_matches.append((later - position, path_id, position, later))
                     break
         if unresolved_future:
             self.violations.append(self._violation("AMBIGUOUS_EVIDENCE", state.expected_step, event, "Skip interpretation depends on an unresolved conditional branch."))
             return "ambiguous_evidence"
         if future_matches:
             smallest_skip = min(match[0] for match in future_matches)
-            selected = [(path_id, later) for count, path_id, later in future_matches if count == smallest_skip]
+            selected = [(path_id, position, later) for count, path_id, position, later in future_matches if count == smallest_skip]
             expected = state.expected_step or (next(iter(expected_steps)) if expected_steps else None)
-            selected_path, later = selected[0]
-            for skipped in self.paths[selected_path][1][self.candidates[0][1]:later]:
+            selected_path, selected_position, later = selected[0]
+            for skipped in self.paths[selected_path][1][selected_position:later]:
                 self.violations.append(self._violation("SKIPPED_STEP", skipped, event, f"{skipped} was expected before observed {event.action}."))
             self.violations.append(self._violation("WRONG_SEQUENCE", expected, event, f"Observed {event.action} before the expected step {expected or 'completion'}."))
-            self.candidates = selected
+            # The future-matching event itself was observed, so resume after it.
+            self.candidates = [(path_id, later + 1) for path_id, _, later in selected]
             return "skipped_step"
 
         previous_actions = {prior.action for prior in self.events[:-1]}
@@ -203,6 +231,26 @@ class WorkflowEngine:
         else:
             self.violations.append(self._violation("UNEXPECTED_ACTION", state.expected_step, event, f"{event.action} is not defined by workflow {self.workflow_id}."))
             return "unknown_action"
+
+    def _consume_partial_order(self, event: ActionEvent) -> str:
+        if event.action not in self.required_actions:
+            self.violations.append(self._violation("UNEXPECTED_ACTION", self.state().expected_step, event,
+                                                   f"{event.action} is not a required action in workflow {self.workflow_id}."))
+            return "unknown_action"
+        if event.action in self.completed_actions:
+            self.violations.append(self._violation("REPEATED_STEP", self.state().expected_step, event,
+                                                   f"{event.action} was already accepted in this procedure execution."))
+            return "repeated_step"
+        missing = self.prerequisites.get(event.action, set()) - self.completed_actions
+        if missing:
+            self.violations.append(self._violation("WRONG_SEQUENCE", self.state().expected_step, event,
+                                                   f"{event.action} is missing prerequisites: {sorted(missing)}."))
+            for action in sorted(missing):
+                self.violations.append(self._violation("SKIPPED_STEP", action, event,
+                                                       f"Prerequisite {action} was not accepted before {event.action}."))
+            return "invalid_transition"
+        self.completed_actions.add(event.action)
+        return "completed" if self.state().completed else "accepted_transition"
 
     def finalize(self, timestamp: float | None = None) -> WorkflowResult:
         state = self.state()

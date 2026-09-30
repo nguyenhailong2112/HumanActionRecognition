@@ -55,12 +55,15 @@ def validate_workflow(workflow_config: dict, action_vocabulary: set[str]) -> lis
             errors.append(f"action_disposition for {action} must be one of {sorted(allowed_dispositions)}")
         if status in {"conditional", "out_of_scope"} and isinstance(entry, dict) and not entry.get("reason"):
             errors.append(f"action_disposition for {action} needs a reason")
+    partial_order = "prerequisites" in workflow
     paths = workflow.get("valid_paths", [])
     if not isinstance(paths, list):
         errors.append("workflow.valid_paths must be a list")
         paths = []
-    if not paths:
+    if not paths and not partial_order:
         errors.append("workflow.valid_paths must define at least one process-owner-approved path")
+    if paths and partial_order:
+        errors.append("choose one workflow representation: valid_paths or prerequisites, not both")
     path_ids = [path.get("id") for path in paths]
     if any(not value for value in path_ids) or len(path_ids) != len(set(path_ids)):
         errors.append("valid_paths need unique, non-empty ids")
@@ -80,6 +83,53 @@ def validate_workflow(workflow_config: dict, action_vocabulary: set[str]) -> lis
         out_of_scope_steps = set(steps) & {name for name, status in statuses.items() if status == "out_of_scope"}
         if out_of_scope_steps:
             errors.append(f"valid path {path.get('id')} uses actions marked out_of_scope: {sorted(out_of_scope_steps)}")
+    required_actions = set()
+    if partial_order:
+        raw_required = workflow.get("required_actions")
+        if not isinstance(raw_required, list) or not raw_required or any(not isinstance(x, str) for x in raw_required):
+            errors.append("workflow.required_actions must be a non-empty list of action IDs for prerequisite workflows")
+        else:
+            required_actions = set(raw_required)
+            if len(raw_required) != len(required_actions):
+                errors.append("workflow.required_actions contains duplicates")
+            if required_actions - actions:
+                errors.append(f"required_actions contains unknown/out-of-scope actions: {sorted(required_actions - actions)}")
+        raw_prerequisites = workflow.get("prerequisites")
+        if not isinstance(raw_prerequisites, dict) or not raw_prerequisites:
+            errors.append("workflow.prerequisites must be a non-empty action-to-prerequisite mapping")
+            raw_prerequisites = {}
+        if required_actions and set(raw_prerequisites) != required_actions:
+            errors.append("prerequisites must define every and only required action")
+        graph = {}
+        for action, prerequisites in raw_prerequisites.items():
+            if action not in actions:
+                errors.append(f"prerequisites defines unknown action: {action}")
+            if not isinstance(prerequisites, list) or any(not isinstance(item, str) for item in prerequisites):
+                errors.append(f"prerequisites for {action} must be a list of action IDs")
+                continue
+            if len(prerequisites) != len(set(prerequisites)):
+                errors.append(f"prerequisites for {action} contains duplicates")
+            if action in prerequisites:
+                errors.append(f"action {action} cannot be its own prerequisite")
+            unknown = set(prerequisites) - actions
+            if unknown:
+                errors.append(f"prerequisites for {action} references unknown actions: {sorted(unknown)}")
+            if required_actions and (set(prerequisites) - required_actions):
+                errors.append(f"prerequisites for {action} references actions not in required_actions: {sorted(set(prerequisites) - required_actions)}")
+            graph[action] = set(prerequisites)
+        visiting, visited = set(), set()
+        def visit(action):
+            if action in visiting:
+                return True
+            if action in visited:
+                return False
+            visiting.add(action)
+            cyclic = any(visit(item) for item in graph.get(action, set()) if item in graph)
+            visiting.remove(action)
+            visited.add(action)
+            return cyclic
+        if any(visit(action) for action in graph if action not in visited):
+            errors.append("prerequisites contains a cycle; no valid completion order exists")
     if any(status != "out_of_scope" for status in statuses.values()) and actions != {name for name, status in statuses.items() if status != "out_of_scope"}:
         errors.append("action_vocabulary must list exactly the actions whose disposition is not out_of_scope")
     completion = workflow.get("completion", {})
@@ -100,7 +150,7 @@ def validate_workflow(workflow_config: dict, action_vocabulary: set[str]) -> lis
         for path in paths
         for source, target in zip(path.get("steps", []), path.get("steps", [])[1:])
     }
-    if "valid_transitions" in workflow:
+    if "valid_transitions" in workflow and not partial_order:
         declared_edges = []
         for edge in workflow["valid_transitions"]:
             if not isinstance(edge, (list, tuple)) or len(edge) != 2:
@@ -262,7 +312,7 @@ def validate_workflow(workflow_config: dict, action_vocabulary: set[str]) -> lis
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Check a process-owner-approved workflow against the CP01.1 action vocabulary.")
+    parser = argparse.ArgumentParser(description="Validate a human-reviewed research workflow against an action vocabulary.")
     parser.add_argument("--config", required=True, help="Approved workflow YAML")
     parser.add_argument("--actions-config", default="configs/cp01_1.yaml")
     args = parser.parse_args()

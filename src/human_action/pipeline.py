@@ -120,7 +120,12 @@ def evaluate_video(video_id: str, split: str, config: dict[str, Any], config_pat
     if device.type == "cuda":
         torch.cuda.synchronize(device)
     inference_seconds = time.perf_counter() - inference_started
-    metrics = action_metrics(sequence.labels, predicted, config["actions"]["class_order"], background_id=0)
+    metrics = action_metrics(
+        sequence.labels,
+        predicted,
+        config["actions"]["class_order"],
+        background_label=config["actions"].get("background", "NULL"),
+    )
     temporal = config["temporal"]
     segments = decode_segments(predicted, probabilities, config["actions"]["class_order"], sequence.timestamps, sequence.frame_indices, int(temporal["smoothing_window"]), float(temporal["min_segment_seconds"]))
     events = to_action_events(segments, sequence.worker_id, video_id, config["actions"]["background"], config["dataset"].get("view", ""))

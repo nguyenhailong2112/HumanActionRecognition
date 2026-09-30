@@ -18,19 +18,20 @@ from human_action.pipeline import evaluate_video  # noqa: E402
 
 
 def summarize(rows: list[dict], class_order: list[str]) -> dict:
+    background_id = class_order.index("NULL")
     keys = ("frame_accuracy", "macro_f1_actions", "normalized_edit_score")
     segs = ("F1@10", "F1@25", "F1@50")
     pooled_gt = np.concatenate([np.asarray(r["gt"], dtype=np.int64) for r in rows])
     pooled_pred = np.concatenate([np.asarray(r["pred"], dtype=np.int64) for r in rows])
-    pooled = action_metrics(pooled_gt, pooled_pred, class_order)
+    pooled = action_metrics(pooled_gt, pooled_pred, class_order, background_id=background_id)
     # Keep execution boundaries: frame/class counts pool over frames, but edit
     # and segment matches must not treat the last frame of one video as adjacent
     # to the first frame of another.
     edit_distance_total = edit_denominator_total = 0
     segment_counts = {key: {"tp": 0, "fp": 0, "fn": 0} for key in ("F1@10", "F1@25", "F1@50")}
     for row in rows:
-        gt_seg = [label for label, _, _ in _segments(np.asarray(row["gt"], dtype=np.int64)) if label != 0]
-        pred_seg = [label for label, _, _ in _segments(np.asarray(row["pred"], dtype=np.int64)) if label != 0]
+        gt_seg = [label for label, _, _ in _segments(np.asarray(row["gt"], dtype=np.int64)) if label != background_id]
+        pred_seg = [label for label, _, _ in _segments(np.asarray(row["pred"], dtype=np.int64)) if label != background_id]
         edit_distance_total += _edit_distance(gt_seg, pred_seg)
         edit_denominator_total += max(len(gt_seg), len(pred_seg), 1)
         for key in segment_counts:
@@ -76,6 +77,7 @@ def main() -> None:
 
     # Deterministic mismatch runs. Reasons remain unknown until a person reviews video.
     names = config["actions"]["class_order"]
+    background_id = names.index(config["actions"].get("background", "NULL"))
     errors = []
     pair_counts = Counter()
     sequence_diagnostics = []
@@ -93,7 +95,7 @@ def main() -> None:
             pair_counts[(names[g], names[q])] += int(end - start)
             near_boundary = bool(np.any(np.abs(boundary_points - start) <= 2) or np.any(np.abs(boundary_points - end) <= 2))
             tags = []
-            if g == 0 or q == 0:
+            if g == background_id or q == background_id:
                 category = "NULL/background leakage"
                 tags.append("NULL/background leakage")
             else:
@@ -102,15 +104,15 @@ def main() -> None:
                 tags.append("short-action failure")
             if near_boundary:
                 tags.append("boundary error")
-            if g != 0 and support[g] < 100:
+            if g != background_id and support[g] < 100:
                 tags.append("rare-class failure")
-            if g != 0 and q != 0:
+            if g != background_id and q != background_id:
                 category = "class confusion"
             elif end - start <= 2:
                 category = "short-action failure"
             elif near_boundary:
                 category = "boundary error"
-            elif g != 0 and support[g] < 100:
+            elif g != background_id and support[g] < 100:
                 category = "rare-class failure"
             else:
                 category = "NULL/background leakage"

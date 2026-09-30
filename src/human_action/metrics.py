@@ -47,13 +47,33 @@ def _segment_f1(gt: list[tuple[int, int, int]], pred: list[tuple[int, int, int]]
     return f1, tp, fp, fn
 
 
-def action_metrics(gt: np.ndarray, pred: np.ndarray, class_order: list[str], background_id: int = 0) -> dict:
+def action_metrics(
+    gt: np.ndarray,
+    pred: np.ndarray,
+    class_order: list[str],
+    background_id: int | None = None,
+    background_label: str | None = None,
+) -> dict:
     gt = np.asarray(gt, dtype=np.int64)
     pred = np.asarray(pred, dtype=np.int64)
-    length = min(len(gt), len(pred))
-    gt, pred = gt[:length], pred[:length]
-    if not length:
+    if gt.ndim != 1 or pred.ndim != 1:
+        raise ValueError(f"Ground truth and prediction must be 1D label sequences; got {gt.shape} and {pred.shape}")
+    if len(gt) != len(pred):
+        raise ValueError(f"Ground truth and prediction lengths are not aligned: {len(gt)} != {len(pred)}")
+    if len(gt) == 0:
         raise ValueError("Cannot evaluate an empty sequence")
+    if background_id is None and background_label is None:
+        raise ValueError("Specify background_id or background_label for action metrics")
+    if background_id is None:
+        try:
+            background_id = class_order.index(background_label)
+        except ValueError as exc:
+            raise ValueError(f"Background label {background_label!r} is absent from class_order") from exc
+    if not 0 <= background_id < len(class_order):
+        raise ValueError(f"background_id {background_id} is outside class_order")
+    if np.any((gt < 0) | (gt >= len(class_order))) or np.any((pred < 0) | (pred >= len(class_order))):
+        raise ValueError("Ground truth or prediction contains a class ID outside class_order")
+    length = len(gt)
     confusion = np.zeros((len(class_order), len(class_order)), dtype=np.int64)
     np.add.at(confusion, (gt, pred), 1)
     report = {}

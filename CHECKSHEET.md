@@ -2025,3 +2025,25 @@ Action data, training/validation/test evaluation, per-class and temporal error a
 | Evidence review | HUMAN REVIEW REQUIRED | 21 category selections deduplicate to 13 unique events in `experiments/CP07/evidence_review_manifest.json`; fixed handoff in `HUMAN_HANDOFF_CP07_EVIDENCE_REVIEW.md`. |
 | Process compliance / anomaly / duration | NOT EVALUATED | No validated workflow and matching process ground truth or timing policy. |
 | Test suite | PASS | 56 repository tests and Python compileall passed after CP07 safeguards. See `experiments/EXP-CP07.md`. |
+
+# 40. ENGINEERING HARDENING — CP07.1
+
+**Checkpoint:** CP07.1 — system hardening and workflow architecture alignment  
+**Status:** PASS — generic workflow/metric correctness changes verified; project process semantics remain HUMAN_REVIEW_REQUIRED.  
+**Last updated:** 2026-09-27
+
+| Work item | Status | Evidence / result |
+|---|---|---|
+| Pre-change context and audit | PASS | `experiments/CP07.1/CP07.1_context_and_audit.md`; HEAD `2a89bc9355b2f8a8453e831ba6b1a7e1fb0fdedc`; baseline 56 tests. |
+| Partial-order workflow capability | PASS, synthetic only | Existing `WorkflowEngine` accepts either `valid_paths` or `required_actions` + acyclic `prerequisites`; both A/B orders and prerequisite rejection tested. No Disassembly_A rules added. |
+| Route skip handling | PASS | Regression with two candidate routes at different positions verifies route-local skipped steps and post-event position. |
+| Observation and process acceptance separation | PASS | `observations` preserves uncertain/malformed events; only sufficient, valid events progress the workflow. Confidence remains separate. |
+| Metric alignment/background | PASS | Unequal and non-1D inputs fail; background resolves by configured class label; tests include nonzero background ID. |
+| Workflow semantic activation | PASS as safety gate | No executable workflow file was created or draft/worksheet semantically modified. Draft validator rejects unapproved/incomplete semantics as expected. |
+| Temporal decoder | INSPECTED, unchanged | Existing deterministic heuristic and tests remain; no concrete defect reproduced and no held-out tuning performed. |
+| Frozen CP05/CP06 provenance | PRESERVED | No files written to CP05/CP06 experiment outputs or `models/`; no training, result regeneration, or checkpoint replacement. |
+| Repository hygiene | PASS, low-risk only | `.idea/` ignored; no tracked `.idea/` entries were present; stale help/package/workflow README wording corrected. |
+| Complete verification | PASS | `.venv-cp05` unittest discovery: **63 passed**; `compileall -q src tools tests` passed; draft validator exited 1 for expected semantic approval errors. |
+| Process metrics / real workflow trace | NOT EVALUATED | No owner-validated workflow or matching process ground truth. |
+
+**CP08 entry:** generic workflow and strict scoring plumbing are available. Actual Disassembly_A trace interpretation remains gated on the human-owned worksheet and approved YAML; process compliance remains NOT EVALUATED.

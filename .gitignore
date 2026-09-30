@@ -1,6 +1,7 @@
 .venv
 .venv/
 .venv-cp05/
+.idea/
 __pycache__/
 data
 data/
