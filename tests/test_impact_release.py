@@ -84,6 +84,54 @@ class ImpactReleaseTests(unittest.TestCase):
         self.assertTrue(any("outside the supplied project/model action scope" in error for error in errors))
         self.assertFalse(any("outside the TAS-S vocabulary" in error for error in errors))
 
+    def test_workflow_dispositions_cover_project_scope_but_vocabulary_excludes_out_of_scope(self):
+        project_scope = {"A", "B", "C", "D"}
+
+        def candidate():
+            return {"workflow": {
+                "id": "procedure", "version": "review-v1", "status": "HUMAN_VALIDATED",
+                "enabled": True, "approved_by": "owner", "approved_on": "2026-09-30",
+                "action_vocabulary": ["A", "B", "C"],
+                "action_disposition": {
+                    "A": {"status": "required"},
+                    "B": {"status": "optional"},
+                    "C": {"status": "rework"},
+                    "D": {"status": "out_of_scope", "reason": "not considered by this workflow"},
+                },
+                "valid_paths": [{"id": "main", "steps": ["A", "B", "C"]}],
+                "optional_steps": ["B"],
+                "completion": {"condition": "owner-defined completion condition"},
+            }}
+
+        valid = candidate()
+        self.assertEqual(validate_workflow(valid, project_scope), [])
+
+        missing_disposition = candidate()
+        del missing_disposition["workflow"]["action_disposition"]["D"]
+        self.assertTrue(any("action_disposition must classify every" in error
+                            for error in validate_workflow(missing_disposition, project_scope)))
+
+        out_of_scope_in_vocabulary = candidate()
+        out_of_scope_in_vocabulary["workflow"]["action_vocabulary"].append("D")
+        self.assertTrue(any("action_vocabulary must list exactly" in error
+                            for error in validate_workflow(out_of_scope_in_vocabulary, project_scope)))
+
+        unknown_in_vocabulary = candidate()
+        unknown_in_vocabulary["workflow"]["action_vocabulary"].append("X")
+        errors = validate_workflow(unknown_in_vocabulary, project_scope)
+        self.assertTrue(any("outside the supplied project/model action scope" in error for error in errors))
+
+        out_of_scope_in_path = candidate()
+        out_of_scope_in_path["workflow"]["valid_paths"][0]["steps"].append("D")
+        errors = validate_workflow(out_of_scope_in_path, project_scope)
+        self.assertTrue(any("uses unknown actions" in error for error in errors))
+        self.assertTrue(any("uses actions marked out_of_scope" in error for error in errors))
+
+        outside_project_model_scope = candidate()
+        outside_project_model_scope["workflow"]["action_vocabulary"].append("FINISH_ANGLE_GRINDER_ASSEMBLY")
+        errors = validate_workflow(outside_project_model_scope, project_scope)
+        self.assertTrue(any("outside the supplied project/model action scope" in error for error in errors))
+
     def test_workflow_validation_rejects_unreachable_transition_and_incomplete_metadata(self):
         vocabulary = {"A", "B"}
         config = {"workflow": {

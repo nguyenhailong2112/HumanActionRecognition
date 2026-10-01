@@ -40,12 +40,13 @@ def validate_workflow(workflow_config: dict, action_vocabulary: set[str]) -> lis
         errors.append("workflow.action_vocabulary contains duplicate action IDs")
     if not actions:
         errors.append("workflow.action_vocabulary is required")
-    unknown_actions = actions - action_vocabulary
+    project_model_actions = set(action_vocabulary)
+    unknown_actions = actions - project_model_actions
     if unknown_actions:
         errors.append(f"workflow contains actions outside the supplied project/model action scope: {sorted(unknown_actions)}")
     disposition = workflow.get("action_disposition", {})
-    if set(disposition) != action_vocabulary:
-        errors.append(f"action_disposition must classify every non-background action in the supplied project/model scope; missing={sorted(action_vocabulary - set(disposition))}, extra={sorted(set(disposition) - action_vocabulary)}")
+    if set(disposition) != project_model_actions:
+        errors.append(f"action_disposition must classify every non-background action in the supplied project/model scope; missing={sorted(project_model_actions - set(disposition))}, extra={sorted(set(disposition) - project_model_actions)}")
     allowed_dispositions = {"required", "optional", "conditional", "rework", "out_of_scope"}
     statuses = {}
     for action, entry in disposition.items():
@@ -130,8 +131,12 @@ def validate_workflow(workflow_config: dict, action_vocabulary: set[str]) -> lis
             return cyclic
         if any(visit(action) for action in graph if action not in visited):
             errors.append("prerequisites contains a cycle; no valid completion order exists")
-    if any(status != "out_of_scope" for status in statuses.values()) and actions != {name for name, status in statuses.items() if status != "out_of_scope"}:
-        errors.append("action_vocabulary must list exactly the actions whose disposition is not out_of_scope")
+    workflow_actions = {name for name, status in statuses.items() if status != "out_of_scope"}
+    if actions != workflow_actions:
+        errors.append(
+            "action_vocabulary must list exactly project/model actions whose disposition is not out_of_scope; "
+            f"missing={sorted(workflow_actions - actions)}, extra={sorted(actions - workflow_actions)}"
+        )
     completion = workflow.get("completion", {})
     if not isinstance(completion, dict) or not completion.get("condition"):
         errors.append("workflow.completion.condition must describe the process-owner-approved completion criterion")

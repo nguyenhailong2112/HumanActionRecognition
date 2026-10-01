@@ -10,6 +10,8 @@
 
 > **CP09 status (2026-10-01):** CP08 finalization code is present and verified; pipeline EOF remains observation end. CP09 corrected confirmed event-history pollution so rejected events remain in observations but do not enter accepted workflow history or mutate current accepted state. Official TAS-S scope is recorded as 25 non-NULL + NULL; frozen project model scope remains 17 non-NULL + NULL. Full suite: 73 passed; compileall passed. Human workflow approval is still missing, so no executable workflow, real process trace, or process metric exists. CP09 is **PARTIAL**; see `experiments/EXP-CP09.md`.
 
+> **CP10 status (2026-10-01):** Validator now separately enforces complete disposition coverage over project/model actions and a workflow vocabulary containing exactly non-`out_of_scope` actions. Synthetic valid mixed-disposition configuration passes; missing/extra/unknown/out-of-scope cases fail. Full suite: 74 passed; compileall passed. No human-approved YAML exists, so real workflow validation/trace and process metrics remain **NOT EVALUATED**. CP10 is **PARTIAL**; see `experiments/EXP-CP10.md`.
+
 ---
 
 # 0. CÁCH SỬ DỤNG CHECKSHEET
