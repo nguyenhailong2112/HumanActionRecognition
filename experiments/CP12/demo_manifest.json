@@ -1,0 +1,102 @@
+{
+  "experiment_id": "EXP-CP12",
+  "title": "Human Action Inference Demo v1",
+  "status": "READY",
+  "execution_status": "LOCALLY_EXECUTED",
+  "source": "IMPACT v1.1 TAS-S S2 split 2; Disassembly_A; front",
+  "split_counts": {
+    "train": 39,
+    "validation": 5,
+    "test": 4
+  },
+  "held_out_worker": "SS07EL13",
+  "model": {
+    "identifier": "Our MS-TCN | EXP-CP05 seed-17 | validation-selected cp05_mstcn_best.pt",
+    "checkpoint": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\models\\cp05_mstcn_best.pt",
+    "sha256": "2e1f06a248973dad925f449ad9588064bbade4f9c2f4ed9c961a5196008f567d",
+    "training_or_tuning_in_cp12": false
+  },
+  "config": {
+    "path": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\configs\\cp05.yaml",
+    "sha256": "bb6052d1b90d6c69466e5b838f36cb8d5d7453dc476bb5b399df1afbf291f2fa"
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "pytorch": "2.14.0+cu132",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 5060 Ti",
+    "opencv": "4.14.0",
+    "numpy": "2.5.3"
+  },
+  "runs": [
+    {
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "input_frames": 6756,
+      "sampled_i3d_features": 1126,
+      "predicted_segments": 35,
+      "action_events": 24,
+      "feature_inference_seconds": 0.2004571,
+      "render_seconds": 72.876265,
+      "output_video": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp12\\SS07EL13_Disassembly_A_001_front\\demo_video.mp4",
+      "output_video_sha256": "fd3414434ae073f7fcd67ad12c3649cc1d0610edcea05f24483cea6376d0a7a4",
+      "decoded_output_frames": 6756,
+      "output_fps": 30.0,
+      "execution_manifest": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp12\\SS07EL13_Disassembly_A_001_front\\manifest.json"
+    },
+    {
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "input_frames": 3939,
+      "sampled_i3d_features": 657,
+      "predicted_segments": 23,
+      "action_events": 18,
+      "feature_inference_seconds": 0.176598,
+      "render_seconds": 44.619995,
+      "output_video": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp12\\SS07EL13_Disassembly_A_002_front\\demo_video.mp4",
+      "output_video_sha256": "5eb7dd37462eec746089cd533822862a5629cb1ccf984e17acb02b2c3a7f4057",
+      "decoded_output_frames": 3939,
+      "output_fps": 30.0,
+      "execution_manifest": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp12\\SS07EL13_Disassembly_A_002_front\\manifest.json"
+    },
+    {
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "input_frames": 4040,
+      "sampled_i3d_features": 674,
+      "predicted_segments": 17,
+      "action_events": 13,
+      "feature_inference_seconds": 0.1732594,
+      "render_seconds": 46.908077,
+      "output_video": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp12\\SS07EL13_Disassembly_A_003_front\\demo_video.mp4",
+      "output_video_sha256": "eed90e08b32a2c1932aea6e0700fc7274c269e4f818d07254e5c974474ef8937",
+      "decoded_output_frames": 4040,
+      "output_fps": 30.0,
+      "execution_manifest": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp12\\SS07EL13_Disassembly_A_003_front\\manifest.json"
+    },
+    {
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "input_frames": 3543,
+      "sampled_i3d_features": 591,
+      "predicted_segments": 19,
+      "action_events": 14,
+      "feature_inference_seconds": 0.1812527,
+      "render_seconds": 41.688472,
+      "output_video": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp12\\SS07EL13_Disassembly_A_004_front\\demo_video.mp4",
+      "output_video_sha256": "44fdff9a102cce79e0da630c9d0d4698cfe31875599948782715771580e423ef",
+      "decoded_output_frames": 3543,
+      "output_fps": 30.0,
+      "execution_manifest": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp12\\SS07EL13_Disassembly_A_004_front\\manifest.json"
+    }
+  ],
+  "verification": {
+    "four_of_four_held_out_executions_rendered": true,
+    "source_and_output_frame_counts_match": true,
+    "output_fps_matches_source": true,
+    "rendered_video_reopened_and_fully_decoded": true,
+    "segment_json_and_csv_exist_for_each_execution": true,
+    "action_event_evidence_status": "unknown",
+    "workflow_compliance": "NOT_EVALUATED",
+    "factory_sop": "NOT_VALIDATED",
+    "github_ci": "NOT_CHECKED"
+  },
+  "aggregate_output_video_size_bytes": 388228651,
+  "outputs_root": "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp12"
+}

@@ -15,7 +15,7 @@ Establish a conservative executable Research Workflow Specification / Benchmark 
 
 ## Specification
 
-Five required process actions. UNSCREW is the prerequisite for each of the four major component removals; the four removals have no mutual ordering constraints. This edge follows CP11's explicit “mechanical preparation” interpretation, while observed order frequencies are not used as normative evidence. START is a boundary marker. Eleven auxiliary/logistics/retrieval/install/attach/tool actions are out of scope and retained as observations without violations. Completion means all five core actions accepted: research-defined observable subprocedure completion, not full physical teardown. Repeats are interpreted as `REPEATED_STEP`, never automatically as mistakes. Duration and timeout policies are disabled. Unknown/ambiguous evidence does not advance workflow state. `factory_sop_validated: false`.
+Five required process actions. UNSCREW is the prerequisite for each of the four major component removals; the four removals have no mutual ordering constraints. This edge follows CP11's explicit “mechanical preparation” interpretation, while observed order frequencies are not used as normative evidence. START is a boundary marker. Twelve auxiliary/logistics/retrieval/install/attach/tool actions are out of scope and retained as observations without violations. Completion means all five core actions accepted: research-defined observable subprocedure completion, not full physical teardown. Repeats are interpreted as `REPEATED_STEP`, never automatically as mistakes. Duration and timeout policies are disabled. Unknown/ambiguous evidence does not advance workflow state. `factory_sop_validated: false`.
 
 ## Implementation
 

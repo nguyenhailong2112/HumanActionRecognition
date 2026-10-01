@@ -1,50 +1,58 @@
-# Human Action R&D — Current System (CP07)
+# Human Action R&D — CP11 / CP12
 
-This repository is an R&D prototype, not a factory-ready process-compliance system. The current executable research slice evaluates temporal action segmentation on one fixed IMPACT v1.1 procedure/view. Workflow semantics remain human-dependent; process compliance is not evaluated.
+This repository is an R&D prototype, not a factory-ready process-compliance system. CP11 established a project-approved **Research Workflow Specification / Benchmark Procedure Interpretation** for one bounded study; it is not official IMPACT author ground truth or a factory SOP. CP12 provides a visual demo of frozen action inference on the held-out IMPACT test executions. Process performance remains **NOT EVALUATED**.
 
-## Current validated experiment
+## Current validated research slice
 
-- Dataset: IMPACT v1.1, TAS-S, S2 split 2; `Disassembly_A`, `front` view.
-- Research subset: 39 train / 5 validation / 4 held-out test executions; test worker SS07EL13. This procedure-scoped subset is **not** a full official leaderboard reproduction.
-- Features: official I3D features, sampled at 5 FPS, float32 `T×1024`; target feature/video/annotation coverage 48/48. The verified source archive remains outside the project repository.
-- Models: FramewiseBaseline and **our MS-TCN baseline on IMPACT**. CP05 training/evaluation and CP06 three-seed reliability artifacts are preserved.
-- Environment used: Python 3.12.14, PyTorch 2.14.0+cu132, CUDA available, RTX 5060 Ti 16 GiB. See experiment reports for configuration and limits.
-- CP07: 56 repository tests pass. This includes deterministic synthetic workflow logic; it does not establish real process performance.
-- The current machine/environment snapshot is [recorded here](experiments/CP07/environment_audit.json); it is not a locked dependency environment.
+- Dataset: IMPACT v1.1, TAS-S, S2 split 2, `Disassembly_A`, `front`.
+- Research subset: 39 train / 5 validation / 4 held-out test executions; held-out worker `SS07EL13`. This is not a full official leaderboard reproduction.
+- Features: official precomputed I3D features; original arrays are frame-aligned `T×1024` at 30 FPS and sampled by the existing pipeline at 5 FPS for inference. Data remain outside the repository.
+- Frozen models: FramewiseBaseline and our MS-TCN on IMPACT. CP05/CP06 checkpoints, vocabularies, split and historical metrics remain unchanged.
+- CP11 workflow: `configs/workflows/disassembly_A.yaml` is `RESEARCH_APPROVED` for project research only. It explicitly sets `factory_sop_validated: false`. Unknown evidence does not advance process state.
+- CP12 status: **READY**. It runs the frozen CP05 seed-17 MS-TCN best checkpoint on all four held-out executions and writes videos with prediction overlays, a synchronized action timeline, segment JSON/CSV and provenance manifests under ignored `results/cp12/`.
 
-## Source and data locations
+## Run the CP12 demo
 
-Project source: `C:\Users\Admin\PycharmProjects\HumanActionRecognition`  
-Dataset storage: `D:\HaiLongRnD\Datasets\HumanActionRecognition`
+PowerShell, from the project root:
 
-Keep raw data and extracted large assets outside the Git repository. `configs/cp05.yaml` contains the primary-machine data paths and frozen experiment split.
+```powershell
+$videoRoot = 'D:\HaiLongRnD\Datasets\HumanActionRecognition\IMPACT\v1.1\videos\IMPACT-v1.1-videos-front\IMPACT-v1.1\videos\front'
+$featureRoot = 'D:\HaiLongRnD\Datasets\HumanActionRecognition\IMPACT\v1.1\features\IMPACT-v1.1-features-I3D\IMPACT-v1.1\features\I3D'
+$ids = @(
+  'SS07EL13_Disassembly_A_001_front',
+  'SS07EL13_Disassembly_A_002_front',
+  'SS07EL13_Disassembly_A_003_front',
+  'SS07EL13_Disassembly_A_004_front'
+)
+foreach ($id in $ids) {
+  .\.venv-cp05\Scripts\python.exe demos\run_human_action_demo.py `
+    --video "$videoRoot\$id.mp4" `
+    --features "$featureRoot\$id.npy" `
+    --checkpoint models\cp05_mstcn_best.pt `
+    --config configs\cp05.yaml `
+    --output-dir "results\cp12\$id"
+  if ($LASTEXITCODE -ne 0) { throw "CP12 demo failed for $id" }
+}
+```
 
-## Reproducible checks
+Each execution folder contains `demo_video.mp4`, `prediction_segments.json`, `prediction_segments.csv` and `manifest.json`. Generated videos are local outputs and are ignored by Git. The on-video confidence is the model's mean softmax score for the predicted class; it is not calibrated confidence or evidence sufficiency. The overlay shows action inference only and makes no compliance judgment.
 
-Using the configured Windows environment:
+## Workflow and evidence boundary
+
+CP11's research workflow has five required observable actions: UNSCREW followed by the four component removals in any order. Twelve modeled auxiliary/logistics/retrieval/install/attach/tool actions are out of scope but preserved as observations. Completion means research-defined observable subprocedure completion, not full physical teardown. No duration or timeout policy is enabled.
+
+The 69 frozen CP05 ActionEvents still have `evidence_status: unknown`. CP12 does not promote them, run workflow traces, or produce process-compliance/anomaly metrics. Human review and a separately validated evidence policy remain required before real process interpretation. Factory SOP validity remains **NOT VALIDATED**.
+
+## Checks and records
 
 ```powershell
 .\.venv-cp05\Scripts\python.exe -m unittest discover -s tests -v
-.\.venv-cp05\Scripts\python.exe tools\validate_workflow.py --config configs\workflows\disassembly_A.draft.yaml
+.\.venv-cp05\Scripts\python.exe -m compileall -q src tools tests demos
 ```
 
-The second command is expected to reject the draft until the process owner supplies and validates semantics. Do not weaken that gate to make the command pass.
+- CP05 frozen baseline: [experiment record](experiments/EXP-CP05.md)
+- CP11 workflow specification: [experiment record](experiments/EXP-CP11.md)
+- CP12 visual inference demo: [demo guide](demos/README.md) and [experiment record](experiments/EXP-CP12.md)
+- Research corpus and project planning: `ResearchDocuments/`, `ROADMAP.md`, `SCOPEOFWORK.md`, `PROJECTREADINESSPACKAGE.md`, `CHECKSHEET.md`
 
-## Workflow and evidence gate
-
-The workflow artifact must be a **Research Workflow Specification / Benchmark Procedure Interpretation**, not an official factory SOP. No executable `configs/workflows/disassembly_A.yaml` is present. The draft contains no accepted routes. Workflow logic is disabled unless `workflow.enabled: true` and `workflow.status: HUMAN_VALIDATED`; model-generated ActionEvents default to `evidence_status: unknown` because no confidence/evidence policy has been validated.
-
-Complete [HUMAN_HANDOFF_CP07.md](HUMAN_HANDOFF_CP07.md) for procedure semantics and [HUMAN_HANDOFF_CP07_EVIDENCE_REVIEW.md](HUMAN_HANDOFF_CP07_EVIDENCE_REVIEW.md) for the actual event review. Until valid process ground truth exists, compliance/anomaly metrics and duration violations remain **NOT EVALUATED**.
-
-## Repository map
-
-- `src/human_action/`: IMPACT data loading, frame features, temporal models/metrics, ActionEvent, workflow engine, trace adapter, evidence.
-- `configs/`: frozen CP05 experiment, CP06 repeatability configs, and non-executable workflow draft.
-- `tools/`: data preflight, training/evaluation, workflow validation, CP06/CP07 analysis.
-- `tests/`: data/split, model, temporal, workflow, evidence, and event/aggregation regressions.
-- `experiments/`: checkpoint records and machine-readable outputs. Start with [EXP-CP05](experiments/EXP-CP05.md), [EXP-CP06](experiments/EXP-CP06.md), [EXP-CP07](experiments/EXP-CP07.md), and [CP07 closure audit](experiments/CP07/CP07_system_audit_and_closure.md).
-- `ResearchDocuments/ResearchDocuments/`: research corpus, matrix and synthesis. Its studies inform the bounded design but do not imply that unimplemented perception branches are present.
-
-## Current limits
-
-The repository does not currently implement person/object/tool/hand/pose/zone tracking, multi-camera fusion, validated process-compliance performance, streaming latency, a production UI/API, or deployment safeguards. No advanced temporal model is justified until human evidence review and process semantics clarify the actual bottleneck.
+Raw datasets, large features, checkpoints and generated media are kept out of the project repository unless a specific artifact is intentionally versioned.
