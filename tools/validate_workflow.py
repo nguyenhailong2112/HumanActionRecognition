@@ -42,10 +42,10 @@ def validate_workflow(workflow_config: dict, action_vocabulary: set[str]) -> lis
         errors.append("workflow.action_vocabulary is required")
     unknown_actions = actions - action_vocabulary
     if unknown_actions:
-        errors.append(f"workflow contains actions outside the TAS-S vocabulary: {sorted(unknown_actions)}")
+        errors.append(f"workflow contains actions outside the supplied project/model action scope: {sorted(unknown_actions)}")
     disposition = workflow.get("action_disposition", {})
     if set(disposition) != action_vocabulary:
-        errors.append(f"action_disposition must classify every non-background TAS-S action; missing={sorted(action_vocabulary - set(disposition))}, extra={sorted(set(disposition) - action_vocabulary)}")
+        errors.append(f"action_disposition must classify every non-background action in the supplied project/model scope; missing={sorted(action_vocabulary - set(disposition))}, extra={sorted(set(disposition) - action_vocabulary)}")
     allowed_dispositions = {"required", "optional", "conditional", "rework", "out_of_scope"}
     statuses = {}
     for action, entry in disposition.items():
@@ -312,7 +312,7 @@ def validate_workflow(workflow_config: dict, action_vocabulary: set[str]) -> lis
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Validate a human-reviewed research workflow against an action vocabulary.")
+    parser = argparse.ArgumentParser(description="Validate a human-reviewed research workflow against the configured project model action scope.")
     parser.add_argument("--config", required=True, help="Approved workflow YAML")
     parser.add_argument("--actions-config", default="configs/cp01_1.yaml")
     args = parser.parse_args()
@@ -325,7 +325,7 @@ def main() -> None:
         for error in errors:
             print(f"- {error}")
         raise SystemExit(1)
-    print(f"[ok] approved workflow {workflow_config.get('workflow', workflow_config)['id']} covers {len(vocabulary)} TAS-S action labels")
+    print(f"[ok] approved workflow {workflow_config.get('workflow', workflow_config)['id']} covers {len(vocabulary)} configured project/model actions (from {args.actions_config})")
 
 
 if __name__ == "__main__":

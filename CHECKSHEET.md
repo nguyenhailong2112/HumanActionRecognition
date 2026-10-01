@@ -4,9 +4,11 @@
 
 ### Coding / Research Implementation / Validation / Prototype
 
-> **Current-status rule (2026-09-27):** Sections 1–38 are preserved checkpoint-time snapshots and may contain superseded acquisition/hardware states or earlier “SOP” wording. Use the latest dated checkpoint section, currently CP07, plus `ROADMAP.md`, `README.md`, and the current CP07 handoffs for present status. The current artifact is a **Research Workflow Specification / Benchmark Procedure Interpretation**, not an official factory SOP.
+> **Current-status rule (2026-10-01):** Sections 1–38 are preserved checkpoint-time snapshots and may contain superseded acquisition/hardware states or earlier “SOP” wording. Use the latest dated checkpoint section, currently CP09, plus `ROADMAP.md` and the current CP09 handoff for present status. The current artifact is a **Research Workflow Specification / Benchmark Procedure Interpretation**, not an official factory SOP.
 
 > **CP08 status (2026-10-01):** Frozen CP05 MS-TCN outputs were converted to 69 structured ActionEvents and linked 1:1 to existing source videos, snapshots and clips (programmatic file/link audit; no semantic visual review). Workflow finalization now distinguishes an observation ending from an explicitly ended incomplete procedure. The full current test suite reports 66 passing tests. `configs/workflows/disassembly_A.yaml` remains absent, the draft remains `HUMAN_REVIEW_REQUIRED`, and process compliance/anomaly metrics remain `NOT_EVALUATED`. Human workflow decisions and the 13-event evidence review are pending; see `experiments/CP08/` and the root CP08 handoffs. CP08 is **PARTIAL**, not end-to-end process completion.
+
+> **CP09 status (2026-10-01):** CP08 finalization code is present and verified; pipeline EOF remains observation end. CP09 corrected confirmed event-history pollution so rejected events remain in observations but do not enter accepted workflow history or mutate current accepted state. Official TAS-S scope is recorded as 25 non-NULL + NULL; frozen project model scope remains 17 non-NULL + NULL. Full suite: 73 passed; compileall passed. Human workflow approval is still missing, so no executable workflow, real process trace, or process metric exists. CP09 is **PARTIAL**; see `experiments/EXP-CP09.md`.
 
 ---
 

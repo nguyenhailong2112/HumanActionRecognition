@@ -70,6 +70,20 @@ class ImpactReleaseTests(unittest.TestCase):
         approved["workflow"]["valid_paths"][0]["steps"].append("GUESS")
         self.assertTrue(any("unknown actions" in error for error in validate_workflow(approved, vocabulary)))
 
+    def test_workflow_validator_keeps_official_and_project_model_action_scopes_distinct(self):
+        project_scope = {"START", "REMOVE"}
+        approved = {"workflow": {
+            "id": "procedure", "version": "research-1", "status": "HUMAN_VALIDATED",
+            "approved_by": "owner", "approved_on": "2026-09-26",
+            "action_vocabulary": ["START", "REMOVE", "OFFICIAL_BUT_NOT_MODELED"],
+            "action_disposition": {label: {"status": "required"} for label in project_scope},
+            "valid_paths": [{"id": "main", "steps": ["START", "REMOVE"]}],
+            "completion": {"condition": "owner-defined"},
+        }}
+        errors = validate_workflow(approved, project_scope)
+        self.assertTrue(any("outside the supplied project/model action scope" in error for error in errors))
+        self.assertFalse(any("outside the TAS-S vocabulary" in error for error in errors))
+
     def test_workflow_validation_rejects_unreachable_transition_and_incomplete_metadata(self):
         vocabulary = {"A", "B"}
         config = {"workflow": {

@@ -1096,7 +1096,7 @@ Nội dung:
 
 ---
 
-# CURRENT EXECUTION STATUS — 2026-09-27
+# CURRENT EXECUTION STATUS — 2026-10-01
 
 Roadmap phases above describe the intended system, not completed implementation. Current evidenced implementation is a procedure-scoped research slice:
 
@@ -1107,5 +1107,7 @@ Roadmap phases above describe the intended system, not completed implementation.
 | CP06 | PARTIAL, action reliability and synthetic workflow logic | Three-seed study, per-execution/pooled metrics, error review package, deterministic engine/validator tests. No validated process semantics. |
 | CP07 | Implementation/audit package CLOSED; system remains PARTIAL | Event contract, trace adapter, activation gate, review handoff, boundary audit and 56-test suite; no human-validated workflow or process metrics. See `experiments/EXP-CP07.md`. |
 | CP07.1 | Engineering hardening CLOSED; semantic gate remains | One engine supports route and prerequisite-DAG inputs; route skip handling corrected; metrics enforce sequence alignment and configured background; observations persist independently from accepted workflow events. 63 tests pass. See `experiments/CP07.1/CP07.1_system_hardening.md`. |
+| CP08 | PARTIAL | Semantic integrity audit and 69 frozen event/evidence links packaged; no human visual review or validated workflow. See `experiments/EXP-CP08.md`. |
+| CP09 | PARTIAL | Finalization/EOF semantics reconciled; rejected events no longer pollute accepted workflow history; 25 official actions vs 17 frozen project model actions explicitly audited; 73 tests pass. Human semantic approval remains absent. See `experiments/EXP-CP09.md`. |
 
-Current next gate: process owner completes the human-owned `HumanSemanticWorksheet.md` and supplies the reviewed Research Workflow Specification. CP08 should validate that input, add narrow workflow-YAML and event-evidence-reference plumbing to the current API, and only then run frozen ActionEvents through actual workflow semantics. Do not mark the full architecture above as implemented: person/object/tool/pose/zone tracking, validated compliance evaluation, streaming runtime, and factory deployment remain future work.
+Current next gate: the process/project owner completes the human-owned `HumanSemanticWorksheet.md`, returns an approved Research Workflow Specification, and completes the pending CP08 event visual review. CP10 may validate owner-provided semantics and run frozen ActionEvents only after genuine workflow validation/activation. Process metrics still require matching process ground truth. Do not mark the full architecture above as implemented: person/object/tool/pose/zone tracking, validated compliance evaluation, streaming runtime, and factory deployment remain future work.

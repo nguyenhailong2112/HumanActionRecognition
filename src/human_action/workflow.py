@@ -149,9 +149,6 @@ class WorkflowEngine:
         if self.events and event.start_time < self.events[-1].end_time:
             self.violations.append(self._violation("INSUFFICIENT_EVIDENCE", self.state().expected_step, event, "Overlapping event interval; event was not applied."))
             return "insufficient_evidence"
-        # Keep the prior event-history meaning: evidence-valid observations are
-        # recorded before the workflow transition is judged.
-        self.events.append(event)
         state = self.state()
         expected_steps = set(state.next_valid_steps)
 
@@ -185,6 +182,7 @@ class WorkflowEngine:
             direct.extend(unresolved_direct)
         if direct:
             self.candidates = direct
+            self.events.append(event)
             return "completed" if self.state().completed else "accepted_transition"
 
         # The observed action exists on a valid route but is ahead of the expected step.
@@ -217,9 +215,10 @@ class WorkflowEngine:
             self.violations.append(self._violation("WRONG_SEQUENCE", expected, event, f"Observed {event.action} before the expected step {expected or 'completion'}."))
             # The future-matching event itself was observed, so resume after it.
             self.candidates = [(path_id, later + 1) for path_id, _, later in selected]
+            self.events.append(event)
             return "skipped_step"
 
-        previous_actions = {prior.action for prior in self.events[:-1]}
+        previous_actions = {prior.action for prior in self.events}
         if event.action in previous_actions:
             expected = state.expected_step
             self.violations.append(self._violation("REPEATED_STEP", expected, event, f"{event.action} was observed again while it was not the next valid step."))
@@ -251,6 +250,7 @@ class WorkflowEngine:
                                                        f"Prerequisite {action} was not accepted before {event.action}."))
             return "invalid_transition"
         self.completed_actions.add(event.action)
+        self.events.append(event)
         return "completed" if self.state().completed else "accepted_transition"
 
     def finalize(self, timestamp: float | None = None, *, procedure_ended: bool = False) -> WorkflowResult:
@@ -258,14 +258,15 @@ class WorkflowEngine:
         state = self.state()
         if self.timeout_policy.get("enabled") and timestamp is not None and float(timestamp) > float(self.timeout_policy["seconds"]):
             self.violations.append(self._violation("TIMEOUT", state.expected_step, None, f"Execution duration {float(timestamp):.2f}s exceeded configured {float(self.timeout_policy['seconds']):.2f}s timeout.", float(timestamp)))
-        finalization_status = "completed"
-        if not state.completed:
-            if procedure_ended:
+        if procedure_ended:
+            if state.completed:
+                finalization_status = "procedure_ended_complete"
+            else:
                 expected = state.expected_step or (state.next_valid_steps[0] if state.next_valid_steps else None)
                 self.violations.append(self._violation("INCOMPLETE_PROCEDURE", expected, None, f"Procedure ended before completion; expected {expected or 'a valid route' }.", timestamp))
                 finalization_status = "procedure_ended_incomplete"
-            else:
-                finalization_status = "observation_ended_unconfirmed"
+        else:
+            finalization_status = "observation_ended_unconfirmed"
         final_state = self.state()
         return WorkflowResult(final_state, list(self.violations), final_state.selected_path,
                               list(self.event_statuses), finalization_status)

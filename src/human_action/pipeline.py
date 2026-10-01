@@ -105,6 +105,7 @@ def predict_video(video_path: Path, video_id: str, worker_id: str, config: dict[
         "events": events,
         "segments": segments,
         "workflow_state": final_result.state if final_result else None,
+        "workflow_finalization_status": final_result.finalization_status if final_result else None,
         "violations": final_result.violations if final_result else [],
     }
 
@@ -156,6 +157,7 @@ def evaluate_video(video_id: str, split: str, config: dict[str, Any], config_pat
             "predicted_action_sequence": pred_events,
             "sequence_exact_match": sequence_exact_match(gt_events, pred_events),
             "workflow_status": "EVALUATED" if process else "NOT EVALUATED: awaiting process-owner-approved procedure path",
+            "finalization_status": process.finalization_status if process else None,
             "selected_workflow_path": process.selected_path if process else None,
             "completed": process.state.completed if process else None,
             "predicted_violations": [to_dict(item) for item in process.violations] if process else [],

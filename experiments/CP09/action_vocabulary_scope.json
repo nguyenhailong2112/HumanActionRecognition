@@ -1,0 +1,175 @@
+{
+  "source": "ResearchDocuments\\ResearchDocuments\\01_IMPACT\\code\\IMPACT\\dataset\\TAS\\mapping_TAS-S.txt",
+  "official_label_count_including_null": 26,
+  "official_non_null_action_count": 25,
+  "background_label": [
+    {
+      "id": 0,
+      "action": "NULL"
+    }
+  ],
+  "project_model_action_count": 17,
+  "project_model_action_order": [
+    "NULL",
+    "START_ANGLE_GRINDER_ASSEMBLY",
+    "UNSCREW_ANTI_VIBRATION_HANDLE",
+    "STORE_ANTI_VIBRATION_HANDLE",
+    "REMOVE_LOCKING_LEVER_ASSEMBLY",
+    "STORE_LOCKING_LEVER_ASSEMBLY",
+    "EXTRACT_BEARING_PLATE_ASSEMBLY",
+    "STORE_BEARING_PLATE_ASSEMBLY",
+    "DETACH_ADAPTER_PLATE",
+    "REMOVE_ROTOR_ASSEMBLY",
+    "STORE_ROTOR_ASSEMBLY",
+    "STORE_GEARBOX_HOUSING",
+    "STORE_ADAPTER_PLATE",
+    "INSTALL_ROTOR_ASSEMBLY",
+    "ATTACH_ADAPTER_PLATE",
+    "RETRIEVE_BEARING_PLATE_ASSEMBLY",
+    "RETRIEVE_LOCKING_LEVER_ASSEMBLY",
+    "STORE_TOOL"
+  ],
+  "official_actions_not_in_project_model_scope": [
+    "FINISH_ANGLE_GRINDER_ASSEMBLY",
+    "INSERT_BEARING_PLATE_ASSEMBLY",
+    "INSTALL_LOCKING_LEVER_ASSEMBLY",
+    "RETRIEVE_ADAPTER_PLATE",
+    "RETRIEVE_ANTI_VIBRATION_HANDLE",
+    "RETRIEVE_GEARBOX_HOUSING",
+    "RETRIEVE_ROTOR_ASSEMBLY",
+    "SCREW_ON_ANTI_VIBRATION_HANDLE"
+  ],
+  "project_model_actions_absent_from_official_mapping": [],
+  "labels": [
+    {
+      "id": 0,
+      "action": "NULL",
+      "represented_in_project_model_scope": false
+    },
+    {
+      "id": 1,
+      "action": "START_ANGLE_GRINDER_ASSEMBLY",
+      "represented_in_project_model_scope": true
+    },
+    {
+      "id": 2,
+      "action": "UNSCREW_ANTI_VIBRATION_HANDLE",
+      "represented_in_project_model_scope": true
+    },
+    {
+      "id": 3,
+      "action": "STORE_ANTI_VIBRATION_HANDLE",
+      "represented_in_project_model_scope": true
+    },
+    {
+      "id": 4,
+      "action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+      "represented_in_project_model_scope": true
+    },
+    {
+      "id": 5,
+      "action": "STORE_LOCKING_LEVER_ASSEMBLY",
+      "represented_in_project_model_scope": true
+    },
+    {
+      "id": 6,
+      "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+      "represented_in_project_model_scope": true
+    },
+    {
+      "id": 7,
+      "action": "STORE_BEARING_PLATE_ASSEMBLY",
+      "represented_in_project_model_scope": true
+    },
+    {
+      "id": 8,
+      "action": "DETACH_ADAPTER_PLATE",
+      "represented_in_project_model_scope": true
+    },
+    {
+      "id": 9,
+      "action": "REMOVE_ROTOR_ASSEMBLY",
+      "represented_in_project_model_scope": true
+    },
+    {
+      "id": 10,
+      "action": "STORE_ROTOR_ASSEMBLY",
+      "represented_in_project_model_scope": true
+    },
+    {
+      "id": 11,
+      "action": "STORE_GEARBOX_HOUSING",
+      "represented_in_project_model_scope": true
+    },
+    {
+      "id": 12,
+      "action": "STORE_ADAPTER_PLATE",
+      "represented_in_project_model_scope": true
+    },
+    {
+      "id": 13,
+      "action": "RETRIEVE_GEARBOX_HOUSING",
+      "represented_in_project_model_scope": false
+    },
+    {
+      "id": 14,
+      "action": "RETRIEVE_ROTOR_ASSEMBLY",
+      "represented_in_project_model_scope": false
+    },
+    {
+      "id": 15,
+      "action": "INSTALL_ROTOR_ASSEMBLY",
+      "represented_in_project_model_scope": true
+    },
+    {
+      "id": 16,
+      "action": "ATTACH_ADAPTER_PLATE",
+      "represented_in_project_model_scope": true
+    },
+    {
+      "id": 17,
+      "action": "RETRIEVE_ADAPTER_PLATE",
+      "represented_in_project_model_scope": false
+    },
+    {
+      "id": 18,
+      "action": "RETRIEVE_ANTI_VIBRATION_HANDLE",
+      "represented_in_project_model_scope": false
+    },
+    {
+      "id": 19,
+      "action": "RETRIEVE_BEARING_PLATE_ASSEMBLY",
+      "represented_in_project_model_scope": true
+    },
+    {
+      "id": 20,
+      "action": "INSERT_BEARING_PLATE_ASSEMBLY",
+      "represented_in_project_model_scope": false
+    },
+    {
+      "id": 21,
+      "action": "RETRIEVE_LOCKING_LEVER_ASSEMBLY",
+      "represented_in_project_model_scope": true
+    },
+    {
+      "id": 22,
+      "action": "INSTALL_LOCKING_LEVER_ASSEMBLY",
+      "represented_in_project_model_scope": false
+    },
+    {
+      "id": 23,
+      "action": "SCREW_ON_ANTI_VIBRATION_HANDLE",
+      "represented_in_project_model_scope": false
+    },
+    {
+      "id": 24,
+      "action": "STORE_TOOL",
+      "represented_in_project_model_scope": true
+    },
+    {
+      "id": 25,
+      "action": "FINISH_ANGLE_GRINDER_ASSEMBLY",
+      "represented_in_project_model_scope": false
+    }
+  ]
+}

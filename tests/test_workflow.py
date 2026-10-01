@@ -34,9 +34,10 @@ class WorkflowTests(unittest.TestCase):
     def test_valid_sequence_and_completion(self):
         engine = WorkflowEngine(workflow(), "W1")
         result = engine.consume([event("A"), event("B"), event("C"), event("D")])
-        result = engine.finalize(10.0)
+        result = engine.finalize(10.0, procedure_ended=True)
         self.assertTrue(result.state.completed)
         self.assertEqual(result.violations, [])
+        self.assertEqual(result.finalization_status, "procedure_ended_complete")
 
     def test_reset_clears_execution_state_and_changes_worker_scope(self):
         engine = WorkflowEngine(workflow(), "W1", "video_1")
@@ -77,6 +78,46 @@ class WorkflowTests(unittest.TestCase):
         kinds = [item.violation_type for item in result.violations]
         self.assertIn("SKIPPED_STEP", kinds)
         self.assertIn("WRONG_SEQUENCE", kinds)
+        self.assertEqual([item.action for item in engine.events], ["A", "C"])
+
+    def test_rejected_repeat_does_not_pollute_history_or_block_later_valid_step(self):
+        engine = WorkflowEngine(workflow(), "W1")
+        result = engine.consume([event("A"), event("A"), event("B")])
+        self.assertEqual(result.event_statuses, ["accepted_transition", "repeated_step", "accepted_transition"])
+        self.assertEqual([item.action for item in engine.observations], ["A", "A", "B"])
+        self.assertEqual([item.action for item in engine.events], ["A", "B"])
+        self.assertEqual(result.state.current_step, "B")
+        self.assertEqual(result.state.expected_step, "C")
+        self.assertEqual([item.violation_type for item in result.violations], ["REPEATED_STEP"])
+
+    def test_rejected_repetition_does_not_change_current_accepted_step(self):
+        engine = WorkflowEngine(workflow(), "W1")
+        result = engine.consume([event("A"), event("A")])
+        self.assertEqual(result.event_statuses, ["accepted_transition", "repeated_step"])
+        self.assertEqual([item.action for item in engine.observations], ["A", "A"])
+        self.assertEqual([item.action for item in engine.events], ["A"])
+        self.assertEqual(result.state.current_step, "A")
+        self.assertEqual(result.state.expected_step, "B")
+
+    def test_unknown_action_does_not_mutate_accepted_state(self):
+        engine = WorkflowEngine(workflow(), "W1")
+        result = engine.consume([event("X")])
+        self.assertEqual(result.event_statuses, ["unknown_action"])
+        self.assertEqual([item.action for item in engine.observations], ["X"])
+        self.assertEqual(engine.events, [])
+        self.assertIsNone(result.state.current_step)
+        self.assertEqual(result.state.expected_step, "A")
+
+    def test_ambiguous_and_insufficient_evidence_remain_observations_only(self):
+        engine = WorkflowEngine(workflow(), "W1")
+        ambiguous = ActionEvent("W1", "A", 0, 1, 1, .9, "demo", 0, 29, "ambiguous")
+        insufficient = ActionEvent("W1", "A", 3, 4, 1, .9, "demo", 90, 119, "insufficient")
+        result = engine.consume([ambiguous, insufficient])
+        self.assertEqual(result.event_statuses, ["ambiguous", "insufficient"])
+        self.assertEqual(engine.observations, [ambiguous, insufficient])
+        self.assertEqual(engine.events, [])
+        self.assertIsNone(result.state.current_step)
+        self.assertEqual(result.state.expected_step, "A")
 
     def test_repeat_is_reported_without_advancing_workflow(self):
         engine = WorkflowEngine(workflow(), "W1")
@@ -118,6 +159,14 @@ class WorkflowTests(unittest.TestCase):
         engine = WorkflowEngine(workflow(), "W1")
         engine.consume([event("A")])
         finalized = engine.finalize(3.0)
+        self.assertEqual(finalized.finalization_status, "observation_ended_unconfirmed")
+        self.assertNotIn("INCOMPLETE_PROCEDURE", [item.violation_type for item in finalized.violations])
+
+    def test_completed_workflow_without_termination_signal_remains_observation_end(self):
+        engine = WorkflowEngine(workflow([{"id": "one", "steps": ["A"]}]), "W1")
+        engine.consume([event("A")])
+        finalized = engine.finalize(2.0)
+        self.assertTrue(finalized.state.completed)
         self.assertEqual(finalized.finalization_status, "observation_ended_unconfirmed")
         self.assertNotIn("INCOMPLETE_PROCEDURE", [item.violation_type for item in finalized.violations])
 

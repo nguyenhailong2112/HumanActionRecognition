@@ -29,7 +29,7 @@
 | Split | S2 / split 2 | DG / project scope |
 | Project executions | 48: 39 train / 5 validation / 4 held-out test | Project scope |
 | Current TAS-S action vocabulary | 17 non-NULL labels observed in this project slice | DO |
-| Official TAS-S vocabulary | 26 non-NULL coarse actions + `NULL` | DG |
+| Official TAS-S vocabulary | 25 non-NULL coarse actions + `NULL` (26 total labels) | DG |
 | Workflow model | State/goal + prerequisite partial order | RD |
 | Executable workflow | Not activated until project artifact is reviewed | POL |
 | Process compliance metric | `NOT_EVALUATED` until matching process ground truth exists | POL |

@@ -24,7 +24,7 @@
 | Evaluation setting | S2 / cross-subject | DG |
 | Project subset | 48 selected front-view Disassembly_A executions: 39 train / 5 val / 4 held-out test | Project experiment scope |
 | Current action vocabulary | 17 non-NULL TAS-S classes observed in the project subset | Project-derived scope |
-| Official TAS-S vocabulary | 26 non-NULL coarse step classes + `NULL` background | DG |
+| Official TAS-S vocabulary | 25 non-NULL coarse step classes + `NULL` background (26 total labels) | DG |
 | Workflow interpretation | Not yet executable | HUMAN |
 | Process compliance metric | `NOT_EVALUATED` until approved procedure semantics and matching process ground truth exist | Engineering policy |
 

@@ -225,7 +225,8 @@ class CP07ContractAndAggregationTests(unittest.TestCase):
         self.assertEqual(result.event_statuses, ["invalid_transition"])
         self.assertEqual(engine.completed_actions, set())
         self.assertEqual(len(engine.observations), 1)
-        self.assertEqual(engine.events, [event])
+        self.assertEqual(engine.events, [])
+        self.assertIsNone(result.state.current_step)
 
     def test_validator_accepts_acyclic_prerequisite_schema_without_route_enumeration(self):
         workflow = {"workflow": {
