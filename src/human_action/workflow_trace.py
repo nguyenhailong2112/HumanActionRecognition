@@ -25,10 +25,8 @@ def build_workflow_trace(
     """
     workflow_config = config.get("workflow", config)
     if not synthetic_validation:
-        if workflow_config.get("status") != "HUMAN_VALIDATED":
-            raise ValueError("workflow trace is disabled until workflow.status is HUMAN_VALIDATED")
         if not workflow_is_enabled(config):
-            raise ValueError("workflow trace requires workflow.enabled: true")
+            raise ValueError("workflow trace requires workflow.enabled: true and status HUMAN_VALIDATED or scoped RESEARCH_APPROVED")
     engine = WorkflowEngine(config, worker_id, execution_id, branch_decisions)
     records = []
     for event in events:
@@ -85,4 +83,5 @@ def _interpret(status: str) -> str:
         "unknown": "unknown_or_ambiguous",
         "insufficient": "insufficient_evidence",
         "insufficient_evidence": "insufficient_evidence",
+        "out_of_scope_ignored": "out_of_scope_ignored",
     }.get(status, status)

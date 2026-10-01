@@ -17,8 +17,16 @@ def validate_workflow(workflow_config: dict, action_vocabulary: set[str]) -> lis
     workflow = workflow_config.get("workflow", workflow_config)
     if "enabled" in workflow and not isinstance(workflow["enabled"], bool):
         errors.append("workflow.enabled must be a boolean")
-    if workflow.get("status") != "HUMAN_VALIDATED":
-        errors.append("workflow.status must be HUMAN_VALIDATED before executable validation")
+    status = workflow.get("status")
+    if status == "RESEARCH_APPROVED":
+        if workflow.get("approval_scope") != "PROJECT_RESEARCH":
+            errors.append("RESEARCH_APPROVED workflow requires approval_scope: PROJECT_RESEARCH")
+        if not workflow.get("approval_basis"):
+            errors.append("RESEARCH_APPROVED workflow requires approval_basis")
+        if workflow.get("factory_sop_validated") is not False:
+            errors.append("RESEARCH_APPROVED workflow must explicitly set factory_sop_validated: false")
+    elif status != "HUMAN_VALIDATED":
+        errors.append("workflow.status must be HUMAN_VALIDATED or explicitly scoped RESEARCH_APPROVED before executable validation")
     if not workflow.get("id"):
         errors.append("workflow.id is required")
     if not workflow.get("version") or str(workflow.get("version")).startswith("<"):

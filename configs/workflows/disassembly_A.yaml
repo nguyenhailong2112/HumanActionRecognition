@@ -1,0 +1,104 @@
+workflow:
+  id: impact_v1_1_disassembly_A_front
+  version: research-v1
+  title: Research Workflow Specification / Benchmark Procedure Interpretation
+  artifact_type: Research Workflow Specification / Benchmark Procedure Interpretation
+  enabled: true
+  status: RESEARCH_APPROVED
+  approval_scope: PROJECT_RESEARCH
+  approval_basis: >-
+    Project owner delegated research-level semantic decisions in the CP11 master
+    prompt; this approval applies only to the project research interpretation.
+  approved_by: Project owner-delegated CP11 process (delegation recorded in CP11 master prompt)
+  approved_on: "2026-10-01"
+  factory_sop_validated: false
+  factory_sop_validation_status: NOT_VALIDATED
+  semantic_sources:
+    - ResearchDocuments/ResearchDocuments/01_IMPACT/code/IMPACT/dataset/TAS/mapping_TAS-S.txt
+    - ResearchDocuments/ResearchDocuments/01_IMPACT/code/IMPACT/docs/BENCHMARK.md
+    - experiments/CP08/semantic_integrity_audit.md
+    - experiments/CP10/validator_integrity_audit.md
+    - CP11 master prompt (project-owner delegated research decisions)
+  action_vocabulary:
+    - UNSCREW_ANTI_VIBRATION_HANDLE
+    - REMOVE_LOCKING_LEVER_ASSEMBLY
+    - EXTRACT_BEARING_PLATE_ASSEMBLY
+    - DETACH_ADAPTER_PLATE
+    - REMOVE_ROTOR_ASSEMBLY
+  action_disposition:
+    START_ANGLE_GRINDER_ASSEMBLY:
+      status: out_of_scope
+      reason: Procedure-boundary marker; not a completion objective.
+    UNSCREW_ANTI_VIBRATION_HANDLE: required
+    STORE_ANTI_VIBRATION_HANDLE:
+      status: out_of_scope
+      reason: Auxiliary storage action is outside normal-disassembly completion.
+    REMOVE_LOCKING_LEVER_ASSEMBLY: required
+    STORE_LOCKING_LEVER_ASSEMBLY:
+      status: out_of_scope
+      reason: Auxiliary storage action is outside normal-disassembly completion.
+    EXTRACT_BEARING_PLATE_ASSEMBLY: required
+    STORE_BEARING_PLATE_ASSEMBLY:
+      status: out_of_scope
+      reason: Auxiliary storage action is outside normal-disassembly completion.
+    DETACH_ADAPTER_PLATE: required
+    REMOVE_ROTOR_ASSEMBLY: required
+    STORE_ROTOR_ASSEMBLY:
+      status: out_of_scope
+      reason: Auxiliary storage action is outside normal-disassembly completion.
+    STORE_GEARBOX_HOUSING:
+      status: out_of_scope
+      reason: Storage does not establish the distinct PSR Remove gearbox_housing state.
+    STORE_ADAPTER_PLATE:
+      status: out_of_scope
+      reason: Auxiliary storage action is outside normal-disassembly completion.
+    INSTALL_ROTOR_ASSEMBLY:
+      status: out_of_scope
+      reason: Installation/recovery semantics are not defined in normal-disassembly v1.
+    ATTACH_ADAPTER_PLATE:
+      status: out_of_scope
+      reason: Attachment/recovery semantics are not defined in normal-disassembly v1.
+    RETRIEVE_BEARING_PLATE_ASSEMBLY:
+      status: out_of_scope
+      reason: Retrieval/rework semantics are outside normal-disassembly v1.
+    RETRIEVE_LOCKING_LEVER_ASSEMBLY:
+      status: out_of_scope
+      reason: Retrieval/rework semantics are outside normal-disassembly v1.
+    STORE_TOOL:
+      status: out_of_scope
+      reason: Tool logistics are outside normal-disassembly completion.
+  required_actions:
+    - UNSCREW_ANTI_VIBRATION_HANDLE
+    - REMOVE_LOCKING_LEVER_ASSEMBLY
+    - EXTRACT_BEARING_PLATE_ASSEMBLY
+    - DETACH_ADAPTER_PLATE
+    - REMOVE_ROTOR_ASSEMBLY
+  prerequisites:
+    UNSCREW_ANTI_VIBRATION_HANDLE: []
+    REMOVE_LOCKING_LEVER_ASSEMBLY:
+      - UNSCREW_ANTI_VIBRATION_HANDLE
+    EXTRACT_BEARING_PLATE_ASSEMBLY:
+      - UNSCREW_ANTI_VIBRATION_HANDLE
+    DETACH_ADAPTER_PLATE:
+      - UNSCREW_ANTI_VIBRATION_HANDLE
+    REMOVE_ROTOR_ASSEMBLY:
+      - UNSCREW_ANTI_VIBRATION_HANDLE
+  completion:
+    condition: >-
+      All five required core process actions have been accepted. This is
+      research-defined observable subprocedure completion, not proof of full
+      physical teardown.
+  repeat_policy:
+    accepted_core_action: REPEATED_STEP
+    interpretation: workflow_deviation_not_human_mistake
+    maximum_repeat_count: null
+  duration_policy:
+    enabled: false
+    reason: No authoritative duration policy is defined in the available project evidence.
+  timeout_policy:
+    enabled: false
+    reason: No authoritative timeout policy is defined in the available project evidence.
+  evidence_policy:
+    confidence_is_evidence_sufficiency: false
+    unknown_or_ambiguous_advances_workflow: false
+    frozen_events_may_be_promoted_without_review: false

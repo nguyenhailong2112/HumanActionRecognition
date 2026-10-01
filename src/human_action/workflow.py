@@ -26,8 +26,14 @@ def workflow_is_enabled(config: dict[str, Any]) -> bool:
         raise ValueError("workflow.enabled must be a boolean")
     if not enabled:
         return False
-    if workflow.get("status") != "HUMAN_VALIDATED":
-        raise ValueError("workflow.enabled requires workflow.status: HUMAN_VALIDATED")
+    status = workflow.get("status")
+    if status == "RESEARCH_APPROVED":
+        if workflow.get("approval_scope") != "PROJECT_RESEARCH" or workflow.get("factory_sop_validated") is not False:
+            raise ValueError("RESEARCH_APPROVED requires PROJECT_RESEARCH scope and factory_sop_validated: false")
+        if not workflow.get("approval_basis") or not workflow.get("approved_by") or not workflow.get("approved_on"):
+            raise ValueError("RESEARCH_APPROVED requires approval_basis, approved_by, and approved_on metadata")
+    elif status != "HUMAN_VALIDATED":
+        raise ValueError("workflow.enabled requires HUMAN_VALIDATED or explicitly scoped RESEARCH_APPROVED status")
     return True
 
 
@@ -37,6 +43,10 @@ class WorkflowEngine:
     def __init__(self, config: dict[str, Any], worker_id: str, video_id: str = "", branch_decisions: dict[str, bool] | None = None) -> None:
         workflow = config["workflow"]
         self.workflow_id = workflow["id"]
+        self.action_dispositions = {
+            action: (entry.get("status") if isinstance(entry, dict) else entry)
+            for action, entry in workflow.get("action_disposition", {}).items()
+        }
         self.worker_id = worker_id
         self.video_id = video_id
         self.partial_order = "prerequisites" in workflow
@@ -127,6 +137,8 @@ class WorkflowEngine:
     def _consume_one(self, event: ActionEvent) -> str:
         # Preserve every received observation for audit, including uncertain or malformed events.
         self.observations.append(event)
+        if self.action_dispositions.get(event.action) == "out_of_scope":
+            return "out_of_scope_ignored"
         if event.worker_id != self.worker_id:
             self.violations.append(self._violation("INSUFFICIENT_EVIDENCE", self.state().expected_step, event, "Event worker does not match this workflow execution; event was isolated."))
             return "insufficient_evidence"

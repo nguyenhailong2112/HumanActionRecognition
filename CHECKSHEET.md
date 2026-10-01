@@ -12,6 +12,8 @@
 
 > **CP10 status (2026-10-01):** Validator now separately enforces complete disposition coverage over project/model actions and a workflow vocabulary containing exactly non-`out_of_scope` actions. Synthetic valid mixed-disposition configuration passes; missing/extra/unknown/out-of-scope cases fail. Full suite: 74 passed; compileall passed. No human-approved YAML exists, so real workflow validation/trace and process metrics remain **NOT EVALUATED**. CP10 is **PARTIAL**; see `experiments/EXP-CP10.md`.
 
+> **CP11 status (2026-10-01):** Closed for the project-level Research Workflow Specification / Benchmark Procedure Interpretation v1. The executable config has explicit `RESEARCH_APPROVED` / `PROJECT_RESEARCH` scope and `factory_sop_validated: false`; validator passes over all 17 model actions. UNSCREW precedes the four unordered component removals. Deterministic out-of-scope behavior and synthetic partial-order/completion tests pass. Full suite: 85 passed; compileall passed. The 69 frozen CP08 events all retain `evidence_status: unknown`; therefore the real held-out trace and all process-performance metrics remain **NOT EVALUATED** pending human visual evidence review and an explicit derived evidence policy. This is not factory-SOP validation. See `experiments/EXP-CP11.md`.
+
 ---
 
 # 0. CÁCH SỬ DỤNG CHECKSHEET
