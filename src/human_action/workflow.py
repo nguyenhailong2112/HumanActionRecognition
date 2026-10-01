@@ -13,6 +13,7 @@ class WorkflowResult:
     violations: list[Violation]
     selected_path: str | None
     event_statuses: list[str] | None = None
+    finalization_status: str | None = None
 
 
 def workflow_is_enabled(config: dict[str, Any]) -> bool:
@@ -252,11 +253,19 @@ class WorkflowEngine:
         self.completed_actions.add(event.action)
         return "completed" if self.state().completed else "accepted_transition"
 
-    def finalize(self, timestamp: float | None = None) -> WorkflowResult:
+    def finalize(self, timestamp: float | None = None, *, procedure_ended: bool = False) -> WorkflowResult:
+        """Finalize an observation; only an explicit procedure end proves incompletion."""
         state = self.state()
         if self.timeout_policy.get("enabled") and timestamp is not None and float(timestamp) > float(self.timeout_policy["seconds"]):
             self.violations.append(self._violation("TIMEOUT", state.expected_step, None, f"Execution duration {float(timestamp):.2f}s exceeded configured {float(self.timeout_policy['seconds']):.2f}s timeout.", float(timestamp)))
+        finalization_status = "completed"
         if not state.completed:
-            expected = state.expected_step or (state.next_valid_steps[0] if state.next_valid_steps else None)
-            self.violations.append(self._violation("INCOMPLETE_PROCEDURE", expected, None, f"Procedure ended before completion; expected {expected or 'a valid route' }.", timestamp))
-        return WorkflowResult(self.state(), list(self.violations), self.state().selected_path, list(self.event_statuses))
+            if procedure_ended:
+                expected = state.expected_step or (state.next_valid_steps[0] if state.next_valid_steps else None)
+                self.violations.append(self._violation("INCOMPLETE_PROCEDURE", expected, None, f"Procedure ended before completion; expected {expected or 'a valid route' }.", timestamp))
+                finalization_status = "procedure_ended_incomplete"
+            else:
+                finalization_status = "observation_ended_unconfirmed"
+        final_state = self.state()
+        return WorkflowResult(final_state, list(self.violations), final_state.selected_path,
+                              list(self.event_statuses), finalization_status)

@@ -110,8 +110,16 @@ class WorkflowTests(unittest.TestCase):
         self.assertIn("TOO_SLOW", kinds)
         self.assertIn("TIMEOUT", kinds)
         self.assertIn("REPEATED_STEP", kinds)
-        finalized = engine.finalize(15.0)
+        finalized = engine.finalize(15.0, procedure_ended=True)
         self.assertIn("INCOMPLETE_PROCEDURE", [item.violation_type for item in finalized.violations])
+        self.assertEqual(finalized.finalization_status, "procedure_ended_incomplete")
+
+    def test_observation_end_does_not_claim_procedure_incomplete(self):
+        engine = WorkflowEngine(workflow(), "W1")
+        engine.consume([event("A")])
+        finalized = engine.finalize(3.0)
+        self.assertEqual(finalized.finalization_status, "observation_ended_unconfirmed")
+        self.assertNotIn("INCOMPLETE_PROCEDURE", [item.violation_type for item in finalized.violations])
 
 
 if __name__ == "__main__":

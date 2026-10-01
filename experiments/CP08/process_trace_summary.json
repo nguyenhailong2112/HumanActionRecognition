@@ -1,0 +1,50 @@
+{
+  "workflow_execution_status": "BLOCKED_PENDING_VALIDATED_SPEC",
+  "validated_workflow_exists": false,
+  "process_performance": "NOT_EVALUATED",
+  "reason": "configs/workflows/disassembly_A.yaml is absent; draft remains HUMAN_REVIEW_REQUIRED",
+  "frozen_action_event_count": 69,
+  "evidence_linked_action_event_count": 69,
+  "execution_summaries": [
+    {
+      "execution_id": "SS07EL13_Disassembly_A_001_front",
+      "worker_id": "SS07EL13",
+      "source_view": "front",
+      "frozen_action_event_count": 24,
+      "evidence_linked_event_count": 24,
+      "workflow_execution_status": "BLOCKED_PENDING_VALIDATED_SPEC",
+      "workflow_trace_generated": false,
+      "process_performance": "NOT_EVALUATED"
+    },
+    {
+      "execution_id": "SS07EL13_Disassembly_A_002_front",
+      "worker_id": "SS07EL13",
+      "source_view": "front",
+      "frozen_action_event_count": 18,
+      "evidence_linked_event_count": 18,
+      "workflow_execution_status": "BLOCKED_PENDING_VALIDATED_SPEC",
+      "workflow_trace_generated": false,
+      "process_performance": "NOT_EVALUATED"
+    },
+    {
+      "execution_id": "SS07EL13_Disassembly_A_003_front",
+      "worker_id": "SS07EL13",
+      "source_view": "front",
+      "frozen_action_event_count": 13,
+      "evidence_linked_event_count": 13,
+      "workflow_execution_status": "BLOCKED_PENDING_VALIDATED_SPEC",
+      "workflow_trace_generated": false,
+      "process_performance": "NOT_EVALUATED"
+    },
+    {
+      "execution_id": "SS07EL13_Disassembly_A_004_front",
+      "worker_id": "SS07EL13",
+      "source_view": "front",
+      "frozen_action_event_count": 14,
+      "evidence_linked_event_count": 14,
+      "workflow_execution_status": "BLOCKED_PENDING_VALIDATED_SPEC",
+      "workflow_trace_generated": false,
+      "process_performance": "NOT_EVALUATED"
+    }
+  ]
+}

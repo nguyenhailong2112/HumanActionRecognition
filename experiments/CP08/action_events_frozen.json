@@ -1,0 +1,1610 @@
+{
+  "status": "VERIFIED_FROM_FROZEN_CP05_PREDICTION_TIMELINES",
+  "model": "MS-TCN seed-17 frozen outputs",
+  "dataset_protocol": "IMPACT v1.1 TAS-S S2 split2 Disassembly_A/front held-out test",
+  "event_count": 69,
+  "confidence_interpretation": "descriptive only; not evidence sufficiency",
+  "evidence_status": "unknown; no validated evidence policy",
+  "sources": {
+    "cp05_config": "configs/cp05.yaml",
+    "cp05_best_checkpoint_sha256": "2e1f06a248973dad925f449ad9588064bbade4f9c2f4ed9c961a5196008f567d",
+    "cp05_evidence_index_sha256": "cd57333750025a397fe7a5ce1648d880180a08873b8e95935d711562a07e588e",
+    "cp05_test_metrics_sha256": "52efe347791cf2c29fa0230714ae546ec31ed2219c3b9bb6f4f12283987ca076",
+    "cp07_review_manifest_sha256": "cb1d55ab72432d85be1c8247287c863954875b834a0422e3109cc2c559c8ea43",
+    "timelines": {
+      "results/cp05/evaluation/SS07EL13_Disassembly_A_001_front_mstcn_timeline.json": "8d003b6678039e8160f8966233aafaf65bace60e88882808c3e394f2fbf7d576",
+      "results/cp05/evaluation/SS07EL13_Disassembly_A_002_front_mstcn_timeline.json": "692de02bd71fd429bfca27d702ca52f1f6b1e48264b3faa37e174062323222cd",
+      "results/cp05/evaluation/SS07EL13_Disassembly_A_003_front_mstcn_timeline.json": "b1ecea2b98fc3530a09ff61c5f1e98736c882fa4138ae6d7e1ec6059b1cffe92",
+      "results/cp05/evaluation/SS07EL13_Disassembly_A_004_front_mstcn_timeline.json": "4c45f32e03224209052e7891f64d1e53259f2dd8844f5f59fbd0a6684b41b772"
+    }
+  },
+  "events": [
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "start_time": 2.0,
+        "end_time": 13.799997329711914,
+        "duration": 11.799997329711914,
+        "confidence": 0.7980098128318787,
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "start_frame": 60,
+        "end_frame": 408,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_001_front:60-408:EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_001_60.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_001_60.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 1,
+      "human_review_event_id": "CP05-MSTCN-001",
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_001_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_BEARING_PLATE_ASSEMBLY",
+        "start_time": 13.800000190734863,
+        "end_time": 14.99999713897705,
+        "duration": 1.1999969482421875,
+        "confidence": 0.3291056156158447,
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "start_frame": 414,
+        "end_frame": 444,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_001_front:414-444:STORE_BEARING_PLATE_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_002_414.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_002_414.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 2,
+      "human_review_event_id": "CP05-MSTCN-002",
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_001_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "start_time": 15.0,
+        "end_time": 15.799997329711914,
+        "duration": 0.7999973297119141,
+        "confidence": 0.29260197281837463,
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "start_frame": 450,
+        "end_frame": 468,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_001_front:450-468:EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_003_450.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_003_450.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 3,
+      "human_review_event_id": "CP05-MSTCN-003",
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_001_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "start_time": 18.0,
+        "end_time": 22.799997329711914,
+        "duration": 4.799997329711914,
+        "confidence": 0.4498206079006195,
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "start_frame": 540,
+        "end_frame": 678,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_001_front:540-678:EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_004_540.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_004_540.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 4,
+      "human_review_event_id": "CP05-MSTCN-004",
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_001_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_LOCKING_LEVER_ASSEMBLY",
+        "start_time": 26.0,
+        "end_time": 26.799997329711914,
+        "duration": 0.7999973297119141,
+        "confidence": 0.40560874342918396,
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "start_frame": 780,
+        "end_frame": 798,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_001_front:780-798:STORE_LOCKING_LEVER_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_005_780.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_005_780.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 5,
+      "human_review_event_id": "CP05-MSTCN-005",
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_001_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+        "start_time": 31.0,
+        "end_time": 32.599998474121094,
+        "duration": 1.5999984741210938,
+        "confidence": 0.35258015990257263,
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "start_frame": 930,
+        "end_frame": 972,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_001_front:930-972:REMOVE_LOCKING_LEVER_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_006_930.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_006_930.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 6,
+      "human_review_event_id": "CP05-MSTCN-006",
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_001_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "start_time": 32.599998474121094,
+        "end_time": 73.19999694824219,
+        "duration": 40.599998474121094,
+        "confidence": 0.8827400207519531,
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "start_frame": 978,
+        "end_frame": 2190,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_001_front:978-2190:EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_007_978.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_007_978.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 7,
+      "human_review_event_id": "CP05-MSTCN-007",
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_001_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_BEARING_PLATE_ASSEMBLY",
+        "start_time": 73.19999694824219,
+        "end_time": 75.0,
+        "duration": 1.8000030517578125,
+        "confidence": 0.45441675186157227,
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "start_frame": 2196,
+        "end_frame": 2244,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_001_front:2196-2244:STORE_BEARING_PLATE_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_008_2196.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_008_2196.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 8,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_001_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "start_time": 89.4000015258789,
+        "end_time": 109.5999984741211,
+        "duration": 20.199996948242188,
+        "confidence": 0.8141422867774963,
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "start_frame": 2682,
+        "end_frame": 3282,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_001_front:2682-3282:EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_009_2682.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_009_2682.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 9,
+      "human_review_event_id": "CP05-MSTCN-009",
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_001_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_BEARING_PLATE_ASSEMBLY",
+        "start_time": 109.5999984741211,
+        "end_time": 112.0,
+        "duration": 2.4000015258789062,
+        "confidence": 0.4668213427066803,
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "start_frame": 3288,
+        "end_frame": 3354,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_001_front:3288-3354:STORE_BEARING_PLATE_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_010_3288.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_010_3288.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 10,
+      "human_review_event_id": "CP05-MSTCN-010",
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_001_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "DETACH_ADAPTER_PLATE",
+        "start_time": 114.80000305175781,
+        "end_time": 133.1999969482422,
+        "duration": 18.399993896484375,
+        "confidence": 0.9081613421440125,
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "start_frame": 3444,
+        "end_frame": 3990,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_001_front:3444-3990:DETACH_ADAPTER_PLATE",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_011_3444.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_011_3444.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 11,
+      "human_review_event_id": "CP05-MSTCN-011",
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_001_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_ADAPTER_PLATE",
+        "start_time": 133.1999969482422,
+        "end_time": 134.1999969482422,
+        "duration": 1.0,
+        "confidence": 0.43137630820274353,
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "start_frame": 3996,
+        "end_frame": 4020,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_001_front:3996-4020:STORE_ADAPTER_PLATE",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_012_3996.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_012_3996.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 12,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_001_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "DETACH_ADAPTER_PLATE",
+        "start_time": 134.1999969482422,
+        "end_time": 161.8000030517578,
+        "duration": 27.600006103515625,
+        "confidence": 0.9345638751983643,
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "start_frame": 4026,
+        "end_frame": 4848,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_001_front:4026-4848:DETACH_ADAPTER_PLATE",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_013_4026.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_013_4026.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 13,
+      "human_review_event_id": "CP05-MSTCN-013",
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_001_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_ADAPTER_PLATE",
+        "start_time": 161.8000030517578,
+        "end_time": 164.0,
+        "duration": 2.1999969482421875,
+        "confidence": 0.4621521234512329,
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "start_frame": 4854,
+        "end_frame": 4914,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_001_front:4854-4914:STORE_ADAPTER_PLATE",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_014_4854.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_014_4854.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 14,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_001_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "DETACH_ADAPTER_PLATE",
+        "start_time": 164.0,
+        "end_time": 170.1999969482422,
+        "duration": 6.1999969482421875,
+        "confidence": 0.5080968141555786,
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "start_frame": 4920,
+        "end_frame": 5100,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_001_front:4920-5100:DETACH_ADAPTER_PLATE",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_015_4920.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_015_4920.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 15,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_001_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "REMOVE_ROTOR_ASSEMBLY",
+        "start_time": 170.1999969482422,
+        "end_time": 174.0,
+        "duration": 3.8000030517578125,
+        "confidence": 0.5133234262466431,
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "start_frame": 5106,
+        "end_frame": 5214,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_001_front:5106-5214:REMOVE_ROTOR_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_016_5106.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_016_5106.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 16,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_001_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "REMOVE_ROTOR_ASSEMBLY",
+        "start_time": 175.8000030517578,
+        "end_time": 182.59999084472656,
+        "duration": 6.79998779296875,
+        "confidence": 0.7255680561065674,
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "start_frame": 5274,
+        "end_frame": 5472,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_001_front:5274-5472:REMOVE_ROTOR_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_017_5274.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_017_5274.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 17,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_001_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_ROTOR_ASSEMBLY",
+        "start_time": 182.60000610351562,
+        "end_time": 184.59999084472656,
+        "duration": 1.9999847412109375,
+        "confidence": 0.3811175227165222,
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "start_frame": 5478,
+        "end_frame": 5532,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_001_front:5478-5532:STORE_ROTOR_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_018_5478.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_018_5478.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 18,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_001_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "start_time": 192.0,
+        "end_time": 203.8000030517578,
+        "duration": 11.800003051757812,
+        "confidence": 0.7759615182876587,
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "start_frame": 5760,
+        "end_frame": 6108,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_001_front:5760-6108:EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_019_5760.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_019_5760.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 19,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_001_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_BEARING_PLATE_ASSEMBLY",
+        "start_time": 203.8000030517578,
+        "end_time": 206.1999969482422,
+        "duration": 2.399993896484375,
+        "confidence": 0.4089737832546234,
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "start_frame": 6114,
+        "end_frame": 6180,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_001_front:6114-6180:STORE_BEARING_PLATE_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_020_6114.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_020_6114.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 20,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_001_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "DETACH_ADAPTER_PLATE",
+        "start_time": 206.1999969482422,
+        "end_time": 210.1999969482422,
+        "duration": 4.0,
+        "confidence": 0.6844561696052551,
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "start_frame": 6186,
+        "end_frame": 6300,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_001_front:6186-6300:DETACH_ADAPTER_PLATE",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_021_6186.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_021_6186.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 21,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_001_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_ADAPTER_PLATE",
+        "start_time": 210.1999969482422,
+        "end_time": 212.0,
+        "duration": 1.8000030517578125,
+        "confidence": 0.4490170478820801,
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "start_frame": 6306,
+        "end_frame": 6354,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_001_front:6306-6354:STORE_ADAPTER_PLATE",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_022_6306.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_022_6306.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 22,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_001_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "REMOVE_ROTOR_ASSEMBLY",
+        "start_time": 217.39999389648438,
+        "end_time": 220.39999389648438,
+        "duration": 3.0,
+        "confidence": 0.5459401607513428,
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "start_frame": 6522,
+        "end_frame": 6606,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_001_front:6522-6606:REMOVE_ROTOR_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_023_6522.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_023_6522.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 23,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_001_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_ROTOR_ASSEMBLY",
+        "start_time": 221.1999969482422,
+        "end_time": 224.0,
+        "duration": 2.8000030517578125,
+        "confidence": 0.3970705568790436,
+        "video_id": "SS07EL13_Disassembly_A_001_front",
+        "start_frame": 6636,
+        "end_frame": 6714,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_001_front:6636-6714:STORE_ROTOR_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_024_6636.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_001_front_mstcn_024_6636.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 24,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_001_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "START_ANGLE_GRINDER_ASSEMBLY",
+        "start_time": 0.0,
+        "end_time": 3.4000000953674316,
+        "duration": 3.4000000953674316,
+        "confidence": 0.7562846541404724,
+        "video_id": "SS07EL13_Disassembly_A_002_front",
+        "start_frame": 0,
+        "end_frame": 96,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_002_front:0-96:START_ANGLE_GRINDER_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_001_0.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_001_0.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 25,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_002_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "UNSCREW_ANTI_VIBRATION_HANDLE",
+        "start_time": 3.4000000953674316,
+        "end_time": 8.0,
+        "duration": 4.599999904632568,
+        "confidence": 0.8571937680244446,
+        "video_id": "SS07EL13_Disassembly_A_002_front",
+        "start_frame": 102,
+        "end_frame": 234,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_002_front:102-234:UNSCREW_ANTI_VIBRATION_HANDLE",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_002_102.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_002_102.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 26,
+      "human_review_event_id": "CP05-MSTCN-026",
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_002_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_ANTI_VIBRATION_HANDLE",
+        "start_time": 8.0,
+        "end_time": 9.800000190734863,
+        "duration": 1.8000001907348633,
+        "confidence": 0.6000964641571045,
+        "video_id": "SS07EL13_Disassembly_A_002_front",
+        "start_frame": 240,
+        "end_frame": 288,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_002_front:240-288:STORE_ANTI_VIBRATION_HANDLE",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_003_240.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_003_240.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 27,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_002_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+        "start_time": 10.399999618530273,
+        "end_time": 14.800000190734863,
+        "duration": 4.40000057220459,
+        "confidence": 0.6218956112861633,
+        "video_id": "SS07EL13_Disassembly_A_002_front",
+        "start_frame": 312,
+        "end_frame": 438,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_002_front:312-438:REMOVE_LOCKING_LEVER_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_004_312.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_004_312.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 28,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_002_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "start_time": 14.800000190734863,
+        "end_time": 27.80000114440918,
+        "duration": 13.000000953674316,
+        "confidence": 0.842777669429779,
+        "video_id": "SS07EL13_Disassembly_A_002_front",
+        "start_frame": 444,
+        "end_frame": 828,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_002_front:444-828:EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_005_444.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_005_444.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 29,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_002_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_BEARING_PLATE_ASSEMBLY",
+        "start_time": 27.799999237060547,
+        "end_time": 29.400001525878906,
+        "duration": 1.6000022888183594,
+        "confidence": 0.340904176235199,
+        "video_id": "SS07EL13_Disassembly_A_002_front",
+        "start_frame": 834,
+        "end_frame": 876,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_002_front:834-876:STORE_BEARING_PLATE_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_006_834.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_006_834.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 30,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_002_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_LOCKING_LEVER_ASSEMBLY",
+        "start_time": 29.399999618530273,
+        "end_time": 32.79999923706055,
+        "duration": 3.3999996185302734,
+        "confidence": 0.515993595123291,
+        "video_id": "SS07EL13_Disassembly_A_002_front",
+        "start_frame": 882,
+        "end_frame": 978,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_002_front:882-978:STORE_LOCKING_LEVER_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_007_882.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_007_882.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 31,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_002_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "start_time": 33.599998474121094,
+        "end_time": 53.20000076293945,
+        "duration": 19.60000228881836,
+        "confidence": 0.8849934339523315,
+        "video_id": "SS07EL13_Disassembly_A_002_front",
+        "start_frame": 1008,
+        "end_frame": 1590,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_002_front:1008-1590:EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_008_1008.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_008_1008.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 32,
+      "human_review_event_id": "CP05-MSTCN-032",
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_002_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+        "start_time": 53.20000076293945,
+        "end_time": 57.79999923706055,
+        "duration": 4.599998474121094,
+        "confidence": 0.5402261018753052,
+        "video_id": "SS07EL13_Disassembly_A_002_front",
+        "start_frame": 1596,
+        "end_frame": 1728,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_002_front:1596-1728:REMOVE_LOCKING_LEVER_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_009_1596.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_009_1596.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 33,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_002_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_BEARING_PLATE_ASSEMBLY",
+        "start_time": 57.79999923706055,
+        "end_time": 60.0,
+        "duration": 2.200000762939453,
+        "confidence": 0.27142950892448425,
+        "video_id": "SS07EL13_Disassembly_A_002_front",
+        "start_frame": 1734,
+        "end_frame": 1794,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_002_front:1734-1794:STORE_BEARING_PLATE_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_010_1734.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_010_1734.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 34,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_002_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "DETACH_ADAPTER_PLATE",
+        "start_time": 60.0,
+        "end_time": 66.39999389648438,
+        "duration": 6.399993896484375,
+        "confidence": 0.8401639461517334,
+        "video_id": "SS07EL13_Disassembly_A_002_front",
+        "start_frame": 1800,
+        "end_frame": 1986,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_002_front:1800-1986:DETACH_ADAPTER_PLATE",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_011_1800.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_011_1800.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 35,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_002_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_ADAPTER_PLATE",
+        "start_time": 66.4000015258789,
+        "end_time": 67.39999389648438,
+        "duration": 0.9999923706054688,
+        "confidence": 0.41356581449508667,
+        "video_id": "SS07EL13_Disassembly_A_002_front",
+        "start_frame": 1992,
+        "end_frame": 2016,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_002_front:1992-2016:STORE_ADAPTER_PLATE",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_012_1992.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_012_1992.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 36,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_002_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "DETACH_ADAPTER_PLATE",
+        "start_time": 83.19999694824219,
+        "end_time": 96.79999542236328,
+        "duration": 13.599998474121094,
+        "confidence": 0.9076481461524963,
+        "video_id": "SS07EL13_Disassembly_A_002_front",
+        "start_frame": 2496,
+        "end_frame": 2898,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_002_front:2496-2898:DETACH_ADAPTER_PLATE",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_013_2496.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_013_2496.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 37,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_002_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_ADAPTER_PLATE",
+        "start_time": 96.80000305175781,
+        "end_time": 98.39999389648438,
+        "duration": 1.5999908447265625,
+        "confidence": 0.4337013363838196,
+        "video_id": "SS07EL13_Disassembly_A_002_front",
+        "start_frame": 2904,
+        "end_frame": 2946,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_002_front:2904-2946:STORE_ADAPTER_PLATE",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_014_2904.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_014_2904.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 38,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_002_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "DETACH_ADAPTER_PLATE",
+        "start_time": 98.4000015258789,
+        "end_time": 110.79999542236328,
+        "duration": 12.399993896484375,
+        "confidence": 0.8334810137748718,
+        "video_id": "SS07EL13_Disassembly_A_002_front",
+        "start_frame": 2952,
+        "end_frame": 3318,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_002_front:2952-3318:DETACH_ADAPTER_PLATE",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_015_2952.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_015_2952.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 39,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_002_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_ADAPTER_PLATE",
+        "start_time": 110.80000305175781,
+        "end_time": 112.0,
+        "duration": 1.1999969482421875,
+        "confidence": 0.4077623784542084,
+        "video_id": "SS07EL13_Disassembly_A_002_front",
+        "start_frame": 3324,
+        "end_frame": 3354,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_002_front:3324-3354:STORE_ADAPTER_PLATE",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_016_3324.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_016_3324.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 40,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_002_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "REMOVE_ROTOR_ASSEMBLY",
+        "start_time": 117.80000305175781,
+        "end_time": 126.5999984741211,
+        "duration": 8.799995422363281,
+        "confidence": 0.7480427026748657,
+        "video_id": "SS07EL13_Disassembly_A_002_front",
+        "start_frame": 3534,
+        "end_frame": 3792,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_002_front:3534-3792:REMOVE_ROTOR_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_017_3534.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_017_3534.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 41,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_002_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_ROTOR_ASSEMBLY",
+        "start_time": 126.5999984741211,
+        "end_time": 130.0,
+        "duration": 3.4000015258789062,
+        "confidence": 0.38214558362960815,
+        "video_id": "SS07EL13_Disassembly_A_002_front",
+        "start_frame": 3798,
+        "end_frame": 3894,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_002_front:3798-3894:STORE_ROTOR_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_018_3798.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_002_front_mstcn_018_3798.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 42,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_002_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "START_ANGLE_GRINDER_ASSEMBLY",
+        "start_time": 0.0,
+        "end_time": 1.600000023841858,
+        "duration": 1.600000023841858,
+        "confidence": 0.3931669592857361,
+        "video_id": "SS07EL13_Disassembly_A_003_front",
+        "start_frame": 0,
+        "end_frame": 42,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_003_front:0-42:START_ANGLE_GRINDER_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_001_0.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_001_0.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 43,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_003_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+        "start_time": 7.800000190734863,
+        "end_time": 8.59999942779541,
+        "duration": 0.7999992370605469,
+        "confidence": 0.3554098904132843,
+        "video_id": "SS07EL13_Disassembly_A_003_front",
+        "start_frame": 234,
+        "end_frame": 252,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_003_front:234-252:REMOVE_LOCKING_LEVER_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_002_234.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_002_234.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 44,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_003_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "start_time": 8.600000381469727,
+        "end_time": 14.0,
+        "duration": 5.399999618530273,
+        "confidence": 0.47587358951568604,
+        "video_id": "SS07EL13_Disassembly_A_003_front",
+        "start_frame": 258,
+        "end_frame": 414,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_003_front:258-414:EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_003_258.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_003_258.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 45,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_003_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+        "start_time": 14.0,
+        "end_time": 23.400001525878906,
+        "duration": 9.400001525878906,
+        "confidence": 0.7294279336929321,
+        "video_id": "SS07EL13_Disassembly_A_003_front",
+        "start_frame": 420,
+        "end_frame": 696,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_003_front:420-696:REMOVE_LOCKING_LEVER_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_004_420.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_004_420.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 46,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_003_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_LOCKING_LEVER_ASSEMBLY",
+        "start_time": 23.399999618530273,
+        "end_time": 26.400001525878906,
+        "duration": 3.000001907348633,
+        "confidence": 0.5043771862983704,
+        "video_id": "SS07EL13_Disassembly_A_003_front",
+        "start_frame": 702,
+        "end_frame": 786,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_003_front:702-786:STORE_LOCKING_LEVER_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_005_702.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_005_702.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 47,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_003_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "start_time": 26.399999618530273,
+        "end_time": 66.39999389648438,
+        "duration": 39.9999942779541,
+        "confidence": 0.9169061183929443,
+        "video_id": "SS07EL13_Disassembly_A_003_front",
+        "start_frame": 792,
+        "end_frame": 1986,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_003_front:792-1986:EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_006_792.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_006_792.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 48,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_003_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_BEARING_PLATE_ASSEMBLY",
+        "start_time": 66.4000015258789,
+        "end_time": 68.79999542236328,
+        "duration": 2.399993896484375,
+        "confidence": 0.5600102543830872,
+        "video_id": "SS07EL13_Disassembly_A_003_front",
+        "start_frame": 1992,
+        "end_frame": 2058,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_003_front:1992-2058:STORE_BEARING_PLATE_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_007_1992.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_007_1992.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 49,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_003_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "REMOVE_ROTOR_ASSEMBLY",
+        "start_time": 69.80000305175781,
+        "end_time": 84.0,
+        "duration": 14.199996948242188,
+        "confidence": 0.8824566006660461,
+        "video_id": "SS07EL13_Disassembly_A_003_front",
+        "start_frame": 2094,
+        "end_frame": 2514,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_003_front:2094-2514:REMOVE_ROTOR_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_008_2094.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_008_2094.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 50,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_003_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "DETACH_ADAPTER_PLATE",
+        "start_time": 84.0,
+        "end_time": 110.79999542236328,
+        "duration": 26.79999542236328,
+        "confidence": 0.959213137626648,
+        "video_id": "SS07EL13_Disassembly_A_003_front",
+        "start_frame": 2520,
+        "end_frame": 3318,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_003_front:2520-3318:DETACH_ADAPTER_PLATE",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_009_2520.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_009_2520.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 51,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_003_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_ADAPTER_PLATE",
+        "start_time": 110.80000305175781,
+        "end_time": 113.0,
+        "duration": 2.1999969482421875,
+        "confidence": 0.4746715724468231,
+        "video_id": "SS07EL13_Disassembly_A_003_front",
+        "start_frame": 3324,
+        "end_frame": 3384,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_003_front:3324-3384:STORE_ADAPTER_PLATE",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_010_3324.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_010_3324.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 52,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_003_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "DETACH_ADAPTER_PLATE",
+        "start_time": 113.0,
+        "end_time": 114.39999389648438,
+        "duration": 1.399993896484375,
+        "confidence": 0.42970725893974304,
+        "video_id": "SS07EL13_Disassembly_A_003_front",
+        "start_frame": 3390,
+        "end_frame": 3426,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_003_front:3390-3426:DETACH_ADAPTER_PLATE",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_011_3390.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_011_3390.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 53,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_003_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "REMOVE_ROTOR_ASSEMBLY",
+        "start_time": 115.80000305175781,
+        "end_time": 127.19999694824219,
+        "duration": 11.399993896484375,
+        "confidence": 0.6921396851539612,
+        "video_id": "SS07EL13_Disassembly_A_003_front",
+        "start_frame": 3474,
+        "end_frame": 3810,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_003_front:3474-3810:REMOVE_ROTOR_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_012_3474.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_012_3474.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 54,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_003_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_ROTOR_ASSEMBLY",
+        "start_time": 127.19999694824219,
+        "end_time": 130.1999969482422,
+        "duration": 3.0,
+        "confidence": 0.4196026921272278,
+        "video_id": "SS07EL13_Disassembly_A_003_front",
+        "start_frame": 3816,
+        "end_frame": 3900,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_003_front:3816-3900:STORE_ROTOR_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_013_3816.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_003_front_mstcn_013_3816.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 55,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_003_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "START_ANGLE_GRINDER_ASSEMBLY",
+        "start_time": 0.0,
+        "end_time": 2.000000238418579,
+        "duration": 2.000000238418579,
+        "confidence": 0.59284508228302,
+        "video_id": "SS07EL13_Disassembly_A_004_front",
+        "start_frame": 0,
+        "end_frame": 54,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_004_front:0-54:START_ANGLE_GRINDER_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_001_0.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_001_0.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 56,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_004_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "UNSCREW_ANTI_VIBRATION_HANDLE",
+        "start_time": 2.0,
+        "end_time": 4.0,
+        "duration": 2.0,
+        "confidence": 0.44259247183799744,
+        "video_id": "SS07EL13_Disassembly_A_004_front",
+        "start_frame": 60,
+        "end_frame": 114,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_004_front:60-114:UNSCREW_ANTI_VIBRATION_HANDLE",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_002_60.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_002_60.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 57,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_004_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+        "start_time": 4.0,
+        "end_time": 22.200000762939453,
+        "duration": 18.200000762939453,
+        "confidence": 0.8743876218795776,
+        "video_id": "SS07EL13_Disassembly_A_004_front",
+        "start_frame": 120,
+        "end_frame": 660,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_004_front:120-660:REMOVE_LOCKING_LEVER_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_003_120.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_003_120.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 58,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_004_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_LOCKING_LEVER_ASSEMBLY",
+        "start_time": 22.200000762939453,
+        "end_time": 26.200000762939453,
+        "duration": 4.0,
+        "confidence": 0.47530418634414673,
+        "video_id": "SS07EL13_Disassembly_A_004_front",
+        "start_frame": 666,
+        "end_frame": 780,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_004_front:666-780:STORE_LOCKING_LEVER_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_004_666.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_004_666.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 59,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_004_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "start_time": 26.200000762939453,
+        "end_time": 31.200000762939453,
+        "duration": 5.0,
+        "confidence": 0.6269205212593079,
+        "video_id": "SS07EL13_Disassembly_A_004_front",
+        "start_frame": 786,
+        "end_frame": 930,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_004_front:786-930:EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_005_786.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_005_786.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 60,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_004_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "REMOVE_LOCKING_LEVER_ASSEMBLY",
+        "start_time": 31.200000762939453,
+        "end_time": 40.400001525878906,
+        "duration": 9.200000762939453,
+        "confidence": 0.7674828171730042,
+        "video_id": "SS07EL13_Disassembly_A_004_front",
+        "start_frame": 936,
+        "end_frame": 1206,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_004_front:936-1206:REMOVE_LOCKING_LEVER_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_006_936.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_006_936.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 61,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_004_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "start_time": 40.400001525878906,
+        "end_time": 54.400001525878906,
+        "duration": 14.0,
+        "confidence": 0.8842733502388,
+        "video_id": "SS07EL13_Disassembly_A_004_front",
+        "start_frame": 1212,
+        "end_frame": 1626,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_004_front:1212-1626:EXTRACT_BEARING_PLATE_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_007_1212.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_007_1212.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 62,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_004_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_BEARING_PLATE_ASSEMBLY",
+        "start_time": 54.400001525878906,
+        "end_time": 58.0,
+        "duration": 3.5999984741210938,
+        "confidence": 0.543607771396637,
+        "video_id": "SS07EL13_Disassembly_A_004_front",
+        "start_frame": 1632,
+        "end_frame": 1734,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_004_front:1632-1734:STORE_BEARING_PLATE_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_008_1632.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_008_1632.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 63,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_004_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "DETACH_ADAPTER_PLATE",
+        "start_time": 58.400001525878906,
+        "end_time": 90.19999694824219,
+        "duration": 31.79999542236328,
+        "confidence": 0.8942051529884338,
+        "video_id": "SS07EL13_Disassembly_A_004_front",
+        "start_frame": 1752,
+        "end_frame": 2700,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_004_front:1752-2700:DETACH_ADAPTER_PLATE",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_009_1752.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_009_1752.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 64,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_004_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_ADAPTER_PLATE",
+        "start_time": 90.19999694824219,
+        "end_time": 92.19999694824219,
+        "duration": 2.0,
+        "confidence": 0.492548406124115,
+        "video_id": "SS07EL13_Disassembly_A_004_front",
+        "start_frame": 2706,
+        "end_frame": 2760,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_004_front:2706-2760:STORE_ADAPTER_PLATE",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_010_2706.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_010_2706.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 65,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_004_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "DETACH_ADAPTER_PLATE",
+        "start_time": 92.80000305175781,
+        "end_time": 94.39999389648438,
+        "duration": 1.5999908447265625,
+        "confidence": 0.3711434602737427,
+        "video_id": "SS07EL13_Disassembly_A_004_front",
+        "start_frame": 2784,
+        "end_frame": 2826,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_004_front:2784-2826:DETACH_ADAPTER_PLATE",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_011_2784.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_011_2784.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 66,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_004_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "REMOVE_ROTOR_ASSEMBLY",
+        "start_time": 97.19999694824219,
+        "end_time": 109.5999984741211,
+        "duration": 12.400001525878906,
+        "confidence": 0.8396930694580078,
+        "video_id": "SS07EL13_Disassembly_A_004_front",
+        "start_frame": 2916,
+        "end_frame": 3282,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_004_front:2916-3282:REMOVE_ROTOR_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_012_2916.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_012_2916.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 67,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_004_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_ROTOR_ASSEMBLY",
+        "start_time": 109.5999984741211,
+        "end_time": 111.19999694824219,
+        "duration": 1.5999984741210938,
+        "confidence": 0.3475686311721802,
+        "video_id": "SS07EL13_Disassembly_A_004_front",
+        "start_frame": 3288,
+        "end_frame": 3330,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_004_front:3288-3330:STORE_ROTOR_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_013_3288.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_013_3288.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 68,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_004_front_mstcn_timeline.json"
+    },
+    {
+      "action_event": {
+        "worker_id": "SS07EL13",
+        "action": "STORE_ROTOR_ASSEMBLY",
+        "start_time": 115.0,
+        "end_time": 117.79999542236328,
+        "duration": 2.7999954223632812,
+        "confidence": 0.3475089371204376,
+        "video_id": "SS07EL13_Disassembly_A_004_front",
+        "start_frame": 3450,
+        "end_frame": 3528,
+        "evidence_status": "unknown",
+        "view": "front",
+        "event_id": "SS07EL13_Disassembly_A_004_front:3450-3528:STORE_ROTOR_ASSEMBLY",
+        "evidence_refs": [
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_014_3450.jpg",
+          "C:\\Users\\Admin\\PycharmProjects\\HumanActionRecognition\\results\\cp05\\evaluation\\evidence\\SS07EL13_Disassembly_A_004_front_mstcn_014_3450.mp4"
+        ]
+      },
+      "cp05_evidence_record_index": 69,
+      "human_review_event_id": null,
+      "frozen_prediction_timeline": "results\\cp05\\evaluation\\SS07EL13_Disassembly_A_004_front_mstcn_timeline.json"
+    }
+  ]
+}

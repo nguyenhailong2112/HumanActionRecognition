@@ -16,6 +16,7 @@ def build_workflow_trace(
     finalize_timestamp: float | None = None,
     *,
     synthetic_validation: bool = False,
+    procedure_ended: bool = False,
 ) -> dict[str, Any]:
     """Interpret one execution's structured events; caller validates workflow config first.
 
@@ -58,7 +59,7 @@ def build_workflow_trace(
             "evidence_status": event.evidence_status,
             "uncertainty_flags": [] if event.evidence_status == "sufficient" else [event.evidence_status],
         })
-    final = engine.finalize(finalize_timestamp)
+    final = engine.finalize(finalize_timestamp, procedure_ended=procedure_ended)
     return {
         "scope": "synthetic_logic_validation" if synthetic_validation else "deterministic_workflow_interpretation",
         "execution_id": execution_id,
@@ -66,6 +67,7 @@ def build_workflow_trace(
         "source_view": view,
         "events": records,
         "final_state": to_dict(final.state),
+        "finalization_status": final.finalization_status,
         "final_violations": [to_dict(item) for item in final.violations],
         "process_performance": "NOT_EVALUATED_WITHOUT_VALID_PROCESS_GROUND_TRUTH",
     }

@@ -1,5 +1,7 @@
 import sys
 import unittest
+import json
+import tempfile
 from pathlib import Path
 
 import numpy as np
@@ -15,6 +17,7 @@ from human_action.workflow import WorkflowEngine, workflow_is_enabled
 from human_action.workflow_trace import build_workflow_trace
 from tools.analyze_cp06 import summarize
 from tools.validate_workflow import validate_workflow
+from tools.prepare_cp08_artifacts import prepare_artifacts
 
 
 class CP07ContractAndAggregationTests(unittest.TestCase):
@@ -77,6 +80,59 @@ class CP07ContractAndAggregationTests(unittest.TestCase):
         self.assertEqual(row["evidence_refs"], ["snapshot.jpg"])
         self.assertEqual(trace["scope"], "synthetic_logic_validation")
         self.assertEqual(trace["process_performance"], "NOT_EVALUATED_WITHOUT_VALID_PROCESS_GROUND_TRUTH")
+
+    def test_trace_keeps_observation_end_distinct_from_procedure_end(self):
+        cfg = {"workflow": {"id": "toy", "valid_paths": [{"id": "r", "steps": ["A", "B"]}]}}
+        event = ActionEvent("W1", "A", 0, 1, 1, .9, "exec", 0, 4, "ambiguous")
+        trace = build_workflow_trace(cfg, [event], "W1", "exec", "front", synthetic_validation=True)
+        self.assertEqual(trace["finalization_status"], "observation_ended_unconfirmed")
+        self.assertEqual([v["violation_type"] for v in trace["final_violations"]], ["AMBIGUOUS_EVIDENCE"])
+        ended = build_workflow_trace(cfg, [event], "W1", "exec", "front",
+                                     synthetic_validation=True, procedure_ended=True)
+        self.assertEqual(ended["finalization_status"], "procedure_ended_incomplete")
+        self.assertEqual([v["violation_type"] for v in ended["final_violations"]], ["AMBIGUOUS_EVIDENCE", "INCOMPLETE_PROCEDURE"])
+
+    def test_cp08_frozen_event_preparation_preserves_unknown_evidence_and_links(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            for directory in ("configs/workflows", "experiments/CP05", "experiments/CP06", "experiments/CP07", "models", "results/cp05/evaluation/evidence"):
+                (root / directory).mkdir(parents=True, exist_ok=True)
+            (root / "configs/cp05.yaml").write_text("dataset:\n  view: front\nactions:\n  background: NULL\n", encoding="utf-8")
+            (root / "models/cp05_mstcn_best.pt").write_bytes(b"frozen-checkpoint-fixture")
+            source_video = root / "source.mp4"
+            snapshot = root / "results/cp05/evaluation/evidence/evt.jpg"
+            clip = root / "results/cp05/evaluation/evidence/evt.mp4"
+            for path in (source_video, snapshot, clip):
+                path.write_bytes(b"fixture")
+            video_id = "exec-1"
+            event = {"worker_id": "W1", "action": "A", "start_time": .4, "end_time": .6,
+                     "duration": .2, "confidence": .8, "video_id": video_id,
+                     "start_frame": 12, "end_frame": 17}
+            segment = {key: value for key, value in event.items() if key not in {"worker_id", "video_id"}}
+            timeline = {"video_id": video_id, "model": "mstcn", "events": [event], "segments": [segment]}
+            (root / "results/cp05/evaluation/exec-1_mstcn_timeline.json").write_text(json.dumps(timeline), encoding="utf-8")
+            evidence = {"video_id": video_id, "action": "A", "action_event_start_frame": 12,
+                        "action_event_timestamp_seconds": .4, "confidence": .8,
+                        "source_video_fps": 30, "source_video_frame_count": 100,
+                        "source_video": str(source_video), "snapshot": str(snapshot), "clip": str(clip)}
+            (root / "experiments/CP05/evidence_index.json").write_text(json.dumps({"records": [evidence]}), encoding="utf-8")
+            (root / "experiments/CP06/action_metrics.json").write_text(json.dumps({"video_ids": [video_id]}), encoding="utf-8")
+            (root / "results/cp05/evaluation/test_metrics.json").write_text(
+                json.dumps({"results": [{"model": "mstcn", "video_id": video_id, "video_path": str(source_video)}]}),
+                encoding="utf-8",
+            )
+            review = {"status": "HUMAN_REVIEW_REQUIRED", "unique_event_count": 1,
+                      "events": [{"event_id": "review-1", "video_id": video_id,
+                                  "predicted_action": "A", "timestamp_seconds": .4}]}
+            (root / "experiments/CP07/evidence_review_manifest.json").write_text(json.dumps(review), encoding="utf-8")
+
+            action_events, link_audit, trace_summary = prepare_artifacts(root)
+            record = action_events["events"][0]
+            self.assertEqual(record["action_event"]["evidence_status"], "unknown")
+            self.assertEqual(record["action_event"]["evidence_refs"], (str(snapshot), str(clip)))
+            self.assertEqual(record["human_review_event_id"], "review-1")
+            self.assertEqual(link_audit["one_to_one_identity_matches"], 1)
+            self.assertEqual(trace_summary["workflow_execution_status"], "BLOCKED_PENDING_VALIDATED_SPEC")
 
     def test_trace_rejects_cross_execution_events(self):
         cfg = {"workflow": {"id": "toy", "valid_paths": [{"id": "r", "steps": ["A"]}]}}

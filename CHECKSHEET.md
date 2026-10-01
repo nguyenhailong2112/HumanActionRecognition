@@ -6,6 +6,8 @@
 
 > **Current-status rule (2026-09-27):** Sections 1–38 are preserved checkpoint-time snapshots and may contain superseded acquisition/hardware states or earlier “SOP” wording. Use the latest dated checkpoint section, currently CP07, plus `ROADMAP.md`, `README.md`, and the current CP07 handoffs for present status. The current artifact is a **Research Workflow Specification / Benchmark Procedure Interpretation**, not an official factory SOP.
 
+> **CP08 status (2026-10-01):** Frozen CP05 MS-TCN outputs were converted to 69 structured ActionEvents and linked 1:1 to existing source videos, snapshots and clips (programmatic file/link audit; no semantic visual review). Workflow finalization now distinguishes an observation ending from an explicitly ended incomplete procedure. The full current test suite reports 66 passing tests. `configs/workflows/disassembly_A.yaml` remains absent, the draft remains `HUMAN_REVIEW_REQUIRED`, and process compliance/anomaly metrics remain `NOT_EVALUATED`. Human workflow decisions and the 13-event evidence review are pending; see `experiments/CP08/` and the root CP08 handoffs. CP08 is **PARTIAL**, not end-to-end process completion.
+
 ---
 
 # 0. CÁCH SỬ DỤNG CHECKSHEET
